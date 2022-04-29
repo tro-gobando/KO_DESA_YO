@@ -1,0 +1,431 @@
+{
+    "name": "Z6_HRM_MO1",
+    "description": "Datos_Mano_Obra_1",
+    "guid": "01d45ba5-1183-4c24-acc2-95aefb264a77",
+    "semantics": "TransactionalDataOrFacts",
+    "context": "SAPI",
+    "supportsFull": true,
+    "supportsDelta": false,
+    "mode": "Full",
+    "transferDataOnDeltaInit": false,
+    "columns": 
+    [
+        {
+            "name": "PABRP",
+            "description": "Período cál.nómina",
+            "abapType": "NumericCharacterString",
+            "length": 2,
+            "isPrimaryKey": true,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 2
+        },
+        {
+            "name": "PABRJ",
+            "description": "Año de nómina",
+            "abapType": "NumericCharacterString",
+            "length": 4,
+            "isPrimaryKey": true,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 4
+        },
+        {
+            "name": "BUKRS",
+            "description": "Sociedad",
+            "abapType": "CharacterString",
+            "length": 4,
+            "isPrimaryKey": true,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 4
+        },
+        {
+            "name": "PERNR",
+            "description": "Número de personal",
+            "abapType": "NumericCharacterString",
+            "length": 8,
+            "isPrimaryKey": true,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 8
+        },
+        {
+            "name": "NACHN",
+            "description": "Apellido",
+            "abapType": "CharacterString",
+            "length": 40,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 40
+        },
+        {
+            "name": "NACH2",
+            "description": "Segundo apellido",
+            "abapType": "CharacterString",
+            "length": 40,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 40
+        },
+        {
+            "name": "VORNA",
+            "description": "Nombre",
+            "abapType": "CharacterString",
+            "length": 40,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 40
+        },
+        {
+            "name": "ANTIG",
+            "description": "Cantidad/Unidad",
+            "abapType": "PackedNumber",
+            "length": 7,
+            "decimalCount": 2,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 9
+        },
+        {
+            "name": "NATIO",
+            "description": "Nacionalidad",
+            "abapType": "CharacterString",
+            "length": 15,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 15
+        },
+        {
+            "name": "FATXT",
+            "description": "Estado civil",
+            "abapType": "CharacterString",
+            "length": 6,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 6
+        },
+        {
+            "name": "SINDI",
+            "description": "Sindicato",
+            "abapType": "CharacterString",
+            "length": 40,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 40
+        },
+        {
+            "name": "PBTXT",
+            "description": "Texto división pers.",
+            "abapType": "CharacterString",
+            "length": 30,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 30
+        },
+        {
+            "name": "BTRTX",
+            "description": "Texto subdiv.pers.",
+            "abapType": "CharacterString",
+            "length": 15,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 15
+        },
+        {
+            "name": "RUT",
+            "description": "Número IC",
+            "abapType": "CharacterString",
+            "length": 20,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 20
+        },
+        {
+            "name": "UNAME",
+            "description": "Usuario",
+            "abapType": "CharacterString",
+            "length": 12,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 12
+        },
+        {
+            "name": "FING",
+            "description": "Fecha Ingreso",
+            "abapType": "Date",
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 8
+        },
+        {
+            "name": "FBAJA",
+            "description": "Fecha Baja",
+            "abapType": "Date",
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 8
+        },
+        {
+            "name": "FNAC",
+            "description": "Fecha Nacimiento",
+            "abapType": "Date",
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 8
+        },
+        {
+            "name": "SEXO",
+            "description": "Sexo",
+            "abapType": "CharacterString",
+            "length": 1,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 1
+        },
+        {
+            "name": "PLANS",
+            "description": "Posición",
+            "abapType": "NumericCharacterString",
+            "length": 8,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 8
+        },
+        {
+            "name": "PLANSTXT",
+            "description": "Descripcion Posicion",
+            "abapType": "CharacterString",
+            "length": 40,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 40
+        },
+        {
+            "name": "STELL",
+            "description": "Clave de función",
+            "abapType": "NumericCharacterString",
+            "length": 8,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 8
+        },
+        {
+            "name": "TRFAR",
+            "description": "Clase conv.colectivo",
+            "abapType": "CharacterString",
+            "length": 2,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 2
+        },
+        {
+            "name": "TARTX",
+            "description": "Texto cl.conv.col.",
+            "abapType": "CharacterString",
+            "length": 20,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 20
+        },
+        {
+            "name": "TCTTO",
+            "description": "Tipo Contrato",
+            "abapType": "CharacterString",
+            "length": 20,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 20
+        },
+        {
+            "name": "FFIN",
+            "description": "Fecha en formato AAAAMMDD como Char (8)",
+            "abapType": "Date",
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 8
+        },
+        {
+            "name": "KOSTL",
+            "description": "Centro de coste",
+            "abapType": "CharacterString",
+            "length": 10,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 10
+        },
+        {
+            "name": "KTEXT",
+            "description": "Denominación",
+            "abapType": "CharacterString",
+            "length": 20,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 20
+        },
+        {
+            "name": "GERE1",
+            "description": "Gerencia 1",
+            "abapType": "CharacterString",
+            "length": 30,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 30
+        },
+        {
+            "name": "GERE2",
+            "description": "Gerencia 2",
+            "abapType": "CharacterString",
+            "length": 30,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 30
+        },
+        {
+            "name": "ROTAC",
+            "description": "Rotacion",
+            "abapType": "CharacterString",
+            "length": 30,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 30
+        },
+        {
+            "name": "ROL",
+            "description": "Rol",
+            "abapType": "CharacterString",
+            "length": 30,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 30
+        },
+        {
+            "name": "FTE",
+            "description": "Cantidad/Unidad",
+            "abapType": "PackedNumber",
+            "length": 7,
+            "decimalCount": 2,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 9
+        },
+        {
+            "name": "COMUNA",
+            "description": "Distrito",
+            "abapType": "CharacterString",
+            "length": 40,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 40
+        },
+        {
+            "name": "SUELDOBASE",
+            "description": "Núm.entero (-2147483648 .. 2147483647)",
+            "abapType": "FourByteInteger",
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 11
+        },
+        {
+            "name": "AFP",
+            "description": "ID subplan pensiones",
+            "abapType": "NumericCharacterString",
+            "length": 3,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 3
+        },
+        {
+            "name": "NOMAFP",
+            "description": "AFP",
+            "abapType": "CharacterString",
+            "length": 30,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 30
+        },
+        {
+            "name": "PERSK",
+            "description": "Área de personal",
+            "abapType": "CharacterString",
+            "length": 2,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 2
+        },
+        {
+            "name": "PERSKTXT",
+            "description": "Denom.área personal",
+            "abapType": "CharacterString",
+            "length": 20,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 20
+        },
+        {
+            "name": "TURNOCOD",
+            "description": "Regla p.plan h.tbjo.",
+            "abapType": "CharacterString",
+            "length": 8,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 8
+        },
+        {
+            "name": "TURNODESCRIP",
+            "description": "TxtReglPlanHorTbjo",
+            "abapType": "CharacterString",
+            "length": 25,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 25
+        },
+        {
+            "name": "NOMISAPRE",
+            "description": "Isapre",
+            "abapType": "CharacterString",
+            "length": 30,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 30
+        },
+        {
+            "name": "ORGEH",
+            "description": "Unidad organizativa",
+            "abapType": "NumericCharacterString",
+            "length": 8,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 8
+        },
+        {
+            "name": "ORGEH_TXT",
+            "description": "Denominación objeto",
+            "abapType": "CharacterString",
+            "length": 40,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 40
+        },
+        {
+            "name": "GRADO_HAY",
+            "description": "Func.basada encuesta",
+            "abapType": "CharacterString",
+            "length": 8,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 8
+        },
+        {
+            "name": "INC_LABORAL",
+            "description": "Inclusión Laboral",
+            "abapType": "CharacterString",
+            "length": 2,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 2
+        }
+    ],
+    "parameters": {
+    }
+}
