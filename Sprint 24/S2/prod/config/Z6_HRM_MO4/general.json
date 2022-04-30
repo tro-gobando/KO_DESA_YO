@@ -1,0 +1,15 @@
+{
+    "created": {
+        "machine": "[::ffff:10.6.138.9]:51112",
+        "timestamp": "20211115T211742.893Z",
+        "user": "KOANDINA\\Tro-ecandia"
+    },
+    "destination": "s3_landing_$ENV_sec",
+    "lastChange": {
+        "machine": "[::ffff:181.42.160.35]:54751",
+        "timestamp": "20220314T180113.497Z",
+        "user": "KOANDINA\\PEDALVAREZL"
+    },
+    "source": "SAP_QBH100",
+    "type": "ODP"
+}

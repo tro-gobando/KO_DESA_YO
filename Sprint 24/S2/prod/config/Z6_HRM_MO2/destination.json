@@ -1,0 +1,19 @@
+{
+    "nameGenerator": {
+        "suffix": "",
+        "customName": "Z6HRMMO2_cl_sap",
+        "objectNamingMode": "Custom",
+        "appendsTimestamp": false
+    },
+    "internalDestinationSettings": {
+        "sapDateConversion": {
+            "enabled": true,
+            "replacementForInvalidDate": null,
+            "replacementForZeroDate": "1970-01-01",
+            "replacementForYear9999": "9999-12-31"
+        },
+        "columnNameKind": "Code"
+    },
+    "folderPath": "WITHOUT_PARTITION_OVERWRITE",
+    "columnNameKind": "Code"
+}

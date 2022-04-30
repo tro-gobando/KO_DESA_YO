@@ -1,0 +1,57 @@
+{
+    "functionName": "/SAPDS/RFC_READ_TABLE2",
+    "runInBackgroundJob": false,
+    "tables": 
+    [
+        {
+            "name": "/ANDINA/T024",
+            "description": "HR - Relacion Cl.Convenio+Funcion+Rotacion",
+            "fields": 
+            [
+                {
+                    "name": "TRFAR",
+                    "description": "Clase de convenio colectivo",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "STELL",
+                    "description": "Función",
+                    "abapType": "NumericCharacterString",
+                    "length": 8,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ROTACION",
+                    "description": "20 caract.",
+                    "abapType": "CharacterString",
+                    "length": 20,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ROL",
+                    "description": "20 caract.",
+                    "abapType": "CharacterString",
+                    "length": 20,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "COMENTARIO",
+                    "description": "30 caracteres",
+                    "abapType": "CharacterString",
+                    "length": 30,
+                    "isSelected": true,
+                    "conversionExit": ""
+                }
+            ]
+        }
+    ]
+}

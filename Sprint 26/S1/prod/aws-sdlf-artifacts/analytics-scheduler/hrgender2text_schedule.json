@@ -1,0 +1,17 @@
+{
+"crond_expression": {
+"S": "cron(9 30 * * ? *)"
+},
+"rule_name": {
+"S": "hrgender2text"
+},
+"status": {
+"S": "ENABLED"
+},
+"step_functions_arn": {
+"S": "arn:aws:states:us-east-1:654146749982:stateMachine:hrgender2text"
+},
+"validation_date_expression": {
+"S": "%Y-%m-%d"
+}
+}

@@ -1,0 +1,135 @@
+{
+    "functionName": "/SAPDS/RFC_READ_TABLE2",
+    "runInBackgroundJob": false,
+    "tables": 
+    [
+        {
+            "name": "/ANDINA/THRDECIN",
+            "description": "HR:Declaración de Intereses",
+            "fields": 
+            [
+                {
+                    "name": "MANDT",
+                    "description": "Mandante",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isPrimaryKey": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PERNR",
+                    "description": "Número de personal",
+                    "abapType": "NumericCharacterString",
+                    "length": 8,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CNAME",
+                    "description": "Nombre completo",
+                    "abapType": "CharacterString",
+                    "length": 80,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ICNUM",
+                    "description": "Número ID",
+                    "abapType": "CharacterString",
+                    "length": 30,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "USRID_LONG",
+                    "description": "Comunicación identificación larga/número",
+                    "abapType": "CharacterString",
+                    "length": 241,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PLSTX",
+                    "description": "Denominación de objeto",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ORGTX",
+                    "description": "Texto breve de unidad organizativa",
+                    "abapType": "CharacterString",
+                    "length": 25,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "KOSTL",
+                    "description": "Centro de coste",
+                    "abapType": "CharacterString",
+                    "length": 10,
+                    "isSelected": true,
+                    "conversionExit": "ALPHA"
+                },
+                {
+                    "name": "KOSTX",
+                    "description": "Texto del centro de coste",
+                    "abapType": "CharacterString",
+                    "length": 30,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PAIS",
+                    "description": "Pais",
+                    "abapType": "CharacterString",
+                    "length": 20,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "OPERACION",
+                    "description": "Operacion",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NOMBRE_BOSS",
+                    "description": "Nombre editado del empleado o candidato",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ORGTX_BOSS",
+                    "description": "Texto breve de unidad organizativa",
+                    "abapType": "CharacterString",
+                    "length": 25,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PLSTX_BOSS",
+                    "description": "Denominación de objeto",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "USRID_LONG_BOSS",
+                    "description": "Comunicación identificación larga/número",
+                    "abapType": "CharacterString",
+                    "length": 241,
+                    "isSelected": true,
+                    "conversionExit": ""
+                }
+            ]
+        }
+    ]
+}

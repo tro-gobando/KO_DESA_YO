@@ -1,0 +1,14 @@
+{
+    "created": {
+        "machine": "[::ffff:181.42.160.20]:62185",
+        "timestamp": "20210201T140241.113Z"
+    },
+    "destination": "s3_landing_prod_sec",
+    "lastChange": {
+        "machine": "[::ffff:10.6.138.9]:55244",
+        "timestamp": "20220406T193516.042Z",
+        "user": "KOANDINA\\Tro-gobando"
+    },
+    "source": "SAP_QBH100",
+    "type": "Table"
+}

@@ -1,0 +1,54 @@
+{
+    "name": "0PAYRL_AREA_2_TEXT",
+    "description": "Área de nómina (textos)",
+    "guid": "1e0c14ed-afea-4bf5-a7a5-303c34a1aab0",
+    "semantics": "Texts",
+    "context": "SAPI",
+    "supportsFull": true,
+    "supportsDelta": false,
+    "mode": "Full",
+    "transferDataOnDeltaInit": false,
+    "columns": 
+    [
+        {
+            "name": "LANGU",
+            "description": "Clave de idioma",
+            "abapType": "CharacterString",
+            "length": 1,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "selections": 
+            [
+                {
+                    "value": "E"
+                },
+                {
+                    "value": "S"
+                },
+                {
+                    "value": "P"
+                }
+            ],
+            "outputLength": 1
+        },
+        {
+            "name": "ABKRS",
+            "description": "Área de nómina",
+            "abapType": "CharacterString",
+            "length": 2,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 2
+        },
+        {
+            "name": "TXTSH",
+            "description": "Texto área nómina",
+            "abapType": "CharacterString",
+            "length": 20,
+            "isSelected": true,
+            "outputLength": 20
+        }
+    ],
+    "parameters": {
+    }
+}

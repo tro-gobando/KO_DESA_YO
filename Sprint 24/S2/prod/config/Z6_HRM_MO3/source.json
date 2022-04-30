@@ -1,0 +1,122 @@
+{
+    "name": "Z6_HRM_MO3",
+    "description": "Datos_Mano_Obra_3",
+    "guid": "28621038-7cad-48af-a524-1110b640c094",
+    "semantics": "TransactionalDataOrFacts",
+    "context": "SAPI",
+    "supportsFull": true,
+    "supportsDelta": false,
+    "mode": "Full",
+    "transferDataOnDeltaInit": false,
+    "columns": 
+    [
+        {
+            "name": "BUKRS",
+            "description": "Sociedad",
+            "abapType": "CharacterString",
+            "length": 4,
+            "isPrimaryKey": true,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 4
+        },
+        {
+            "name": "PABRJ",
+            "description": "Año de nómina",
+            "abapType": "NumericCharacterString",
+            "length": 4,
+            "isPrimaryKey": true,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 4
+        },
+        {
+            "name": "PABRP",
+            "description": "Período cál.nómina",
+            "abapType": "NumericCharacterString",
+            "length": 2,
+            "isPrimaryKey": true,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 2
+        },
+        {
+            "name": "KOSTL",
+            "description": "Centro de coste",
+            "abapType": "CharacterString",
+            "length": 10,
+            "isPrimaryKey": true,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 10
+        },
+        {
+            "name": "PERNR",
+            "description": "Número de personal",
+            "abapType": "NumericCharacterString",
+            "length": 8,
+            "isPrimaryKey": true,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 8
+        },
+        {
+            "name": "BEGDA",
+            "description": "Inicio de validez",
+            "abapType": "Date",
+            "isPrimaryKey": true,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 8
+        },
+        {
+            "name": "ENDDA",
+            "description": "Fin de validez",
+            "abapType": "Date",
+            "isPrimaryKey": true,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 8
+        },
+        {
+            "name": "DIASV",
+            "description": "Cantidad/Unidad",
+            "abapType": "PackedNumber",
+            "length": 7,
+            "decimalCount": 2,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 9
+        },
+        {
+            "name": "SALDO",
+            "description": "Cantidad/Unidad",
+            "abapType": "PackedNumber",
+            "length": 7,
+            "decimalCount": 2,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 9
+        },
+        {
+            "name": "ROTAC",
+            "description": "30 caracteres",
+            "abapType": "CharacterString",
+            "length": 30,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 30
+        },
+        {
+            "name": "ROL",
+            "description": "30 caracteres",
+            "abapType": "CharacterString",
+            "length": 30,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 30
+        }
+    ],
+    "parameters": {
+    }
+}

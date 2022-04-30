@@ -1,0 +1,2038 @@
+{
+    "functionName": "/SAPDS/RFC_READ_TABLE2",
+    "runInBackgroundJob": false,
+    "tables": 
+    [
+        {
+            "name": "PA0169",
+            "description": "Maestro personal: infotipo 0169 (planes ahorros)",
+            "fields": 
+            [
+                {
+                    "name": "MANDT",
+                    "description": "Mandante",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isPrimaryKey": true,
+                    "checkTable": "T000",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PERNR",
+                    "description": "Número de personal",
+                    "abapType": "NumericCharacterString",
+                    "length": 8,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "checkTable": "PA0003",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SUBTY",
+                    "description": "Subtipo",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "OBJPS",
+                    "description": "Identificación de objeto",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SPRPS",
+                    "description": "Indicador de bloqueo para registro de maestro de personal",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ENDDA",
+                    "description": "Fin de la validez",
+                    "abapType": "Date",
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BEGDA",
+                    "description": "Inicio de la validez",
+                    "abapType": "Date",
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SEQNR",
+                    "description": "Número de un registro de infotipo para misma clave",
+                    "abapType": "NumericCharacterString",
+                    "length": 3,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "AEDTM",
+                    "description": "Fecha última modificación",
+                    "abapType": "Date",
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "UNAME",
+                    "description": "Nombre del responsable que ha modificado el objeto",
+                    "abapType": "CharacterString",
+                    "length": 12,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "HISTO",
+                    "description": "Indicador de historial",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITXEX",
+                    "description": "Existe texto para infotipo",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "REFEX",
+                    "description": "Existen campos referencia (costes primarios/secundarios)",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ORDEX",
+                    "description": "Existen campos de notificación",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITBLD",
+                    "description": "Control dynpros infotipo",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PREAS",
+                    "description": "Motivo de modificación Datos maestros",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "checkTable": "T530E",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG1",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG2",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG3",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG4",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "RESE1",
+                    "description": "Campo de reserva/ Campo no utilizado de longitud 2",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "RESE2",
+                    "description": "Campo de reserva/ Campo no utilizado de longitud 2",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "GRPVL",
+                    "description": "Valor de agrupamiento p.contratos por ocupación",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BAREA",
+                    "description": "Área de beneficios",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "checkTable": "T5UB3",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PLTYP",
+                    "description": "Cl.plan beneficios",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UB1",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPLAN",
+                    "description": "Plan de beneficios",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UBA",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BENGR",
+                    "description": "Beneficios: Primera agrupación de programas",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UBT",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BSTAT",
+                    "description": "Beneficios, segunda agrupación de programas",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UB9",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ELIDT",
+                    "description": "Beneficios: Fecha de admisibilidad calculada",
+                    "abapType": "Date",
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ELDTO",
+                    "description": "Beneficios: Sustitución fecha admisibilidad",
+                    "abapType": "Date",
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PARDT",
+                    "description": "Beneficios: Fecha de primera participación en plan",
+                    "abapType": "Date",
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ENRTY",
+                    "description": "Beneficios: Tipo inscripción plan",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "EVENT",
+                    "description": "Beneficios: Motivo de ajuste",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T74HA",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PERIO",
+                    "description": "Beneficios: Período para cálculos",
+                    "abapType": "NumericCharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "EEAMT",
+                    "description": "Beneficios, importe contribución antes impuesto de empleado",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "EEPCT",
+                    "description": "Beneficios; % cotización antes de impuestos para empleado",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 5,
+                    "isSelected": true,
+                    "formattedLength": 9,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "EEUNT",
+                    "description": "Beneficios, contr.antes impto.empleado, cantidad unidades",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "isSelected": true,
+                    "formattedLength": 11,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PTAMT",
+                    "description": "Beneficios: Importe contribución después impuestos empleado",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PTPCT",
+                    "description": "Beneficios; % cotización después de impuestos p.empleado",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 5,
+                    "isSelected": true,
+                    "formattedLength": 9,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PTUNT",
+                    "description": "Beneficios: Ctd.unidades contrib.desp.impuestos empleado",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "isSelected": true,
+                    "formattedLength": 11,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PSTTX",
+                    "description": "Beneficios: Ind.inicio inmed.dedución contrib.después impto.",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ROLLO",
+                    "description": "Beneficios: Indicador antes impto.prorrogado después impto.",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BCAMT",
+                    "description": "Beneficio importe contrib.antes impto.empleado p.prima",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BCPCT",
+                    "description": "Beneficios; % cotización antes impto.empleado p.prima",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 5,
+                    "isSelected": true,
+                    "formattedLength": 9,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BCUNT",
+                    "description": "Beneficio ctd.contrib.antes impto.empleado p.prima",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "isSelected": true,
+                    "formattedLength": 11,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPAMT",
+                    "description": "Benef.importe contr.después impto.empleado p.prima",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPPCT",
+                    "description": "Beneficios; % cotización después impto.empleado p.prima",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 5,
+                    "isSelected": true,
+                    "formattedLength": 9,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPUNT",
+                    "description": "Beneficios, ctd.un.contr.después impto.empleado p.prima",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "isSelected": true,
+                    "formattedLength": 11,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPTTX",
+                    "description": "Benef.inic.deduc.inmed.contrib.después impto.nómina esp.",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BROLL",
+                    "description": "Beneficios indicador antes impto.prorrogado (prima)",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SPADT",
+                    "description": "Beneficios, fecha aprobación de cónyuge",
+                    "abapType": "Date",
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PAAMT",
+                    "description": "Beneficios: Importe compensatorio de la jubilación",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ACCTN",
+                    "description": "Beneficios, núm.cuenta",
+                    "abapType": "CharacterString",
+                    "length": 20,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LIFEL",
+                    "description": "Beneficios, límite de cotización vitalicia",
+                    "abapType": "PackedNumber",
+                    "length": 15,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 20,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITS01",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DTY01",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DID01",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPT01",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITS02",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DTY02",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DID02",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPT02",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITS03",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DTY03",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DID03",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPT03",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITS04",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DTY04",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DID04",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPT04",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITS05",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DTY05",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DID05",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPT05",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITS06",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DTY06",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DID06",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPT06",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITS07",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DTY07",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DID07",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPT07",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITS08",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DTY08",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DID08",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPT08",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITS09",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DTY09",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DID09",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPT09",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITS10",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DTY10",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DID10",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPT10",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITS11",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DTY11",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DID11",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPT11",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITS12",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DTY12",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DID12",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPT12",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITS13",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DTY13",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DID13",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPT13",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITS14",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DTY14",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DID14",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPT14",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITS15",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DTY15",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DID15",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPT15",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITS16",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DTY16",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DID16",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPT16",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITS17",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DTY17",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DID17",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPT17",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITS18",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DTY18",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DID18",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPT18",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITS19",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DTY19",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DID19",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPT19",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITS20",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DTY20",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DID20",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BPT20",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CIS01",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CTY01",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CID01",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CPT01",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CIS02",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CTY02",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CID02",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CPT02",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CIS03",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CTY03",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CID03",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CPT03",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CIS04",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CTY04",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CID04",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CPT04",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CIS05",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CTY05",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CID05",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CPT05",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CIS06",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CTY06",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CID06",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CPT06",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CIS07",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CTY07",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CID07",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CPT07",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CIS08",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CTY08",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CID08",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CPT08",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CIS09",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CTY09",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CID09",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CPT09",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CIS10",
+                    "description": "Beneficios: Flag de infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CTY10",
+                    "description": "Beneficios, clase de dependiente",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CID10",
+                    "description": "ID objeto asegur.depen.",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CPT10",
+                    "description": "Beneficios: Porcentaje pago para beneficiarios",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CURRE",
+                    "description": "Beneficios: Clave de moneda",
+                    "abapType": "CharacterString",
+                    "length": 5,
+                    "isSelected": true,
+                    "checkTable": "TCURC",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INV01",
+                    "description": "Beneficios: Inversión p.planes de ahorros",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UBN",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IPT01",
+                    "description": "Porcentaje inversión",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IAM01",
+                    "description": "Beneficio: Importe de la inversión",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INV02",
+                    "description": "Beneficios: Inversión p.planes de ahorros",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UBN",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IPT02",
+                    "description": "Porcentaje inversión",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IAM02",
+                    "description": "Beneficio: Importe de la inversión",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INV03",
+                    "description": "Beneficios: Inversión p.planes de ahorros",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UBN",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IPT03",
+                    "description": "Porcentaje inversión",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IAM03",
+                    "description": "Beneficio: Importe de la inversión",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INV04",
+                    "description": "Beneficios: Inversión p.planes de ahorros",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UBN",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IPT04",
+                    "description": "Porcentaje inversión",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IAM04",
+                    "description": "Beneficio: Importe de la inversión",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INV05",
+                    "description": "Beneficios: Inversión p.planes de ahorros",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UBN",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IPT05",
+                    "description": "Porcentaje inversión",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IAM05",
+                    "description": "Beneficio: Importe de la inversión",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INV06",
+                    "description": "Beneficios: Inversión p.planes de ahorros",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UBN",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IPT06",
+                    "description": "Porcentaje inversión",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IAM06",
+                    "description": "Beneficio: Importe de la inversión",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INV07",
+                    "description": "Beneficios: Inversión p.planes de ahorros",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UBN",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IPT07",
+                    "description": "Porcentaje inversión",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IAM07",
+                    "description": "Beneficio: Importe de la inversión",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INV08",
+                    "description": "Beneficios: Inversión p.planes de ahorros",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UBN",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IPT08",
+                    "description": "Porcentaje inversión",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IAM08",
+                    "description": "Beneficio: Importe de la inversión",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INV09",
+                    "description": "Beneficios: Inversión p.planes de ahorros",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UBN",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IPT09",
+                    "description": "Porcentaje inversión",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IAM09",
+                    "description": "Beneficio: Importe de la inversión",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INV10",
+                    "description": "Beneficios: Inversión p.planes de ahorros",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UBN",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IPT10",
+                    "description": "Porcentaje inversión",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IAM10",
+                    "description": "Beneficio: Importe de la inversión",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INV11",
+                    "description": "Beneficios: Inversión p.planes de ahorros",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UBN",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IPT11",
+                    "description": "Porcentaje inversión",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IAM11",
+                    "description": "Beneficio: Importe de la inversión",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INV12",
+                    "description": "Beneficios: Inversión p.planes de ahorros",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UBN",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IPT12",
+                    "description": "Porcentaje inversión",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IAM12",
+                    "description": "Beneficio: Importe de la inversión",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INV13",
+                    "description": "Beneficios: Inversión p.planes de ahorros",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UBN",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IPT13",
+                    "description": "Porcentaje inversión",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IAM13",
+                    "description": "Beneficio: Importe de la inversión",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INV14",
+                    "description": "Beneficios: Inversión p.planes de ahorros",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UBN",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IPT14",
+                    "description": "Porcentaje inversión",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IAM14",
+                    "description": "Beneficio: Importe de la inversión",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INV15",
+                    "description": "Beneficios: Inversión p.planes de ahorros",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UBN",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IPT15",
+                    "description": "Porcentaje inversión",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IAM15",
+                    "description": "Beneficio: Importe de la inversión",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INV16",
+                    "description": "Beneficios: Inversión p.planes de ahorros",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UBN",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IPT16",
+                    "description": "Porcentaje inversión",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IAM16",
+                    "description": "Beneficio: Importe de la inversión",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INV17",
+                    "description": "Beneficios: Inversión p.planes de ahorros",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UBN",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IPT17",
+                    "description": "Porcentaje inversión",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IAM17",
+                    "description": "Beneficio: Importe de la inversión",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INV18",
+                    "description": "Beneficios: Inversión p.planes de ahorros",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UBN",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IPT18",
+                    "description": "Porcentaje inversión",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IAM18",
+                    "description": "Beneficio: Importe de la inversión",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INV19",
+                    "description": "Beneficios: Inversión p.planes de ahorros",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UBN",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IPT19",
+                    "description": "Porcentaje inversión",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IAM19",
+                    "description": "Beneficio: Importe de la inversión",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INV20",
+                    "description": "Beneficios: Inversión p.planes de ahorros",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T5UBN",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IPT20",
+                    "description": "Porcentaje inversión",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "IAM20",
+                    "description": "Beneficio: Importe de la inversión",
+                    "abapType": "PackedNumber",
+                    "length": 13,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 17,
+                    "conversionExit": ""
+                }
+            ]
+        }
+    ]
+}

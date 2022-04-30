@@ -1,0 +1,227 @@
+{
+    "functionName": "/SAPDS/RFC_READ_TABLE2",
+    "runInBackgroundJob": false,
+    "tables": 
+    [
+        {
+            "name": "HRP1001",
+            "description": "Tabla de BD del infotipo 1001",
+            "fields": 
+            [
+                {
+                    "name": "OTYPE",
+                    "description": "Tp.objeto",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "checkTable": "T778O",
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "OBJID",
+                    "description": "ID objeto",
+                    "abapType": "NumericCharacterString",
+                    "length": 8,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "checkTable": "PLOGI",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PLVAR",
+                    "description": "Variante de plan",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "checkTable": "T778P",
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "RSIGN",
+                    "description": "Particularidad del enlace",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "RELAT",
+                    "description": "Vinculación entre objetos",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "checkTable": "T778V",
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ISTAT",
+                    "description": "Status de planificación",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "checkTable": "T778S",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PRIOX",
+                    "description": "Prioridad",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BEGDA",
+                    "description": "Fecha de inicio",
+                    "abapType": "Date",
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ENDDA",
+                    "description": "Fecha final",
+                    "abapType": "Date",
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "VARYF",
+                    "description": "Campo de variación del fichero PLOG",
+                    "abapType": "CharacterString",
+                    "length": 10,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SEQNR",
+                    "description": "Número de un registro de infotipo para misma clave",
+                    "abapType": "NumericCharacterString",
+                    "length": 3,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INFTY",
+                    "description": "Infotipo",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T778T",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "OTJID",
+                    "description": "Concatenación de tipo de objeto e ID de objeto",
+                    "abapType": "CharacterString",
+                    "length": 10,
+                    "isSelected": true,
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SUBTY",
+                    "description": "Subtipo",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T778U",
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "AEDTM",
+                    "description": "Fecha de modificación",
+                    "abapType": "Date",
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "UNAME",
+                    "description": "Usuario",
+                    "abapType": "CharacterString",
+                    "length": 12,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "REASN",
+                    "description": "Motivo",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "HISTO",
+                    "description": "Indicador de historial",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITXNR",
+                    "description": "Elemento de texto para el infotipo",
+                    "abapType": "NumericCharacterString",
+                    "length": 8,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SCLAS",
+                    "description": "Tipo del objeto vinculado",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "checkTable": "T778O",
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SOBID",
+                    "description": "ID del objeto vinculado",
+                    "abapType": "CharacterString",
+                    "length": 45,
+                    "isSelected": true,
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PROZT",
+                    "description": "Porcentaje ponderación",
+                    "abapType": "PackedNumber",
+                    "length": 5,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 6,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ADATANR",
+                    "description": "Número datos adicionales",
+                    "abapType": "CharacterString",
+                    "length": 32,
+                    "isSelected": true,
+                    "checkTable": "HRIADATANR",
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                }
+            ]
+        }
+    ]
+}

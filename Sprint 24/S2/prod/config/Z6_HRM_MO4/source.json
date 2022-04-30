@@ -1,0 +1,111 @@
+{
+    "name": "Z6_HRM_MO4",
+    "description": "Datos_Mano_Obra_4",
+    "guid": "7a648fc5-ee18-49fa-a7e9-2c38750e2841",
+    "semantics": "TransactionalDataOrFacts",
+    "context": "SAPI",
+    "supportsFull": true,
+    "supportsDelta": false,
+    "mode": "Full",
+    "transferDataOnDeltaInit": false,
+    "columns": 
+    [
+        {
+            "name": "BUKRS",
+            "description": "Sociedad",
+            "abapType": "CharacterString",
+            "length": 4,
+            "isPrimaryKey": true,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 4
+        },
+        {
+            "name": "PERNR",
+            "description": "Número de personal",
+            "abapType": "NumericCharacterString",
+            "length": 8,
+            "isPrimaryKey": true,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 8
+        },
+        {
+            "name": "PABRP",
+            "description": "Período cál.nómina",
+            "abapType": "NumericCharacterString",
+            "length": 2,
+            "isPrimaryKey": true,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 2
+        },
+        {
+            "name": "PABRJ",
+            "description": "Año de nómina",
+            "abapType": "NumericCharacterString",
+            "length": 4,
+            "isPrimaryKey": true,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 4
+        },
+        {
+            "name": "BEGDA",
+            "description": "Inicio de validez",
+            "abapType": "Date",
+            "isPrimaryKey": true,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 8
+        },
+        {
+            "name": "TURNOCOD",
+            "description": "Enlace lógico",
+            "abapType": "CharacterString",
+            "length": 4,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 4
+        },
+        {
+            "name": "TURNOTXT",
+            "description": "Car.20",
+            "abapType": "CharacterString",
+            "length": 20,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 20
+        },
+        {
+            "name": "HHEE",
+            "description": "Cantidad/Unidad",
+            "abapType": "PackedNumber",
+            "length": 7,
+            "decimalCount": 2,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 9
+        },
+        {
+            "name": "KOSTL",
+            "description": "Centro de coste",
+            "abapType": "CharacterString",
+            "length": 10,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 10
+        },
+        {
+            "name": "KTEXT",
+            "description": "Denominación",
+            "abapType": "CharacterString",
+            "length": 20,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 20
+        }
+    ],
+    "parameters": {
+    }
+}

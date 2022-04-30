@@ -1,0 +1,77 @@
+{
+    "functionName": "/SAPDS/RFC_READ_TABLE2",
+    "runInBackgroundJob": false,
+    "tables": 
+    [
+        {
+            "name": "/ANDINA/HRPAT002",
+            "description": "HR: Información Unidades Organizativas",
+            "fields": 
+            [
+                {
+                    "name": "BUKRS",
+                    "description": "Sociedad",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PERNR_BOSS",
+                    "description": "Número de personal",
+                    "abapType": "NumericCharacterString",
+                    "length": 8,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ORGEH_PADRE",
+                    "description": "Unidad organizativa",
+                    "abapType": "NumericCharacterString",
+                    "length": 8,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ORGTX_PADRE",
+                    "description": "Denominación de objeto",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NIVEL",
+                    "description": "Nivel del elemento en la estructura",
+                    "abapType": "FourByteInteger",
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "formattedLength": 11,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ORGEH_HIJA",
+                    "description": "Unidad organizativa",
+                    "abapType": "NumericCharacterString",
+                    "length": 8,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ORGTX_HIJA",
+                    "description": "Denominación de objeto",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                }
+            ]
+        }
+    ]
+}

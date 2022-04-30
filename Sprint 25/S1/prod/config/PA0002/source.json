@@ -1,0 +1,600 @@
+{
+    "functionName": "/SAPDS/RFC_READ_TABLE2",
+    "runInBackgroundJob": false,
+    "tables": 
+    [
+        {
+            "name": "PA0002",
+            "description": "Registro maestro de personal Infotipo 0002 (Datos pers.)",
+            "fields": 
+            [
+                {
+                    "name": "MANDT",
+                    "description": "Mandante",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isPrimaryKey": true,
+                    "checkTable": "T000",
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PERNR",
+                    "description": "Número de personal",
+                    "abapType": "NumericCharacterString",
+                    "length": 8,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "checkTable": "PA0003",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SUBTY",
+                    "description": "Subtipo",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "OBJPS",
+                    "description": "Identificación de objeto",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SPRPS",
+                    "description": "Indicador de bloqueo para registro de maestro de personal",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ENDDA",
+                    "description": "Fin de la validez",
+                    "abapType": "Date",
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BEGDA",
+                    "description": "Inicio de la validez",
+                    "abapType": "Date",
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SEQNR",
+                    "description": "Número de un registro de infotipo para misma clave",
+                    "abapType": "NumericCharacterString",
+                    "length": 3,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "AEDTM",
+                    "description": "Fecha última modificación",
+                    "abapType": "Date",
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "UNAME",
+                    "description": "Nombre del responsable que ha modificado el objeto",
+                    "abapType": "CharacterString",
+                    "length": 12,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "HISTO",
+                    "description": "Indicador de historial",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITXEX",
+                    "description": "Existe texto para infotipo",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "REFEX",
+                    "description": "Existen campos referencia (costes primarios/secundarios)",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ORDEX",
+                    "description": "Existen campos de notificación",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITBLD",
+                    "description": "Control dynpros infotipo",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PREAS",
+                    "description": "Motivo de modificación Datos maestros",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "checkTable": "T530E",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG1",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG2",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG3",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG4",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "RESE1",
+                    "description": "Campo de reserva/ Campo no utilizado de longitud 2",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "RESE2",
+                    "description": "Campo de reserva/ Campo no utilizado de longitud 2",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "GRPVL",
+                    "description": "Valor de agrupamiento p.contratos por ocupación",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INITS",
+                    "description": "Iniciales",
+                    "abapType": "CharacterString",
+                    "length": 10,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NACHN",
+                    "description": "Apellido",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NAME2",
+                    "description": "2°Apellido",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NACH2",
+                    "description": "Segundo apellido",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "VORNA",
+                    "description": "Nombre de pila",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CNAME",
+                    "description": "Nombre completo",
+                    "abapType": "CharacterString",
+                    "length": 80,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "TITEL",
+                    "description": "Título",
+                    "abapType": "CharacterString",
+                    "length": 15,
+                    "isSelected": true,
+                    "checkTable": "T535N",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "TITL2",
+                    "description": "Segundo título",
+                    "abapType": "CharacterString",
+                    "length": 15,
+                    "isSelected": true,
+                    "checkTable": "T535N",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NAMZU",
+                    "description": "Título",
+                    "abapType": "CharacterString",
+                    "length": 15,
+                    "isSelected": true,
+                    "checkTable": "T535N",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "VORSW",
+                    "description": "Prefijo",
+                    "abapType": "CharacterString",
+                    "length": 15,
+                    "isSelected": true,
+                    "checkTable": "T535N",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "VORS2",
+                    "description": "Segundo prefijo",
+                    "abapType": "CharacterString",
+                    "length": 15,
+                    "isSelected": true,
+                    "checkTable": "T535N",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "RUFNM",
+                    "description": "Nombre de pila",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "MIDNM",
+                    "description": "Segundo nom.pila",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "KNZNM",
+                    "description": "Indicador de edición de nombres",
+                    "abapType": "NumericCharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANRED",
+                    "description": "Clave de tratamiento",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "checkTable": "T522G",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "GESCH",
+                    "description": "Clave de sexo",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "GBDAT",
+                    "description": "Fecha de nacimiento",
+                    "abapType": "Date",
+                    "isSelected": true,
+                    "conversionExit": "PDATE"
+                },
+                {
+                    "name": "GBLND",
+                    "description": "País de nacimiento",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isSelected": true,
+                    "checkTable": "T005",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "GBDEP",
+                    "description": "Estado federado",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isSelected": true,
+                    "checkTable": "T005S",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "GBORT",
+                    "description": "Lugar de nacimiento",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NATIO",
+                    "description": "Nacionalidad",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isSelected": true,
+                    "checkTable": "T005",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NATI2",
+                    "description": "Segunda nacionalidad",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isSelected": true,
+                    "checkTable": "T005",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NATI3",
+                    "description": "Tercera nacionalidad",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isSelected": true,
+                    "checkTable": "T005",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SPRSL",
+                    "description": "Idioma para comunicación",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "formattedLength": 2,
+                    "checkTable": "T002",
+                    "conversionExit": "ISOLA"
+                },
+                {
+                    "name": "KONFE",
+                    "description": "Clave de religión",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FAMST",
+                    "description": "Clave para el estado civil",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FAMDT",
+                    "description": "Inicio de validez del estado civil actual",
+                    "abapType": "Date",
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANZKD",
+                    "description": "Nº de hijos",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 4,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NACON",
+                    "description": "Conexión de nombres",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PERMO",
+                    "description": "Modificador para identificador personal",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PERID",
+                    "description": "Número de identificación personal",
+                    "abapType": "CharacterString",
+                    "length": 20,
+                    "isSelected": true,
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "GBPAS",
+                    "description": "Fecha de nacimiento según pasaporte",
+                    "abapType": "Date",
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FNAMK",
+                    "description": "Nombre de pila (Katakana)",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LNAMK",
+                    "description": "Sólo relevante para Japón",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FNAMR",
+                    "description": "Nombre de pila (Romaji)",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LNAMR",
+                    "description": "Apellidos (Romaji)",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NABIK",
+                    "description": "Apellido de soltera (Katakana)",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NABIR",
+                    "description": "Apellido de soltera (Romaji)",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NICKK",
+                    "description": "Koseki (Katakana)",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NICKR",
+                    "description": "Koseki (Romaji)",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "GBJHR",
+                    "description": "Año nacimiento",
+                    "abapType": "NumericCharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "indexed": "Ascending",
+                    "conversionExit": "GJAHR"
+                },
+                {
+                    "name": "GBMON",
+                    "description": "Mes de nacimiento",
+                    "abapType": "NumericCharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "GBTAG",
+                    "description": "Día de nacimiento (dentro de un mes/año)",
+                    "abapType": "NumericCharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NCHMC",
+                    "description": "Apellido (campo p.Ayuda p.búsqueda)",
+                    "abapType": "CharacterString",
+                    "length": 25,
+                    "isSelected": true,
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "VNAMC",
+                    "description": "Nombre (campo de Ayuda p.búsqueda)",
+                    "abapType": "CharacterString",
+                    "length": 25,
+                    "isSelected": true,
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NAMZ2",
+                    "description": "Compl.nombre apellido soltera",
+                    "abapType": "CharacterString",
+                    "length": 15,
+                    "isSelected": true,
+                    "checkTable": "T535N",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ZZ_AMPL",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "name": "0EMPLGROUP_TEXT",
+    "description": "Grupo de personal",
+    "guid": "2acfa7d2-fb6e-4ac4-8027-24ed7cbd0cfb",
+    "semantics": "Texts",
+    "context": "SAPI",
+    "supportsFull": true,
+    "supportsDelta": false,
+    "mode": "Full",
+    "transferDataOnDeltaInit": false,
+    "columns": 
+    [
+        {
+            "name": "SPRSL",
+            "description": "Clave de idioma",
+            "abapType": "CharacterString",
+            "length": 1,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "selections": 
+            [
+                {
+                    "value": "S"
+                },
+                {
+                    "value": "P"
+                },
+                {
+                    "value": "E"
+                }
+            ],
+            "outputLength": 1
+        },
+        {
+            "name": "PERSG",
+            "description": "Grupo de personal",
+            "abapType": "CharacterString",
+            "length": 1,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 1
+        },
+        {
+            "name": "TXTSH",
+            "description": "Denom.grupo personal",
+            "abapType": "CharacterString",
+            "length": 20,
+            "isSelected": true,
+            "outputLength": 20
+        }
+    ],
+    "parameters": {
+    }
+}

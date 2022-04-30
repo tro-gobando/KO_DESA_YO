@@ -1,0 +1,54 @@
+{
+    "name": "0GENDER_2_TEXT",
+    "description": "Sexo (textos)",
+    "guid": "195dadd1-8bd4-4dc2-93bb-b13d50a43c03",
+    "semantics": "Texts",
+    "context": "SAPI",
+    "supportsFull": true,
+    "supportsDelta": false,
+    "mode": "Full",
+    "transferDataOnDeltaInit": false,
+    "columns": 
+    [
+        {
+            "name": "LANGU",
+            "description": "Clave de idioma",
+            "abapType": "CharacterString",
+            "length": 1,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "selections": 
+            [
+                {
+                    "value": "S"
+                },
+                {
+                    "value": "P"
+                },
+                {
+                    "value": "E"
+                }
+            ],
+            "outputLength": 1
+        },
+        {
+            "name": "KEY1",
+            "description": "Campo clave: Textos",
+            "abapType": "CharacterString",
+            "length": 60,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 60
+        },
+        {
+            "name": "TXTLG",
+            "description": "Descripción larga",
+            "abapType": "CharacterString",
+            "length": 60,
+            "isSelected": true,
+            "outputLength": 60
+        }
+    ],
+    "parameters": {
+    }
+}

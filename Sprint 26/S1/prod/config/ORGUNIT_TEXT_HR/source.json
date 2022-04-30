@@ -1,0 +1,78 @@
+{
+    "name": "0ORGUNIT_TEXT",
+    "description": "Unidad organizativa",
+    "guid": "a7b5cba8-749f-4bc7-b0e3-fdc3e312c51c",
+    "semantics": "Texts",
+    "context": "SAPI",
+    "supportsFull": true,
+    "supportsDelta": false,
+    "mode": "Full",
+    "transferDataOnDeltaInit": false,
+    "columns": 
+    [
+        {
+            "name": "LANGU",
+            "description": "Clave de idioma",
+            "abapType": "CharacterString",
+            "length": 1,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "selections": 
+            [
+                {
+                    "value": "S"
+                },
+                {
+                    "value": "E"
+                },
+                {
+                    "value": "P"
+                }
+            ],
+            "outputLength": 1
+        },
+        {
+            "name": "KEY1",
+            "description": "Campo clave: Textos",
+            "abapType": "CharacterString",
+            "length": 60,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 60
+        },
+        {
+            "name": "DATETO",
+            "description": "Validez hasta",
+            "abapType": "Date",
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 8
+        },
+        {
+            "name": "DATEFROM",
+            "description": "Válido de",
+            "abapType": "Date",
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 8
+        },
+        {
+            "name": "TXTSH",
+            "description": "Descripción breve",
+            "abapType": "CharacterString",
+            "length": 20,
+            "isSelected": true,
+            "outputLength": 20
+        },
+        {
+            "name": "TXTMD",
+            "description": "Descripción media",
+            "abapType": "CharacterString",
+            "length": 40,
+            "isSelected": true,
+            "outputLength": 40
+        }
+    ],
+    "parameters": {
+    }
+}

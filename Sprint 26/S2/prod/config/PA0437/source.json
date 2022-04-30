@@ -1,0 +1,598 @@
+{
+    "functionName": "/SAPDS/RFC_READ_TABLE2",
+    "runInBackgroundJob": false,
+    "tables": 
+    [
+        {
+            "name": "PA0437",
+            "description": "Multiple employment (BR)",
+            "fields": 
+            [
+                {
+                    "name": "MANDT",
+                    "description": "Mandante",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isPrimaryKey": true,
+                    "checkTable": "T000",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PERNR",
+                    "description": "Número de personal",
+                    "abapType": "NumericCharacterString",
+                    "length": 8,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "checkTable": "PA0003",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SUBTY",
+                    "description": "Subtipo",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "OBJPS",
+                    "description": "Identificación de objeto",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SPRPS",
+                    "description": "Indicador de bloqueo para registro de maestro de personal",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ENDDA",
+                    "description": "Fin de la validez",
+                    "abapType": "Date",
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BEGDA",
+                    "description": "Inicio de la validez",
+                    "abapType": "Date",
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SEQNR",
+                    "description": "Número de un registro de infotipo para misma clave",
+                    "abapType": "NumericCharacterString",
+                    "length": 3,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "AEDTM",
+                    "description": "Fecha última modificación",
+                    "abapType": "Date",
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "UNAME",
+                    "description": "Nombre del responsable que ha modificado el objeto",
+                    "abapType": "CharacterString",
+                    "length": 12,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "HISTO",
+                    "description": "Indicador de historial",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITXEX",
+                    "description": "Existe texto para infotipo",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "REFEX",
+                    "description": "Existen campos referencia (costes primarios/secundarios)",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ORDEX",
+                    "description": "Existen campos de notificación",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITBLD",
+                    "description": "Control dynpros infotipo",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PREAS",
+                    "description": "Motivo de modificación Datos maestros",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "checkTable": "T530E",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG1",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG2",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG3",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG4",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "RESE1",
+                    "description": "Campo de reserva/ Campo no utilizado de longitud 2",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "RESE2",
+                    "description": "Campo de reserva/ Campo no utilizado de longitud 2",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "GRPVL",
+                    "description": "Valor de agrupamiento p.contratos por ocupación",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "EMPLO",
+                    "description": "Other employer",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGA01",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BET01",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGA02",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BET02",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGA03",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BET03",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGA04",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BET04",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGA05",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BET05",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGA06",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BET06",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGA07",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BET07",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGA08",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BET08",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGA09",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BET09",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGA10",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BET10",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGA11",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BET11",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGA12",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BET12",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGA13",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BET13",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGA14",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BET14",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGA15",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BET15",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGA16",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BET16",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGA17",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BET17",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGA18",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BET18",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGA19",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BET19",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGA20",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BET20",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NRINC",
+                    "description": "Registration number in the CNPJ",
+                    "abapType": "NumericCharacterString",
+                    "length": 14,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CATTR",
+                    "description": "Code of worker category",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "checkTable": "T7BRCX",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CPF_NR",
+                    "description": "Sole Proprietor's Registry number (CPF)",
+                    "abapType": "CharacterString",
+                    "length": 15,
+                    "isSelected": true,
+                    "conversionExit": ""
+                }
+            ]
+        }
+    ]
+}

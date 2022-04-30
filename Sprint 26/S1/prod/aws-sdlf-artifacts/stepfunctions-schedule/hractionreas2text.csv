@@ -1,0 +1,2 @@
+JOBID;JOBNAME;JOBGROUP;LEVEL;DOMAIN;PRE_VALIDATION_JOB_NAME;POST_VALIDATION_JOB_NAME
+J01;analytics-job-files/tb_regional_hractionreas2text_analytics;1;1;hractionreas2text;;

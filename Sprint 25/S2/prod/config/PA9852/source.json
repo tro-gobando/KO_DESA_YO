@@ -1,0 +1,848 @@
+{
+    "functionName": "/SAPDS/RFC_READ_TABLE2",
+    "runInBackgroundJob": false,
+    "tables": 
+    [
+        {
+            "name": "PA9852",
+            "description": "Registro maestro de personal Infotipo 9852",
+            "fields": 
+            [
+                {
+                    "name": "PERNR",
+                    "description": "Número de personal",
+                    "abapType": "NumericCharacterString",
+                    "length": 8,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "checkTable": "PA0003",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SUBTY",
+                    "description": "Subtipo",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "OBJPS",
+                    "description": "Identificación de objeto",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SPRPS",
+                    "description": "Indicador de bloqueo para registro de maestro de personal",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ENDDA",
+                    "description": "Fin de la validez",
+                    "abapType": "Date",
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BEGDA",
+                    "description": "Inicio de la validez",
+                    "abapType": "Date",
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SEQNR",
+                    "description": "Número de un registro de infotipo para misma clave",
+                    "abapType": "NumericCharacterString",
+                    "length": 3,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "AEDTM",
+                    "description": "Fecha última modificación",
+                    "abapType": "Date",
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "UNAME",
+                    "description": "Nombre del responsable que ha modificado el objeto",
+                    "abapType": "CharacterString",
+                    "length": 12,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "HISTO",
+                    "description": "Indicador de historial",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITXEX",
+                    "description": "Existe texto para infotipo",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "REFEX",
+                    "description": "Existen campos referencia (costes primarios/secundarios)",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ORDEX",
+                    "description": "Existen campos de notificación",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITBLD",
+                    "description": "Control dynpros infotipo",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PREAS",
+                    "description": "Motivo de modificación Datos maestros",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "checkTable": "T530E",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG1",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG2",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG3",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG4",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "RESE1",
+                    "description": "Campo de reserva/ Campo no utilizado de longitud 2",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "RESE2",
+                    "description": "Campo de reserva/ Campo no utilizado de longitud 2",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "GRPVL",
+                    "description": "Valor de agrupamiento p.contratos por ocupación",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "TIPVEND",
+                    "description": "Categoría Comisión",
+                    "abapType": "NumericCharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "TIP_VEN",
+                    "description": "Tipo de vendedor",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "WAERS",
+                    "description": "Clave de moneda",
+                    "abapType": "CharacterString",
+                    "length": 5,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGART01",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANZHL01",
+                    "description": "Cantidad",
+                    "abapType": "PackedNumber",
+                    "length": 7,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 10,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BETRG01",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGART02",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANZHL02",
+                    "description": "Cantidad",
+                    "abapType": "PackedNumber",
+                    "length": 7,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 10,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BETRG02",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGART03",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANZHL03",
+                    "description": "Cantidad",
+                    "abapType": "PackedNumber",
+                    "length": 7,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 10,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BETRG03",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGART04",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANZHL04",
+                    "description": "Cantidad",
+                    "abapType": "PackedNumber",
+                    "length": 7,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 10,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BETRG04",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGART05",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANZHL05",
+                    "description": "Cantidad",
+                    "abapType": "PackedNumber",
+                    "length": 7,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 10,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BETRG05",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGART06",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BETRG06",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANZHL06",
+                    "description": "Cantidad",
+                    "abapType": "PackedNumber",
+                    "length": 7,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 10,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGART07",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANZHL07",
+                    "description": "Cantidad",
+                    "abapType": "PackedNumber",
+                    "length": 7,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 10,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BETRG07",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGART08",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANZHL08",
+                    "description": "Cantidad",
+                    "abapType": "PackedNumber",
+                    "length": 7,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 10,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BETRG08",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGART09",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANZHL09",
+                    "description": "Cantidad",
+                    "abapType": "PackedNumber",
+                    "length": 7,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 10,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BETRG09",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGART10",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANZHL10",
+                    "description": "Cantidad",
+                    "abapType": "PackedNumber",
+                    "length": 7,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 10,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BETRG10",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGART11",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANZHL11",
+                    "description": "Cantidad",
+                    "abapType": "PackedNumber",
+                    "length": 7,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 10,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BETRG11",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGART12",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANZHL12",
+                    "description": "Cantidad",
+                    "abapType": "PackedNumber",
+                    "length": 7,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 10,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BETRG12",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGART13",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANZHL13",
+                    "description": "Cantidad",
+                    "abapType": "PackedNumber",
+                    "length": 7,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 10,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BETRG13",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGART14",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANZHL14",
+                    "description": "Cantidad",
+                    "abapType": "PackedNumber",
+                    "length": 7,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 10,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BETRG14",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGART15",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANZHL15",
+                    "description": "Cantidad",
+                    "abapType": "PackedNumber",
+                    "length": 7,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 10,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BETRG15",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGART16",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANZHL16",
+                    "description": "Cantidad",
+                    "abapType": "PackedNumber",
+                    "length": 7,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 10,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BETRG16",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGART17",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANZHL17",
+                    "description": "Cantidad",
+                    "abapType": "PackedNumber",
+                    "length": 7,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 10,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BETRG17",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGART18",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANZHL18",
+                    "description": "Cantidad",
+                    "abapType": "PackedNumber",
+                    "length": 7,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 10,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BETRG18",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGART19",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANZHL19",
+                    "description": "Cantidad",
+                    "abapType": "PackedNumber",
+                    "length": 7,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 10,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BETRG19",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LGART20",
+                    "description": "CC-nómina",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANZHL20",
+                    "description": "Cantidad",
+                    "abapType": "PackedNumber",
+                    "length": 7,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 10,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BETRG20",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "COD_UEN",
+                    "description": "Código de U.E.N (Unidad Estratégida de Negocios)",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "COD_CVEND",
+                    "description": "Código Vendedor en módulo comercial",
+                    "abapType": "CharacterString",
+                    "length": 8,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "COD_ZON",
+                    "description": "Código de Zona",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "COD_RUTA",
+                    "description": "Código de Ruta",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "COD_CVAR",
+                    "description": "Cantida a asignar (EE/VARGES)",
+                    "abapType": "NumericCharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "MIN_TABLA",
+                    "description": "Minimo Tabla",
+                    "abapType": "PackedNumber",
+                    "length": 21,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 26,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "TARGET",
+                    "description": "Target",
+                    "abapType": "PackedNumber",
+                    "length": 21,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 26,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ZBONOGD",
+                    "description": "IS-H: campo general de longitud 2 p.módulo de funciones",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                }
+            ]
+        }
+    ]
+}

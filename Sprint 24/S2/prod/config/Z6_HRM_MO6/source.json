@@ -1,0 +1,172 @@
+{
+    "name": "Z6_HRM_MO6",
+    "description": "Datos_Mano_Obra_6",
+    "guid": "55cde396-43bb-4c4a-85a3-8904d8054262",
+    "semantics": "TransactionalDataOrFacts",
+    "context": "SAPI",
+    "supportsFull": true,
+    "supportsDelta": false,
+    "mode": "Full",
+    "transferDataOnDeltaInit": false,
+    "columns": 
+    [
+        {
+            "name": "PERNR",
+            "description": "Número de personal",
+            "abapType": "NumericCharacterString",
+            "length": 8,
+            "isPrimaryKey": true,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 8
+        },
+        {
+            "name": "PABRP",
+            "description": "Últ.período nómina",
+            "abapType": "NumericCharacterString",
+            "length": 2,
+            "isPrimaryKey": true,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 2
+        },
+        {
+            "name": "PABRJ",
+            "description": "Año de nómina",
+            "abapType": "NumericCharacterString",
+            "length": 4,
+            "isPrimaryKey": true,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 4
+        },
+        {
+            "name": "BEGDA",
+            "description": "Inicio de validez",
+            "abapType": "Date",
+            "isPrimaryKey": true,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 8
+        },
+        {
+            "name": "SYSDATUM",
+            "description": "Fecha",
+            "abapType": "Date",
+            "isPrimaryKey": true,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 8
+        },
+        {
+            "name": "APP",
+            "description": "Ap.Paterno",
+            "abapType": "CharacterString",
+            "length": 20,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 20
+        },
+        {
+            "name": "APM",
+            "description": "Ap.Materno",
+            "abapType": "CharacterString",
+            "length": 20,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 20
+        },
+        {
+            "name": "NOM",
+            "description": "Nombres",
+            "abapType": "CharacterString",
+            "length": 20,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 20
+        },
+        {
+            "name": "STAT2",
+            "description": "Status de ocupación",
+            "abapType": "CharacterString",
+            "length": 1,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 1
+        },
+        {
+            "name": "BUKRS",
+            "description": "Sociedad",
+            "abapType": "CharacterString",
+            "length": 4,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 4
+        },
+        {
+            "name": "KOSTL",
+            "description": "Centro de coste",
+            "abapType": "CharacterString",
+            "length": 10,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 10
+        },
+        {
+            "name": "TRFAR",
+            "description": "Clase conv.colectivo",
+            "abapType": "CharacterString",
+            "length": 2,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 2
+        },
+        {
+            "name": "TRFARTXT",
+            "description": "Descrip.Clase.Conv",
+            "abapType": "CharacterString",
+            "length": 20,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 20
+        },
+        {
+            "name": "GERENCIA2",
+            "description": "Gerencia2",
+            "abapType": "CharacterString",
+            "length": 40,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 40
+        },
+        {
+            "name": "FING",
+            "description": "Fecha.Ingreso",
+            "abapType": "Date",
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 8
+        },
+        {
+            "name": "PLANS_TXT",
+            "description": "Descrip.Posicion",
+            "abapType": "CharacterString",
+            "length": 25,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 25
+        },
+        {
+            "name": "SALDO",
+            "description": "Saldo",
+            "abapType": "PackedNumber",
+            "length": 7,
+            "decimalCount": 2,
+            "isSelected": true,
+            "selectionPermission": "Equals, Between",
+            "outputLength": 9
+        }
+    ],
+    "parameters": {
+    }
+}

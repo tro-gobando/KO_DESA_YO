@@ -1,0 +1,138 @@
+{
+    "functionName": "/SAPDS/RFC_READ_TABLE2",
+    "runInBackgroundJob": false,
+    "tables": 
+    [
+        {
+            "name": "/ANDINA/HRMO09",
+            "description": "HR - Tabla Extractor Equidad de Genero",
+            "fields": 
+            [
+                {
+                    "name": "PABRJ",
+                    "description": "Año de nómina",
+                    "abapType": "NumericCharacterString",
+                    "length": 4,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": "GJAHR"
+                },
+                {
+                    "name": "PABRP",
+                    "description": "Período cálculo de nómina",
+                    "abapType": "NumericCharacterString",
+                    "length": 2,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BUKRS",
+                    "description": "Sociedad",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PERNR",
+                    "description": "Número de personal",
+                    "abapType": "NumericCharacterString",
+                    "length": 8,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PLANS",
+                    "description": "Posición",
+                    "abapType": "NumericCharacterString",
+                    "length": 8,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "COMPARATIO",
+                    "description": "Campo carácter longitud 12",
+                    "abapType": "CharacterString",
+                    "length": 12,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "GRADO_HAY",
+                    "description": "Campo carácter longitud 12",
+                    "abapType": "CharacterString",
+                    "length": 12,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "GRADO_LIDERAZGO",
+                    "description": "Tipo datos 4 caracteres",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "JEFATURA",
+                    "description": "IS-H: campo general de longitud 2 p.módulo de funciones",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NOMBRE_JEFE",
+                    "description": "Nombre editado del empleado o candidato",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ZONA",
+                    "description": "Char 15",
+                    "abapType": "CharacterString",
+                    "length": 15,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CARGAS_LEGALES",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 2,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CARGA_MENOR2",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 2,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PROMOCIONES",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 2,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "MOV_LATERAL",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 2,
+                    "conversionExit": ""
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+SELECT 
+pernr,
+pabrp,
+pabrj,
+begda,
+sysdatum,
+app,
+apm,
+nom,
+stat2,
+bukrs,
+kostl,
+trfar,
+trfartxt,
+gerencia2,
+fing,
+plans_txt,
+saldo
+from $SOURCE_DATABASE.z6hrmmo6_stagesec
