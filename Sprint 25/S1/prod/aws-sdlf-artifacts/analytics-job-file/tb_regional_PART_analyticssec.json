@@ -31,6 +31,6 @@
   "redshift_temp_bucket": "redshift-koandina-prod",
   "execute_redshift_export": "False",
   "execute_spark_transform": "True",
-  "use_analytics_sec_layer": "False",
+  "use_analytics_sec_layer": "True",
   "create_semantic_views": "False"
 }

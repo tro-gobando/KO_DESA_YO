@@ -43,5 +43,5 @@ PLANT string
 ROW FORMAT SERDE
 'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe'
 STORED AS PARQUET
-LOCATION 's3://analyticssec-koandina-dev/regional/sap/employee_attr/'
+LOCATION 's3://analyticssec-koandina-prod/regional/sap/employee_attr/'
 TBLPROPERTIES ('compressionType'='SNAPPY');
