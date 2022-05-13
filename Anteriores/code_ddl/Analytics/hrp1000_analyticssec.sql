@@ -1,5 +1,4 @@
 CREATE EXTERNAL TABLE db_koandina_regional_analyticssec.hrp1000_analyticssec(
-MANDT string,
 PLVAR string,
 OTYPE string,
 OBJID string,

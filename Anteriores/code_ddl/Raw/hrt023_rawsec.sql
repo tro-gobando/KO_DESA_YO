@@ -1,5 +1,4 @@
 CREATE EXTERNAL TABLE db_koandina_cl_raw.hrt023_rawsec(
-MANDT string,
 KOSTL string,
 TRFAR string,
 GERENCIA1 string,

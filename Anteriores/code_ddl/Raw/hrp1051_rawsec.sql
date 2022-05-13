@@ -1,5 +1,4 @@
 CREATE EXTERNAL TABLE db_koandina_regional_raw.hrp1051_rawsec(
-MANDT string,
 PLVAR string,
 OTYPE string,
 OBJID string,

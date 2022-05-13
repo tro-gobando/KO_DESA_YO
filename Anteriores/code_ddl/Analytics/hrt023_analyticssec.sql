@@ -1,5 +1,4 @@
 CREATE EXTERNAL TABLE db_koandina_cl_analyticssec.hrt023_analyticssec(
-MANDT string,
 KOSTL string,
 TRFAR string,
 GERENCIA1 string,

@@ -1,5 +1,4 @@
 CREATE EXTERNAL TABLE db_koandina_regional_stage.hrp1000_stagesec(
-MANDT string,
 PLVAR string,
 OTYPE string,
 OBJID string,

@@ -1,5 +1,4 @@
 CREATE EXTERNAL TABLE db_koandina_cl_stage.hrt023_stagesec(
-MANDT string,
 KOSTL string,
 TRFAR string,
 GERENCIA1 string,
