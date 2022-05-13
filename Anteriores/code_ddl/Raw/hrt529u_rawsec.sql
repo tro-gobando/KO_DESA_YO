@@ -1,4 +1,4 @@
-CREATE TABLE db_koandina_regional_raw.hrt529u_rawsec(
+CREATE EXTERNAL TABLE db_koandina_regional_raw.hrt529u_rawsec(
 SPRSL string,
 STATN string,
 STATV string,

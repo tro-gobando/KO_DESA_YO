@@ -35,5 +35,4 @@ OUTPUTFORMAT
 LOCATION
   's3://stagesec-koandina-prod/regional/sap/hrpa0000'
 TBLPROPERTIES (
-'compressionType'='SNAPPY',
-'skip.header.line.count'='1')
+'compressionType'='SNAPPY')

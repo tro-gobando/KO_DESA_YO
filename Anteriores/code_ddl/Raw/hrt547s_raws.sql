@@ -1,4 +1,4 @@
-CREATE TABLE db_koandina_regional_raw.hrt547s_raw(
+CREATE EXTERNAL TABLE db_koandina_regional_raw.hrt547s_raw(
 SPRSL string,
 CTTYP string,
 CTTXT string)

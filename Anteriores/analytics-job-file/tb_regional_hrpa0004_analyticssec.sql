@@ -1,5 +1,4 @@
 select
-  mandt,
   pernr,
   subty,
   objps,

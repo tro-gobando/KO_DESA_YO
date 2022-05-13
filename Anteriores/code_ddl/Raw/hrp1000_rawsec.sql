@@ -1,4 +1,4 @@
-CREATE TABLE db_koandina_regional_raw.hrp1000_rawsec(
+CREATE EXTERNAL TABLE db_koandina_regional_raw.hrp1000_rawsec(
 MANDT string,
 PLVAR string,
 OTYPE string,
@@ -33,4 +33,5 @@ OUTPUTFORMAT
 LOCATION
   's3://rawsec-koandina-prod/regional/sap/hrp1000/'
 TBLPROPERTIES (
-  'skip.header.line.count'='1')
+  'skip.header.line.count'='1', 
+  'spark.sql.partitionProvider'='catalog')

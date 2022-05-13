@@ -1,5 +1,4 @@
 CREATE EXTERNAL TABLE db_koandina_regional_stage.hrpa0004_stagesec(
-  mandt string,
   pernr string,
   subty string,
   objps string,
@@ -47,5 +46,4 @@ OUTPUTFORMAT
 LOCATION
   's3://stagesec-koandina-prod/regional/sap/hrpa0004'
 TBLPROPERTIES (
-'compressionType'='SNAPPY',
-'skip.header.line.count'='1')
+'compressionType'='SNAPPY')

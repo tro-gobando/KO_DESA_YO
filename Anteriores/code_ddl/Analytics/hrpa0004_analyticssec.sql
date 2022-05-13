@@ -1,5 +1,4 @@
 CREATE EXTERNAL TABLE db_koandina_regional_analyticssec.hrpa0004_analyticssec(
-  mandt string,
   pernr string,
   subty string,
   objps string,

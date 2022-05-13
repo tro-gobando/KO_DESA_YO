@@ -1,4 +1,4 @@
-CREATE TABLE db_koandina_regional_raw.hrpers_area_2_text_raw(
+CREATE EXTERNAL TABLE db_koandina_regional_raw.hrpers_area_2_text_raw(
 PERSA string,
 TXTMD string)
 ROW FORMAT SERDE 

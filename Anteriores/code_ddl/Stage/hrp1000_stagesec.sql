@@ -1,4 +1,4 @@
-CREATE TABLE db_koandina_regional_stage.hrp1000_stagesec(
+CREATE EXTERNAL TABLE db_koandina_regional_stage.hrp1000_stagesec(
 MANDT string,
 PLVAR string,
 OTYPE string,
@@ -22,13 +22,12 @@ MC_SHORT string,
 MC_STEXT string,
 MC_SEARK string)
 ROW FORMAT SERDE 
-  'org.apache.hadoop.hive.serde2.OpenCSVSerde' 
-WITH SERDEPROPERTIES ( 
-  'quoteChar'='\"', 
-  'separatorChar'='\;') 
+  'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe' 
 STORED AS INPUTFORMAT 
   'org.apache.hadoop.mapred.TextInputFormat' 
 OUTPUTFORMAT 
   'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
 LOCATION
   's3://stagesec-koandina-prod/regional/sap/hrp1000/'
+TBLPROPERTIES ( 
+  'compressionType'='SNAPPY')
