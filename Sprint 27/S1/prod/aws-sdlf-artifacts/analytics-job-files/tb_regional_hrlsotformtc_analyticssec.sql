@@ -1,7 +1,0 @@
-select
-TFORM,
-SPRAS,
-TXTSHORT,
-TXTSING,
-TXTPLUR
-from $SOURCE_DATABASE.hrlsotformtc_stagesec
