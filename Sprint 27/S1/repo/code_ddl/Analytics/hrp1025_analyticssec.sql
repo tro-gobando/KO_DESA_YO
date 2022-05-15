@@ -1,4 +1,4 @@
-CREATE EXTERNAL TABLE db_koandina_regional_stage.hrp1025_stagesec(
+CREATE EXTERNAL TABLE db_koandina_regional_analyticssec.hrp1025_analyticssec(
 PLVAR string,
 OTYPE string,
 OBJID string,
@@ -17,8 +17,7 @@ HISTO string,
 ITXNR string,
 NYEARS string,
 NMONTHS string,
-N_TYPE string
-)
+N_TYPE string)
 ROW FORMAT SERDE
   'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe'
 STORED AS INPUTFORMAT
@@ -26,6 +25,6 @@ STORED AS INPUTFORMAT
 OUTPUTFORMAT
   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat'
 LOCATION
-  's3://stagesec-koandina-prod/regional/sap/hrp1025/'
+  's3://analyticssec-koandina-prod/regional/sap/hrp1025/'
 TBLPROPERTIES (
-'compressionType'='SNAPPY')
+  'transient_lastDdlTime'='1611597300')
