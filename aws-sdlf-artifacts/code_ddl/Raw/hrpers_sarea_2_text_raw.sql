@@ -1,4 +1,4 @@
-CREATE TABLE db_koandina_regional_raw.hrpers_sarea_2_text_raw(
+CREATE EXTERNAL TABLE db_koandina_regional_raw.hrpers_sarea_2_text_raw(
 WERKS string,
 BTRTL string,
 TXTSH string)

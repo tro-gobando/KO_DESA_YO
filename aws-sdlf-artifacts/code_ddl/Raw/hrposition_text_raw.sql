@@ -1,4 +1,4 @@
-CREATE TABLE db_koandina_regional_raw.hrposition_text_raw(
+CREATE EXTERNAL TABLE db_koandina_regional_raw.hrposition_text_raw(
 LANGU string,
 KEY1 string,
 DATETO string,

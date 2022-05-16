@@ -1,4 +1,4 @@
-CREATE TABLE db_koandina_regional_raw.hrt547v_raw(
+CREATE EXTERNAL TABLE db_koandina_regional_raw.hrt547v_raw(
 CTTYP string,
 CTLTD string)
 ROW FORMAT SERDE 

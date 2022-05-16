@@ -1,4 +1,4 @@
-CREATE TABLE db_koandina_regional_raw.hremplcntrct_text_raw(
+CREATE EXTERNAL TABLE db_koandina_regional_raw.hremplcntrct_text_raw(
   spras string, 
   molga string, 
   ansvh string, 
@@ -15,4 +15,5 @@ OUTPUTFORMAT
 LOCATION
   's3://raw-koandina-prod/regional/sap/hremplcntrct_text/'
 TBLPROPERTIES (
-  'skip.header.line.count'='1')
+  'skip.header.line.count'='1', 
+  'spark.sql.partitionProvider'='catalog')
