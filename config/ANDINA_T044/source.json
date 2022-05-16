@@ -1,0 +1,82 @@
+{
+    "functionName": "/SAPDS/RFC_READ_TABLE2",
+    "runInBackgroundJob": false,
+    "tables": 
+    [
+        {
+            "name": "/ANDINA/T044",
+            "description": "HR - Trabajador y Territorios",
+            "fields": 
+            [
+                {
+                    "name": "MANDT",
+                    "description": "Mandante",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isPrimaryKey": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PERNR",
+                    "description": "Número de personal",
+                    "abapType": "NumericCharacterString",
+                    "length": 8,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "checkTable": "PA0003",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BEGDA",
+                    "description": "Campo de tipo DATS",
+                    "abapType": "Date",
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "COD_UEN",
+                    "description": "Código de U.E.N (Unidad Estratégida de Negocios)",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "/ANDINA/TPAUEN",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "COD_ZON",
+                    "description": "Código de Zona",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "/ANDINA/TPAZONA",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "TERRITC",
+                    "description": "HR - Territorios cl",
+                    "abapType": "CharacterString",
+                    "length": 5,
+                    "isSelected": true,
+                    "checkTable": "/ANDINA/T045",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "UNAME",
+                    "description": "Nombre de usuario",
+                    "abapType": "CharacterString",
+                    "length": 12,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "AEDTM",
+                    "description": "Fecha de modificación",
+                    "abapType": "Date",
+                    "isSelected": true,
+                    "conversionExit": ""
+                }
+            ]
+        }
+    ]
+}

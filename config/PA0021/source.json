@@ -1,0 +1,557 @@
+{
+    "functionName": "/SAPDS/RFC_READ_TABLE2",
+    "runInBackgroundJob": false,
+    "tables": 
+    [
+        {
+            "name": "PA0021",
+            "description": "Registro maestro personal Infotipo 0021 (Familia)",
+            "fields": 
+            [
+                {
+                    "name": "MANDT",
+                    "description": "Mandante",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isPrimaryKey": true,
+                    "checkTable": "T000",
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PERNR",
+                    "description": "Número de personal",
+                    "abapType": "NumericCharacterString",
+                    "length": 8,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "checkTable": "PA0003",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SUBTY",
+                    "description": "Subtipo",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "OBJPS",
+                    "description": "Identificación de objeto",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SPRPS",
+                    "description": "Indicador de bloqueo para registro de maestro de personal",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ENDDA",
+                    "description": "Fin de la validez",
+                    "abapType": "Date",
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BEGDA",
+                    "description": "Inicio de la validez",
+                    "abapType": "Date",
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SEQNR",
+                    "description": "Número de un registro de infotipo para misma clave",
+                    "abapType": "NumericCharacterString",
+                    "length": 3,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "AEDTM",
+                    "description": "Fecha última modificación",
+                    "abapType": "Date",
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "UNAME",
+                    "description": "Nombre del responsable que ha modificado el objeto",
+                    "abapType": "CharacterString",
+                    "length": 12,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "HISTO",
+                    "description": "Indicador de historial",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITXEX",
+                    "description": "Existe texto para infotipo",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "REFEX",
+                    "description": "Existen campos referencia (costes primarios/secundarios)",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ORDEX",
+                    "description": "Existen campos de notificación",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITBLD",
+                    "description": "Control dynpros infotipo",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PREAS",
+                    "description": "Motivo de modificación Datos maestros",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "checkTable": "T530E",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG1",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG2",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG3",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG4",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "RESE1",
+                    "description": "Campo de reserva/ Campo no utilizado de longitud 2",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "RESE2",
+                    "description": "Campo de reserva/ Campo no utilizado de longitud 2",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "GRPVL",
+                    "description": "Valor de agrupamiento p.contratos por ocupación",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FAMSA",
+                    "description": "Clase registro parentesco",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FGBDT",
+                    "description": "Fecha de nacimiento",
+                    "abapType": "Date",
+                    "isSelected": true,
+                    "indexed": "Ascending",
+                    "conversionExit": "PDATE"
+                },
+                {
+                    "name": "FGBLD",
+                    "description": "País de nacimiento",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isSelected": true,
+                    "checkTable": "T005",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FANAT",
+                    "description": "Nacionalidad",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isSelected": true,
+                    "checkTable": "T005",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FASEX",
+                    "description": "Sexo",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "checkTable": "T77PAD_GENDER",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FAVOR",
+                    "description": "Nombre",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FANAM",
+                    "description": "Apellido",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FGBOT",
+                    "description": "Lugar de nacimiento",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FGDEP",
+                    "description": "Estado federado",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isSelected": true,
+                    "checkTable": "T005S",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ERBNR",
+                    "description": "Número de personal de referencia del miembro de la familia",
+                    "abapType": "CharacterString",
+                    "length": 12,
+                    "isSelected": true,
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FGBNA",
+                    "description": "2°Apellido",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FNAC2",
+                    "description": "Segundo apellido",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FCNAM",
+                    "description": "Nombre completo",
+                    "abapType": "CharacterString",
+                    "length": 80,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FKNZN",
+                    "description": "Indicador de edición de nombres",
+                    "abapType": "NumericCharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FINIT",
+                    "description": "Iniciales",
+                    "abapType": "CharacterString",
+                    "length": 10,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FVRSW",
+                    "description": "Prefijo",
+                    "abapType": "CharacterString",
+                    "length": 15,
+                    "isSelected": true,
+                    "checkTable": "T535N",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FVRS2",
+                    "description": "Prefijo",
+                    "abapType": "CharacterString",
+                    "length": 15,
+                    "isSelected": true,
+                    "checkTable": "T535N",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FNMZU",
+                    "description": "Título",
+                    "abapType": "CharacterString",
+                    "length": 15,
+                    "isSelected": true,
+                    "checkTable": "T535N",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "AHVNR",
+                    "description": "Número prestaciones por vejez y en favor de familiares",
+                    "abapType": "CharacterString",
+                    "length": 11,
+                    "isSelected": true,
+                    "formattedLength": 14,
+                    "conversionExit": "AHVNR"
+                },
+                {
+                    "name": "KDSVH",
+                    "description": "Filiación",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "checkTable": "T577",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "KDBSL",
+                    "description": "Derecho a plus",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "checkTable": "T577",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "KDUTB",
+                    "description": "Alojamiento del hijo",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "checkTable": "T577",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "KDGBR",
+                    "description": "Derecho a subsidio familiar por hijos",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "checkTable": "T577",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "KDART",
+                    "description": "Clase de hijo",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "checkTable": "T577",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "KDZUG",
+                    "description": "Pluses por hijos",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "checkTable": "T577",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "KDZUL",
+                    "description": "Plus por hijos",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "checkTable": "T577",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "KDVBE",
+                    "description": "Autoriz.certificado enfermedad",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "checkTable": "T577",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ERMNR",
+                    "description": "Número de autorización",
+                    "abapType": "CharacterString",
+                    "length": 8,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "AUSVL",
+                    "description": "1ª parte del número afiliación SS (número actual)",
+                    "abapType": "NumericCharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "AUSVG",
+                    "description": "2ª parte del número afiliación SS (fecha nacimiento)",
+                    "abapType": "NumericCharacterString",
+                    "length": 8,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FASDT",
+                    "description": "Fin de la formación del miembro de la familia",
+                    "abapType": "Date",
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FASAR",
+                    "description": "Clase de instituto de enseñanza del miembro de la familia",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "checkTable": "T517T",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FASIN",
+                    "description": "Lugar de formación",
+                    "abapType": "CharacterString",
+                    "length": 20,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "EGAGA",
+                    "description": "Empresario del miembro de la familia",
+                    "abapType": "CharacterString",
+                    "length": 8,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FANA2",
+                    "description": "Segunda nacionalidad",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isSelected": true,
+                    "checkTable": "T005",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FANA3",
+                    "description": "Tercera nacionalidad",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isSelected": true,
+                    "checkTable": "T005",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BETRG",
+                    "description": "Importe",
+                    "abapType": "PackedNumber",
+                    "length": 9,
+                    "decimalCount": 2,
+                    "isSelected": true,
+                    "formattedLength": 13,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "TITEL",
+                    "description": "Título",
+                    "abapType": "CharacterString",
+                    "length": 15,
+                    "isSelected": true,
+                    "checkTable": "T535N",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "EMRGN",
+                    "description": "Persona referencia en caso de emergencia",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ZNUMEROCONTACTO",
+                    "description": "30 caracteres",
+                    "abapType": "CharacterString",
+                    "length": 30,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ZPARENTESCO",
+                    "description": "Campo carácter longitud 12",
+                    "abapType": "CharacterString",
+                    "length": 12,
+                    "isSelected": true,
+                    "conversionExit": ""
+                }
+            ]
+        }
+    ]
+}

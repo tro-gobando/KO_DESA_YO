@@ -1,0 +1,220 @@
+{
+    "functionName": "/SAPDS/RFC_READ_TABLE2",
+    "runInBackgroundJob": false,
+    "tables": 
+    [
+        {
+            "name": "PA0034",
+            "description": "Datos maest.personales Infotipo 0034 (Funciones empresar.)",
+            "fields": 
+            [
+                {
+                    "name": "MANDT",
+                    "description": "Mandante",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isPrimaryKey": true,
+                    "checkTable": "T000",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PERNR",
+                    "description": "Número de personal",
+                    "abapType": "NumericCharacterString",
+                    "length": 8,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "checkTable": "PA0003",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SUBTY",
+                    "description": "Subtipo",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "OBJPS",
+                    "description": "Identificación de objeto",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SPRPS",
+                    "description": "Indicador de bloqueo para registro de maestro de personal",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ENDDA",
+                    "description": "Fin de la validez",
+                    "abapType": "Date",
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BEGDA",
+                    "description": "Inicio de la validez",
+                    "abapType": "Date",
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SEQNR",
+                    "description": "Número de un registro de infotipo para misma clave",
+                    "abapType": "NumericCharacterString",
+                    "length": 3,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "AEDTM",
+                    "description": "Fecha última modificación",
+                    "abapType": "Date",
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "UNAME",
+                    "description": "Nombre del responsable que ha modificado el objeto",
+                    "abapType": "CharacterString",
+                    "length": 12,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "HISTO",
+                    "description": "Indicador de historial",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITXEX",
+                    "description": "Existe texto para infotipo",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "REFEX",
+                    "description": "Existen campos referencia (costes primarios/secundarios)",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ORDEX",
+                    "description": "Existen campos de notificación",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITBLD",
+                    "description": "Control dynpros infotipo",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PREAS",
+                    "description": "Motivo de modificación Datos maestros",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "checkTable": "T530E",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG1",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG2",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG3",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG4",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "RESE1",
+                    "description": "Campo de reserva/ Campo no utilizado de longitud 2",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "RESE2",
+                    "description": "Campo de reserva/ Campo no utilizado de longitud 2",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "GRPVL",
+                    "description": "Valor de agrupamiento p.contratos por ocupación",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FUNKT",
+                    "description": "Función interna",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "DAT34",
+                    "description": "Fecha de inicio de la función interna",
+                    "abapType": "Date",
+                    "isSelected": true,
+                    "conversionExit": ""
+                }
+            ]
+        }
+    ]
+}

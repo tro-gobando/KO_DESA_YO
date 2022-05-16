@@ -1,0 +1,585 @@
+{
+    "functionName": "/SAPDS/RFC_READ_TABLE2",
+    "runInBackgroundJob": false,
+    "tables": 
+    [
+        {
+            "name": "PA0006",
+            "description": "Registro maestro personal Infotipo 0006 (Direcciones)",
+            "fields": 
+            [
+                {
+                    "name": "MANDT",
+                    "description": "Mandante",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isPrimaryKey": true,
+                    "checkTable": "T000",
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PERNR",
+                    "description": "Número de personal",
+                    "abapType": "NumericCharacterString",
+                    "length": 8,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "checkTable": "PA0003",
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SUBTY",
+                    "description": "Subtipo",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "OBJPS",
+                    "description": "Identificación de objeto",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SPRPS",
+                    "description": "Indicador de bloqueo para registro de maestro de personal",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ENDDA",
+                    "description": "Fin de la validez",
+                    "abapType": "Date",
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BEGDA",
+                    "description": "Inicio de la validez",
+                    "abapType": "Date",
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SEQNR",
+                    "description": "Número de un registro de infotipo para misma clave",
+                    "abapType": "NumericCharacterString",
+                    "length": 3,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "AEDTM",
+                    "description": "Fecha última modificación",
+                    "abapType": "Date",
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "UNAME",
+                    "description": "Nombre del responsable que ha modificado el objeto",
+                    "abapType": "CharacterString",
+                    "length": 12,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "HISTO",
+                    "description": "Indicador de historial",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITXEX",
+                    "description": "Existe texto para infotipo",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "REFEX",
+                    "description": "Existen campos referencia (costes primarios/secundarios)",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ORDEX",
+                    "description": "Existen campos de notificación",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ITBLD",
+                    "description": "Control dynpros infotipo",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PREAS",
+                    "description": "Motivo de modificación Datos maestros",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "checkTable": "T530E",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG1",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG2",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG3",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLAG4",
+                    "description": "Campo de reserva/ campo no utilizado",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "RESE1",
+                    "description": "Campo de reserva/ Campo no utilizado de longitud 2",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "RESE2",
+                    "description": "Campo de reserva/ Campo no utilizado de longitud 2",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "GRPVL",
+                    "description": "Valor de agrupamiento p.contratos por ocupación",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ANSSA",
+                    "description": "Clase de registro de direcciones",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NAME2",
+                    "description": "Nombre de contacto",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "STRAS",
+                    "description": "Calle y número",
+                    "abapType": "CharacterString",
+                    "length": 60,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ORT01",
+                    "description": "Población",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ORT02",
+                    "description": "Distrito",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PSTLZ",
+                    "description": "Código postal",
+                    "abapType": "CharacterString",
+                    "length": 10,
+                    "isSelected": true,
+                    "indexed": "Ascending",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LAND1",
+                    "description": "Clave de país",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isSelected": true,
+                    "checkTable": "T005",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "TELNR",
+                    "description": "Nº teléfono",
+                    "abapType": "CharacterString",
+                    "length": 14,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ENTKM",
+                    "description": "Distancia en kilómetros",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "WKWNG",
+                    "description": "Viviendas para el personal",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BUSRT",
+                    "description": "Ruta del autobús",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LOCAT",
+                    "description": "Cpo.adicional direc.",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ADR03",
+                    "description": "Calle 2",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ADR04",
+                    "description": "Calle 3",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "STATE",
+                    "description": "Región (estado, provincia, distrito)",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isSelected": true,
+                    "checkTable": "T005S",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "HSNMR",
+                    "description": "Nº (edificio)",
+                    "abapType": "CharacterString",
+                    "length": 10,
+                    "isSelected": true,
+                    "formattedLength": 6,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "POSTA",
+                    "description": "Identificación de una vivienda en una casa",
+                    "abapType": "CharacterString",
+                    "length": 10,
+                    "isSelected": true,
+                    "formattedLength": 6,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BLDNG",
+                    "description": "Edificio (número o sigla)",
+                    "abapType": "CharacterString",
+                    "length": 10,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FLOOR",
+                    "description": "Planta del edificio",
+                    "abapType": "CharacterString",
+                    "length": 10,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "STRDS",
+                    "description": "Sigla de vía pública",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "checkTable": "T5EVP",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ENTK2",
+                    "description": "Distancia en kilómetros",
+                    "abapType": "PackedNumber",
+                    "length": 3,
+                    "isSelected": true,
+                    "formattedLength": 3,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "COM01",
+                    "description": "Clase de comunicación",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T536B",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NUM01",
+                    "description": "Número de comunicación",
+                    "abapType": "CharacterString",
+                    "length": 20,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "COM02",
+                    "description": "Clase de comunicación",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T536B",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NUM02",
+                    "description": "Número de comunicación",
+                    "abapType": "CharacterString",
+                    "length": 20,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "COM03",
+                    "description": "Clase de comunicación",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T536B",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NUM03",
+                    "description": "Número de comunicación",
+                    "abapType": "CharacterString",
+                    "length": 20,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "COM04",
+                    "description": "Clase de comunicación",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T536B",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NUM04",
+                    "description": "Número de comunicación",
+                    "abapType": "CharacterString",
+                    "length": 20,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "COM05",
+                    "description": "Clase de comunicación",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T536B",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NUM05",
+                    "description": "Número de comunicación",
+                    "abapType": "CharacterString",
+                    "length": 20,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "COM06",
+                    "description": "Clase de comunicación",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isSelected": true,
+                    "checkTable": "T536B",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NUM06",
+                    "description": "Número de comunicación",
+                    "abapType": "CharacterString",
+                    "length": 20,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "INDRL",
+                    "description": "Sólo relevante para Japón",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isSelected": true,
+                    "checkTable": "T577",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "COUNC",
+                    "description": "Código de condado",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isSelected": true,
+                    "checkTable": "T005E",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "RCTVC",
+                    "description": "Código de la ciudad",
+                    "abapType": "CharacterString",
+                    "length": 6,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "OR2KK",
+                    "description": "Sólo relevante para Japón",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "CONKK",
+                    "description": "Sólo relevante para Japón",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "OR1KK",
+                    "description": "Sólo relevante para Japón",
+                    "abapType": "CharacterString",
+                    "length": 40,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "RAILW",
+                    "description": "Subscripción soc.ferrocarril",
+                    "abapType": "NumericCharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "YYHRMBUILD",
+                    "description": "Location Code",
+                    "abapType": "CharacterString",
+                    "length": 8,
+                    "isSelected": true,
+                    "checkTable": "/SCL/HRM_T777A",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "YYHRMWRKHM",
+                    "description": "Works From Home Flag",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "YYHRMMAILC",
+                    "description": "KO Office Mail Stop",
+                    "abapType": "CharacterString",
+                    "length": 10,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "YYHRMOFFPH",
+                    "description": "KO Office Telephone Number",
+                    "abapType": "CharacterString",
+                    "length": 24,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "YYHRMMOBPH",
+                    "description": "KO Mobile Number",
+                    "abapType": "CharacterString",
+                    "length": 24,
+                    "isSelected": true,
+                    "conversionExit": ""
+                }
+            ]
+        }
+    ]
+}

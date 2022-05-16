@@ -1,0 +1,15 @@
+{
+    "created": {
+        "machine": "[::ffff:10.6.138.9]:50961",
+        "timestamp": "20220511T184348.746Z",
+        "user": "KOANDINA\\Tro-gobando"
+    },
+    "destination": "s3_landing_prod_sec",
+    "lastChange": {
+        "machine": "[::ffff:10.6.138.9]:50961",
+        "timestamp": "20220511T184429.429Z",
+        "user": "KOANDINA\\Tro-gobando"
+    },
+    "source": "SAP_QBH100",
+    "type": "Table"
+}

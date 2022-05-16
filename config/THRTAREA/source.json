@@ -1,0 +1,71 @@
+{
+    "functionName": "/SAPDS/RFC_READ_TABLE2",
+    "runInBackgroundJob": false,
+    "tables": 
+    [
+        {
+            "name": "/ANDINA/THRTAREA",
+            "description": "Nível salarial - subáreas unificadas",
+            "fields": 
+            [
+                {
+                    "name": "MANDT",
+                    "description": "Mandante",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isPrimaryKey": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "WERKS",
+                    "description": "División de personal",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "checkTable": "T500P",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BTRTL",
+                    "description": "Subdivisión de personal",
+                    "abapType": "CharacterString",
+                    "length": 4,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "checkTable": "T001P",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ENDDA",
+                    "description": "Fin de la validez",
+                    "abapType": "Date",
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "BEGDA",
+                    "description": "Inicio de la validez",
+                    "abapType": "Date",
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "UNIFIED_SUBAREA",
+                    "abapType": "CharacterString",
+                    "length": 10,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "REGION",
+                    "abapType": "CharacterString",
+                    "length": 10,
+                    "isSelected": true,
+                    "conversionExit": ""
+                }
+            ]
+        }
+    ]
+}
