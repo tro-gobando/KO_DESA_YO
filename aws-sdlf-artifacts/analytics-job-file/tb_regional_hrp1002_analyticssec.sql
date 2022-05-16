@@ -1,0 +1,20 @@
+select
+    PLVAR,
+    OTYPE,
+    OBJID,
+    SUBTY,
+    ISTAT,
+    BEGDA,
+    ENDDA,
+    LANGU,
+    FILLER,
+    SEQNR,
+    INFTY,
+    OTJID,
+    AEDTM,
+    UNAME,
+    REASN,
+    HISTO,
+    ITXNR,
+    TABNR
+from $SOURCE_DATABASE.hrp1002_stagesec

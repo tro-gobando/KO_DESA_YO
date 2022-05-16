@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="78f0383f-df07-4221-889f-0227ee44e074" name="Changes" comment="ordenamiento del los anteriores a una sola carpeta.1">
+      <change afterPath="$PROJECT_DIR$/Anteriores/code_ddl/Analytics/hrpa0004_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Anteriores/code_ddl/Raw/hrpa0004_rawsec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Anteriores/code_ddl/Stage/hrpa0004_stagesec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/prod/aws-sdlf-artifacts/code_ddl/Stage/hrp1025_stagesec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/prod/aws-sdlf-artifacts/code_ddl/Stage/hrpa9801_stagesec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/prod/aws-sdlf-artifacts/code_ddl/Stage/hrpa9850_stagesec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/prod/aws-sdlf-artifacts/code_ddl/Stage/hrpad25_stagesec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/analytics-job-file/tb_br_hrpa9801_analyticssec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/analytics-job-file/tb_br_hrpa9801_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/analytics-job-file/tb_br_hrpa9850_analyticssec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/analytics-job-file/tb_br_hrpa9850_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/analytics-job-file/tb_br_hrthrtcdir_analyticssec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/analytics-job-file/tb_br_hrthrtcdir_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/analytics-job-file/tb_regional_hrp1025_analyticssec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/analytics-job-file/tb_regional_hrp1025_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/analytics-job-file/tb_regional_hrpa0661_analyticssec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/analytics-job-file/tb_regional_hrpa0661_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/analytics-job-file/tb_regional_hrpad25_analyticssec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/analytics-job-file/tb_regional_hrpad25_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/analytics-job-file/tb_regional_hrt1002_analyticssec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/analytics-job-file/tb_regional_hrt1002_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/analytics-scheduler/hrp1025_schedule.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/analytics-scheduler/hrpa0661_schedule.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/analytics-scheduler/hrpa9801_schedule.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/analytics-scheduler/hrpa9850_schedule.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/analytics-scheduler/hrpad25_schedule.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/analytics-scheduler/hrt1002_schedule.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/analytics-scheduler/hrthrtcdir_schedule.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/code_ddl/Analytics/hrp1025_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/code_ddl/Analytics/hrpa0661_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/code_ddl/Analytics/hrpa9801_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/code_ddl/Analytics/hrpa9850_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/code_ddl/Analytics/hrpad25_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/code_ddl/Analytics/hrt1002_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/code_ddl/Analytics/hrthrtcdir_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/code_ddl/Raw/hrp1025_rawsec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/code_ddl/Raw/hrpa0661_rawsec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/code_ddl/Raw/hrpa9801_rawsec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/code_ddl/Raw/hrpa9850_rawsec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/code_ddl/Raw/hrpad25_rawsec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/code_ddl/Raw/hrt1002_rawsec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/code_ddl/Raw/hrthrtcdir_rawsec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/code_ddl/Stage/hrp1025_stagesec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/code_ddl/Stage/hrpa0661_stagesec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/code_ddl/Stage/hrpa9801_stagesec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/code_ddl/Stage/hrpa9850_stagesec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/code_ddl/Stage/hrpad25_stagesec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/code_ddl/Stage/hrt1002.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/code_ddl/Stage/hrt1002_stagesec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/code_ddl/Stage/hrthrtcdir_stagesec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/job-catalog/JSON CARGA STAGE hrp1025.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/job-catalog/JSON CARGA STAGE hrpa0661.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/job-catalog/JSON CARGA STAGE hrpa9801.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/job-catalog/JSON CARGA STAGE hrpa9850.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/job-catalog/JSON CARGA STAGE hrpad25.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/job-catalog/JSON CARGA STAGE hrt1002.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/job-catalog/JSON CARGA STAGE hrthrtcdir.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/stepfunctions-scheduler/hrp1025.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/stepfunctions-scheduler/hrp1025.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/stepfunctions-scheduler/hrpa0661.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/stepfunctions-scheduler/hrpa0661.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/stepfunctions-scheduler/hrpa9801.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/stepfunctions-scheduler/hrpa9801.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/stepfunctions-scheduler/hrpa9850.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/stepfunctions-scheduler/hrpa9850.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/stepfunctions-scheduler/hrpad25.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/stepfunctions-scheduler/hrpad25.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/stepfunctions-scheduler/hrt1002.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/stepfunctions-scheduler/hrt1002.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/stepfunctions-scheduler/hrthrtcdir.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/stepfunctions-scheduler/hrthrtcdir.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/stepfunctions-scheduler/hrthrtdir.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/stepfunctions-scheduler/hrthrtdir.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S1/repo/stepfunctions-scheduler/sdlf_step_functions_gen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/analytics-job-file/tb_cl_hrconve_analyticssec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/analytics-job-file/tb_cl_hrconve_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/analytics-job-file/tb_cl_hrt022_analyticssec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/analytics-job-file/tb_cl_hrt022_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/analytics-job-file/tb_regional_hrp1002_analyticssec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/analytics-job-file/tb_regional_hrp1002_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/analytics-job-file/tb_regional_hrpa0009_analyticssec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/analytics-job-file/tb_regional_hrpa0009_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/analytics-job-file/tb_regional_hrpa0027_analyticssec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/analytics-job-file/tb_regional_hrpa0027_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/analytics-job-file/tb_regional_hrpa0048_analyticssec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/analytics-job-file/tb_regional_hrpa0048_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/analytics-scheduler/hrconve_schedule.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/analytics-scheduler/hrp1002_schedule.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/analytics-scheduler/hrpa0009_schedule.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/analytics-scheduler/hrpa0027_schedule.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/analytics-scheduler/hrpa0048_schedule.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/analytics-scheduler/hrt022_schedule.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/code_ddl/Analytics/hrconve_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/code_ddl/Analytics/hrp1002_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/code_ddl/Analytics/hrpa0009_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/code_ddl/Analytics/hrpa0027_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/code_ddl/Analytics/hrpa0048_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/code_ddl/Analytics/hrt022_analyticssec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/code_ddl/Raw/hrconve_rawsec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/code_ddl/Raw/hrp1002_rawsec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/code_ddl/Raw/hrpa0009_rawsec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/code_ddl/Raw/hrpa0027_rawsec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/code_ddl/Raw/hrpa0048_rawsec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/code_ddl/Raw/hrt022_rawsec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/code_ddl/Stage/hrconve_stagesec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/code_ddl/Stage/hrp1002_stagesec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/code_ddl/Stage/hrpa0009_stagesec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/code_ddl/Stage/hrpa0027_stagesec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/code_ddl/Stage/hrpa0048_stagesec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/code_ddl/Stage/hrt022_stagesec.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/job-catalog/JSON CARGA STAGE hrconve.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/job-catalog/JSON CARGA STAGE hrp1002.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/job-catalog/JSON CARGA STAGE hrpa0009.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/job-catalog/JSON CARGA STAGE hrpa0027.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/job-catalog/JSON CARGA STAGE hrpa0048.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/job-catalog/JSON CARGA STAGE hrt022.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/stepfunctions-scheduler/hrconve.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/stepfunctions-scheduler/hrconve.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/stepfunctions-scheduler/hrp1002.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/stepfunctions-scheduler/hrp1002.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/stepfunctions-scheduler/hrpa0009.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/stepfunctions-scheduler/hrpa0009.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/stepfunctions-scheduler/hrpa0027.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/stepfunctions-scheduler/hrpa0027.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/stepfunctions-scheduler/hrpa0048.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/stepfunctions-scheduler/hrpa0048.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/stepfunctions-scheduler/hrt022.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/stepfunctions-scheduler/hrt022.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sprint 27/S2/repo/stepfunctions-scheduler/sdlf_step_functions_gen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sprint 27/S1/prod/aws-sdlf-artifacts/code_ddl/Stage/hrt1002.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Sprint 27/S1/prod/aws-sdlf-artifacts/code_ddl/Stage/hrt1002.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Analytics/hremplcntrct_text_analytics.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Analytics/hremplcntrct_text_analytics.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Analytics/hrp1000_analyticssec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Analytics/hrp1000_analyticssec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Analytics/hrp1051_analyticssec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Analytics/hrp1051_analyticssec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Analytics/hrpa2001_analyticssec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Analytics/hrpa2001_analyticssec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Analytics/hrpers_area_2_text_analytics.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Analytics/hrpers_area_2_text_analytics.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Analytics/hrpers_sarea_2_text_analytics.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Analytics/hrpers_sarea_2_text_analytics.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Analytics/hrposition_text_analytics.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Analytics/hrposition_text_analytics.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Analytics/hrt023_analyticssec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Analytics/hrt023_analyticssec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Analytics/hrt529u_analyticssec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Analytics/hrt529u_analyticssec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Analytics/hrt547s_analytics.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Analytics/hrt547s_analytics.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Analytics/hrt547v_analytics.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Analytics/hrt547v_analytics.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Raw/hremplcntrct_text_raw.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Raw/hremplcntrct_text_raw.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Raw/hrp1000_rawsec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Raw/hrp1000_rawsec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Raw/hrp1051_rawsec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Raw/hrp1051_rawsec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Raw/hrpers_area_2_text_raw.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Raw/hrpers_area_2_text_raw.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Raw/hrpers_sarea_2_text_raw.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Raw/hrpers_sarea_2_text_raw.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Raw/hrposition_text_raw.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Raw/hrposition_text_raw.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Raw/hrt023_rawsec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Raw/hrt023_rawsec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Raw/hrt044_rawsec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Raw/hrt044_rawsec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Raw/hrt529u_rawsec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Raw/hrt529u_rawsec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Raw/hrt547s_raws.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Raw/hrt547s_raws.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Raw/hrt547v_raw.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Raw/hrt547v_raw.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hremplcntrct_text_stage.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hremplcntrct_text_stage.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrp1000_stagesec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrp1000_stagesec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrp1025_stagesec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrp1025_stagesec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrp1051_stagesec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrp1051_stagesec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpa0003_stagesec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpa0003_stagesec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpa0022_stagesec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpa0022_stagesec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpa0050_stagesec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpa0050_stagesec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpa0167_stagesec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpa0167_stagesec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpa0661_stagesec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpa0661_stagesec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpa2001_stagesec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpa2001_stagesec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpa2002_stagesec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpa2002_stagesec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpa2012_stagesec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpa2012_stagesec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpa9801_stagesec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpa9801_stagesec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpa9850_stagesec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpa9850_stagesec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpad25_stagesec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpad25_stagesec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpat001_stagesec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpat001_stagesec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpers_area_2_text_stage.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpers_area_2_text_stage.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpers_sarea_2_text_stage.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrpers_sarea_2_text_stage.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrposition_text_stage.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrposition_text_stage.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrt023_stagesec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrt023_stagesec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrt1002.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrt1002.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrt529u_stagesec.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrt529u_stagesec.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrt547s_stage.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrt547s_stage.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrt547v_stage.sql" beforeDir="false" afterPath="$PROJECT_DIR$/aws-sdlf-artifacts/code_ddl/Stage/hrt547v_stage.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="911f5623-9ebb-4ad6-951e-4cb8ebba9cb9" />
+        <option name="url" value="https://github.com/tro-gobando/KO_DESA.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProjectId" id="28ezWhEq4eKQ2SETZOVFgRNoC3O" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../repo/pase 20220511" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="78f0383f-df07-4221-889f-0227ee44e074" name="Changes" comment="" />
+      <created>1651591872570</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651591872570</updated>
+    </task>
+    <task id="LOCAL-00001" summary="9-5-22">
+      <created>1652113618930</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652113618932</updated>
+    </task>
+    <task id="LOCAL-00002" summary="re 09-05-22">
+      <created>1652117012864</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652117012864</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ordenamiento del los anteriores a una sola carpeta.">
+      <created>1652725318065</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652725318065</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="9-5-22" />
+    <MESSAGE value="re 09-05-22" />
+    <MESSAGE value="ordenamiento del los anteriores a una sola carpeta." />
+    <MESSAGE value="ordenamiento del los anteriores a una sola carpeta.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="ordenamiento del los anteriores a una sola carpeta.1" />
+  </component>
+</project>

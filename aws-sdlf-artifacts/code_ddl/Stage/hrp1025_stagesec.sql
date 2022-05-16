@@ -17,8 +17,9 @@ HISTO string,
 ITXNR string,
 NYEARS string,
 NMONTHS string,
-N_TYPE string)
-ROW FORMAT SERDE 
+N_TYPE string
+)
+ROW FORMAT SERDE
   'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe'
 STORED AS INPUTFORMAT
   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat'

@@ -51,7 +51,7 @@ CREATE EXTERNAL TABLE db_koandina_regional_stage.hrpad25_stagesec(
     REFDOCSEQNR string,
     LEARN_STATUS string,
     ACCESS_COUNTER string)
-ROW FORMAT SERDE 
+ROW FORMAT SERDE
   'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe'
 STORED AS INPUTFORMAT
   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat'
