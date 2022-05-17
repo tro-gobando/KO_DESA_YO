@@ -1,0 +1,8 @@
+select
+WERKS,
+BTRTL,
+ENDDA,
+BEGDA,
+UNIFIED_SUBAREA,
+REGION
+from $SOURCE_DATABASE.hrthrtarea_stagesec

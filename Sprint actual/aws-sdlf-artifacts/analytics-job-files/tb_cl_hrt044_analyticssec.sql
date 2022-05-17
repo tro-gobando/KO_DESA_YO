@@ -1,0 +1,9 @@
+select
+PERNR,
+BEGDA,
+COD_UEN,
+COD_ZON,
+TERRITC,
+UNAME,
+AEDTM
+from $SOURCE_DATABASE.hrt044_stagesec
