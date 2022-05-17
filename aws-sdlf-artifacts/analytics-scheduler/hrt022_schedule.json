@@ -9,7 +9,7 @@
 "S": "ENABLED"
 },
 "step_functions_arn": {
-"S": "arn:aws:states:us-east-1:654146749982:stateMachine:hrconve"
+"S": "arn:aws:states:us-east-1:654146749982:stateMachine:hrt022"
 },
 "validation_date_expression": {
 "S": "%Y-%m-%d"

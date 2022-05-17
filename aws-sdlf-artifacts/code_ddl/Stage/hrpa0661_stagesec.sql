@@ -84,7 +84,7 @@ CREATE EXTERNAL TABLE db_koandina_regional_stage.hrpa0661_stagesec(
     COI13 string,
     NUM13 string,
     AMT13 string)
-ROW FORMAT SERDE 
+ROW FORMAT SERDE
   'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe'
 STORED AS INPUTFORMAT
   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat'

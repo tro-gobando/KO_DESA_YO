@@ -1,6 +1,6 @@
 {
 "crond_expression": {
-"S": "cron(30 9 * * ? *)"
+"S": "cron(30 09 * * ? *)"
 },
 "rule_name": {
 "S": "hrlsotformtc"

@@ -2,15 +2,6 @@ CREATE EXTERNAL TABLE db_koandina_regional_stage.hremplsgrouptext_stage(
   sprsl string,
   persk string,
   txtsh string)
-
-
-
-
-
-
-
-
-
 ROW FORMAT SERDE
   'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe'
 STORED AS INPUTFORMAT

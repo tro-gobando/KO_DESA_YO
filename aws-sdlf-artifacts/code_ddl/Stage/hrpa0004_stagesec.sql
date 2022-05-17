@@ -1,4 +1,5 @@
 CREATE EXTERNAL TABLE db_koandina_regional_stage.hrpa0004_stagesec(
+  mandt string,
   pernr string,
   subty string,
   objps string,

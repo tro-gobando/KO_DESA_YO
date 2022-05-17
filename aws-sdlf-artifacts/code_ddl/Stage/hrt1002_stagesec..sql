@@ -1,9 +1,8 @@
-CREATE EXTERNAL TABLE db_koandina_cl_stage.hrt024_stagesec(
-trfar string,
-stell string,
-rotacion string,
-rol string,
-comentario string)
+CREATE EXTERNAL TABLE db_koandina_regional_stage.hrt1002_stagesec(
+    TABNR string,
+    TABSEQNR string,
+    TLINE string,
+    TFORMAT string)
 ROW FORMAT SERDE
   'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe'
 STORED AS INPUTFORMAT
@@ -11,7 +10,6 @@ STORED AS INPUTFORMAT
 OUTPUTFORMAT
   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat'
 LOCATION
-  's3://stagesec-koandina-prod/cl/sap/hrt024'
+  's3://stagesec-koandina-prod/regional/sap/hrt1002/'
 TBLPROPERTIES (
-'compressionType'='SNAPPY',
-'skip.header.line.count'='1')
+'compressionType'='SNAPPY')

@@ -1,11 +1,10 @@
-CREATE EXTERNAL TABLE db_koandina_regional_stage.hrpat002_stagesec(
-bukrs string,
-pernr_boss string,
-orgeh_padre string,
-orgtx_padre string,
-nivel string,
-orgeh_hija string,
-orgtx_hija string)
+CREATE EXTERNAL TABLE db_koandina_br_stage.hrthrtcdir_stagesec(
+  WERKS string,
+  BTRTL string,
+  ENDDA string,
+  BEGDA string,
+  UNIFIED_SUBAREA string,
+  REGION string)
 ROW FORMAT SERDE
   'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe'
 STORED AS INPUTFORMAT
@@ -13,6 +12,6 @@ STORED AS INPUTFORMAT
 OUTPUTFORMAT
   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat'
 LOCATION
-  's3://stagesec-koandina-prod/regional/sap/hrpat002'
+  's3://stagesec-koandina-prod/br/sap/hrthrtcdir/'
 TBLPROPERTIES (
 'compressionType'='SNAPPY')

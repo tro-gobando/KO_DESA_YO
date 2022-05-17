@@ -22,7 +22,7 @@ CREATE EXTERNAL TABLE db_koandina_br_stage.hrpa9801_stagesec(
     RESE2 string,
     GRPVL string,
     PAY_SCALE string)
-ROW FORMAT SERDE 
+ROW FORMAT SERDE
   'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe'
 STORED AS INPUTFORMAT
   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat'
