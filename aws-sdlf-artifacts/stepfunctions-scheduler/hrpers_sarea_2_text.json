@@ -5,9 +5,9 @@
         "Parallel Task_1": {
             "Type": "Parallel",
             "Branches": [                   {
-                                         "StartAt":"Spark_Job_J01_analytics-job-files/tb_regional_hrpers_area_2_text_analytics",
+                                         "StartAt":"Spark_Job_J01_analytics-job-files/tb_regional_hrpers_sarea_2_text_analytics",
                                          "States":{
-                                                            "Spark_Job_J01_analytics-job-files/tb_regional_hrpers_area_2_text_analytics": {
+                                                            "Spark_Job_J01_analytics-job-files/tb_regional_hrpers_sarea_2_text_analytics": {
                                                                                     "Type": "Pass",
                                                                                     "Parameters": {
                                                                                         "StepArguments": {
@@ -35,13 +35,13 @@
                                                                                                     "Arg7.$": "$.jobsBucket"
                                                                                                 },
                                                                                                 {
-                                                                                                    "Arg8": "analytics-job-files/tb_regional_hrpers_area_2_text_analytics"
+                                                                                                    "Arg8": "analytics-job-files/tb_regional_hrpers_sarea_2_text_analytics"
                                                                                                 },
                                                                                                 {
                                                                                                     "Arg9.$": "$.workflowName"
                                                                                                 },
                                                                                                 {
-                                                                                                    "Arg10": "hrpers_area_2_text"
+                                                                                                    "Arg10": "hrpers_sarea_2_text"
                                                                                                 },
                                                                                                 {
                                                                                                     "Arg11.$": "$.startDate"
@@ -53,16 +53,16 @@
                                                                                         }
                                                                                     },
                                                                                     "ResultPath": "$.taskresult",
-                                                                                    "Next": "Exec_Spark_Job_J01_analytics-job-files/tb_regional_hrpers_area_2_text_analytics"
+                                                                                    "Next": "Exec_Spark_Job_J01_analytics-job-files/tb_regional_hrpers_sarea_2_text_analytics"
                                                                                 },
                                                      
-                                                     "Exec_Spark_Job_J01_analytics-job-files/tb_regional_hrpers_area_2_text_analytics": {
+                                                     "Exec_Spark_Job_J01_analytics-job-files/tb_regional_hrpers_sarea_2_text_analytics": {
                                                                                 "Type": "Task",
                                                                                 "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
                                                                                 "Parameters": {
                                                                                                "ClusterId.$": "$.clusterId",                    
                                                                                                  "Step": {
-                                                                                                    "Name": "Spark_Job_J01_analytics-job-files/tb_regional_hrpers_area_2_text_analytics",
+                                                                                                    "Name": "Spark_Job_J01_analytics-job-files/tb_regional_hrpers_sarea_2_text_analytics",
                                                                                                     "ActionOnFailure": "CONTINUE",
                                                                                                     "HadoopJarStep": {
                                                                                                         "Jar": "command-runner.jar",

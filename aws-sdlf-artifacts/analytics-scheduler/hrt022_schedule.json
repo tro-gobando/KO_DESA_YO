@@ -3,7 +3,7 @@
 "S": "cron(0 14 * * ? *)"
 },
 "rule_name": {
-"S": "hrconve"
+"S": "hrt022"
 },
 "status": {
 "S": "ENABLED"
