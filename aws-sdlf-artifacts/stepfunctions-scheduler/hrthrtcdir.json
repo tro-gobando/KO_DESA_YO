@@ -5,9 +5,9 @@
         "Parallel Task_1": {
             "Type": "Parallel",
             "Branches": [                   {
-                                         "StartAt":"Spark_Job_J01_analytics-job-files/tb_br_hrthrtdir_analyticssec",
+                                         "StartAt":"Spark_Job_J01_analytics-job-files/tb_br_hrthrtcdir_analyticssec",
                                          "States":{
-                                                            "Spark_Job_J01_analytics-job-files/tb_br_hrthrtdir_analyticssec": {
+                                                            "Spark_Job_J01_analytics-job-files/tb_br_hrthrtcdir_analyticssec": {
                                                                                     "Type": "Pass",
                                                                                     "Parameters": {
                                                                                         "StepArguments": {
@@ -35,13 +35,13 @@
                                                                                                     "Arg7.$": "$.jobsBucket"
                                                                                                 },
                                                                                                 {
-                                                                                                    "Arg8": "analytics-job-files/tb_br_hrthrtdir_analyticssec"
+                                                                                                    "Arg8": "analytics-job-files/tb_br_hrthrtcdir_analyticssec"
                                                                                                 },
                                                                                                 {
                                                                                                     "Arg9.$": "$.workflowName"
                                                                                                 },
                                                                                                 {
-                                                                                                    "Arg10": "hrthrtdir"
+                                                                                                    "Arg10": "hrthrtcdir"
                                                                                                 },
                                                                                                 {
                                                                                                     "Arg11.$": "$.startDate"
@@ -53,16 +53,16 @@
                                                                                         }
                                                                                     },
                                                                                     "ResultPath": "$.taskresult",
-                                                                                    "Next": "Exec_Spark_Job_J01_analytics-job-files/tb_br_hrthrtdir_analyticssec"
+                                                                                    "Next": "Exec_Spark_Job_J01_analytics-job-files/tb_br_hrthrtcdir_analyticssec"
                                                                                 },
                                                      
-                                                     "Exec_Spark_Job_J01_analytics-job-files/tb_br_hrthrtdir_analyticssec": {
+                                                     "Exec_Spark_Job_J01_analytics-job-files/tb_br_hrthrtcdir_analyticssec": {
                                                                                 "Type": "Task",
                                                                                 "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
                                                                                 "Parameters": {
                                                                                                "ClusterId.$": "$.clusterId",                    
                                                                                                  "Step": {
-                                                                                                    "Name": "Spark_Job_J01_analytics-job-files/tb_br_hrthrtdir_analyticssec",
+                                                                                                    "Name": "Spark_Job_J01_analytics-job-files/tb_br_hrthrtcdir_analyticssec",
                                                                                                     "ActionOnFailure": "CONTINUE",
                                                                                                     "HadoopJarStep": {
                                                                                                         "Jar": "command-runner.jar",
