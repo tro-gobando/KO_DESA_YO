@@ -1,4 +1,4 @@
-CREATE OR REPLACE VIEW db_koandina_regional_analyticssec.vw_hr_maestra_dotacion_analyticssec AS 
+--CREATE OR REPLACE VIEW db_koandina_regional_analyticssec.vw_hr_maestra_dotacion_analyticssec AS 
 /*
 202208 - GOBANDO - 	Cracion
 202209 - GOBANDO - 	Apertura por calendario
@@ -12,7 +12,7 @@ CREATE OR REPLACE VIEW db_koandina_regional_analyticssec.vw_hr_maestra_dotacion_
 					Mejora PA0002
 					Fix apertura por calendario
 202302 - GOBANDO - 	Rotacion PY
-					Rotacion AR
+                    Rotacion AR
 */
 
 WITH
@@ -35,6 +35,7 @@ WITH
 			   GROUP BY anio, mes
 	        )  max_dia_mes ON ((max_dia_mes.mes = tie.mes) AND (max_dia_mes.anio = tie.anio))
   WHERE   tie.anio BETWEEN year(current_date) - 2 AND year(current_date)
+
 ) 
 , employee_attr_tie AS (
   SELECT DISTINCT
@@ -43,6 +44,10 @@ WITH
      db_koandina_regional_analyticssec.employee_attr_analyticssec ea
   LEFT JOIN tie tie ON tie.fecha BETWEEN date_parse(ea.begda, '%Y-%m-%d') AND (CASE WHEN date_parse(ea.endda, '%Y-%m-%d') > current_date THEN current_date ELSE date_parse(ea.endda, '%Y-%m-%d') END)
   WHERE   year(tie.fecha) >= year(current_date) - 2 AND tie.fecha <= current_date and ea.stat2 = '3'
+ 
+   and tie.mes = 12 and tie.anio = 2022
+  
+  
   GROUP BY ea.pernr, mes, anio, tie.ult_dia_mes
 )
 , employee_attr AS (
@@ -73,6 +78,11 @@ WITH
 --   (((stat2 = '3') AND 
   "year"(at.fecha) >= "year"(current_date) - 2 AND at.fecha <= current_date
    and   ea.bukrs != ''
+
+
+and ea.pernr = '06013738'
+
+
 )
 
 -- pa0002 AS (
@@ -628,6 +638,15 @@ LEFT JOIN db_koandina_regional_analyticssec.hrpa0016_analyticssec hrpa0016
   , ea.fecha                                                                                        			AS fecha
   , ea.anio                                                                                         			AS anio
   , ea.mes                                                                                          			AS mes
+  
+   ,roltr.persk rp 
+   ,ea.persk ep
+   ,roltr.cttyp rc
+   ,rota_arg.cttyp ec
+   ,roltr.jcode rj
+   ,p1051.jcode ej
+  
+  
   FROM
   employee_attr ea
   LEFT JOIN db_koandina_regional_analytics.comp_code_text_analytics cct ON ea.bukrs = cct.key1 AND cct.txtmd is not null
@@ -654,37 +673,38 @@ LEFT JOIN db_koandina_regional_analyticssec.hrpa0016_analyticssec hrpa0016
   LEFT JOIN rota_arg rota_arg ON rota_arg.pernr = ea.pernr AND rota_arg.fecha = ea.fecha
   LEFT JOIN db_koandina_py_analyticssec.thrrolrt_analyticssec roltr ON roltr.persk = ea.persk AND roltr.cttyp = rota_arg.cttyp AND roltr.jcode = p1051.jcode
 )
+select * from dotacion
 
- SELECT DISTINCT
-       nro_pers
-     , nomb_pers
-     , cod_sociedad
-     , sociedad
-     , operacion
-     , localidad
-     , zona
-     , gerencia_1
-     , gerencia_2
-     , cod_un_org
-     , desc_un_org
-     , grado_hay
-     , rotacion
-     , rol
-     , genero
-     , nacionalidad
-     , condicion
-     , fech_ing
-     , fech_nac
-     , cod_cargo
-     , cargo
-     , cod_centro_costo
-     , centro_costo
-     , cod_cen_cost_imp
-     , idioma
-     , mail
-     , cod_clasecontrato
-     , area_de_personal
-     , anio
-     , mes
- FROM dotacion
- WHERE  cod_sociedad != ''
+--  SELECT DISTINCT
+--       nro_pers
+--      , nomb_pers
+--      , cod_sociedad
+--      , sociedad
+--      , operacion
+--      , localidad
+--      , zona
+--      , gerencia_1
+--      , gerencia_2
+--      , cod_un_org
+--      , desc_un_org
+--      , grado_hay
+--      , rotacion
+--      , rol
+--      , genero
+--      , nacionalidad
+--      , condicion
+--      , fech_ing
+--      , fech_nac
+--      , cod_cargo
+--      , cargo
+--      , cod_centro_costo
+--      , centro_costo
+--      , cod_cen_cost_imp
+--      , idioma
+--      , mail
+--      , cod_clasecontrato
+--      , area_de_personal
+--      , anio
+--      , mes
+--  FROM dotacion
+--  WHERE  cod_sociedad != ''
