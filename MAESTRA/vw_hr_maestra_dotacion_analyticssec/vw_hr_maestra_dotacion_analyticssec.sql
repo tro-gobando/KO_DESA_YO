@@ -12,6 +12,7 @@ CREATE OR REPLACE VIEW db_koandina_regional_analyticssec.vw_hr_maestra_dotacion_
 					Mejora PA0002
 					Fix apertura por calendario
 202302 - GOBANDO - 	Rotacion PY
+					Rotacion AR
 */
 
 WITH
@@ -590,6 +591,7 @@ LEFT JOIN db_koandina_regional_analyticssec.hrpa0016_analyticssec hrpa0016
       WHEN ea.bukrs IN ('3046','3047') AND rota_arg.cttyp IN ('21','26','35') THEN 'PLANTA' 
       WHEN ea.bukrs IN ('3046','3047') AND rota_arg.cttyp IN ('30','52','53') THEN 'TEMPORADA' 	--cambio de valor 20 por 30 en condicion rota_arg.cttyp
       WHEN ea.bukrs IN ('3046','3047') AND rota_arg.cttyp IN ('68') THEN 'PRACTICA' 
+	  WHEN ea.bukrs IN ('3046','3047') AND rota_arg.cttyp = '' or rota_arg.cttyp is null THEN 'Sin Identificar'		--add 
       WHEN ea.bukrs IN ('3048') AND ea.persk IN ('84','87') THEN 'PRACTICA' 
       WHEN ea.bukrs IN ('3048') AND NOT(ea.persk IN ('84','87')) THEN 'PLANTA' 
       -- ELSE COALESCE(trim(rota2.rotacion), trim(rota1.rotacion)) 
