@@ -1,8 +1,11 @@
 select
-    WERKS,
-    BTRTL,
+    KOSTL,
     ENDDA,
     BEGDA,
-    UNIFIED_SUBAREA,
-    REGION
+    DSDIR,
+    DIRRE,
+    GESTA,
+    SUBGE,
+    LOCLI,
+    INDIC
 from $SOURCE_DATABASE.hrthrtcdir_stagesec

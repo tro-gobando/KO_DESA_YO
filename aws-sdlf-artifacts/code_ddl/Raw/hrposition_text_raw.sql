@@ -15,6 +15,6 @@ STORED AS INPUTFORMAT
 OUTPUTFORMAT 
   'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
 LOCATION
-  's3://raw-koandina-prod/regional/sap/hrposition_text/'
+  's3://raw-koandina-dev/regional/sap/hrposition_text/'
 TBLPROPERTIES (
   'skip.header.line.count'='1')

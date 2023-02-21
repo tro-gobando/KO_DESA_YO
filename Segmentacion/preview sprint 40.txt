@@ -1,0 +1,54 @@
+select * from db_koandina_ar_analyticssec.vw_ar_hrpa0003_analyticssec limit 10
+select * from db_koandina_ar_analyticssec.vw_ar_hrpa0009_analyticssec limit 10
+select * from db_koandina_ar_analyticssec.vw_ar_hrpa0022_analyticssec limit 10
+select * from db_koandina_ar_analyticssec.vw_ar_hrpa0050_analyticssec limit 10
+select * from db_koandina_ar_analyticssec.vw_ar_hrpa0167_analyticssec limit 10
+select * from db_koandina_ar_analyticssec.vw_ar_hrpa2002_analyticssec limit 10
+select * from db_koandina_ar_analyticssec.vw_ar_hrpa2012_analyticssec limit 10
+select * from db_koandina_ar_analyticssec.vw_ar_hrpa0661_analyticssec limit 10
+select * from db_koandina_ar_analyticssec.vw_ar_hrpa0027_analyticssec limit 10
+select * from db_koandina_ar_analyticssec.vw_ar_hrpa0048_analyticssec limit 10
+
+select * from db_koandina_br_analyticssec.vw_br_hrpa0003_analyticssec limit 10
+select * from db_koandina_br_analyticssec.vw_br_hrpa0009_analyticssec limit 10
+select * from db_koandina_br_analyticssec.vw_br_hrpa0022_analyticssec limit 10
+select * from db_koandina_br_analyticssec.vw_br_hrpa0050_analyticssec limit 10
+select * from db_koandina_br_analyticssec.vw_br_hrpa0167_analyticssec limit 10
+select * from db_koandina_br_analyticssec.vw_br_hrpa2002_analyticssec limit 10
+select * from db_koandina_br_analyticssec.vw_br_hrpa2012_analyticssec limit 10
+select * from db_koandina_br_analyticssec.vw_br_hrpa0661_analyticssec limit 10
+select * from db_koandina_br_analyticssec.vw_br_hrpa0027_analyticssec limit 10
+select * from db_koandina_br_analyticssec.vw_br_hrpa0048_analyticssec limit 10
+
+select * from db_koandina_cl_analyticssec.vw_cl_hrpa0003_analyticssec limit 10
+select * from db_koandina_cl_analyticssec.vw_cl_hrpa0009_analyticssec limit 10
+select * from db_koandina_cl_analyticssec.vw_cl_hrpa0022_analyticssec limit 10
+select * from db_koandina_cl_analyticssec.vw_cl_hrpa0050_analyticssec limit 10
+select * from db_koandina_cl_analyticssec.vw_cl_hrpa0167_analyticssec limit 10
+select * from db_koandina_cl_analyticssec.vw_cl_hrpa2002_analyticssec limit 10
+select * from db_koandina_cl_analyticssec.vw_cl_hrpa2012_analyticssec limit 10
+select * from db_koandina_cl_analyticssec.vw_cl_hrpa0661_analyticssec limit 10
+select * from db_koandina_cl_analyticssec.vw_cl_hrpa0027_analyticssec limit 10
+select * from db_koandina_cl_analyticssec.vw_cl_hrpa0048_analyticssec limit 10
+
+select * from db_koandina_py_analyticssec.vw_py_hrpa0003_analyticssec limit 10
+select * from db_koandina_py_analyticssec.vw_py_hrpa0009_analyticssec limit 10
+select * from db_koandina_py_analyticssec.vw_py_hrpa0022_analyticssec limit 10
+select * from db_koandina_py_analyticssec.vw_py_hrpa0050_analyticssec limit 10
+select * from db_koandina_py_analyticssec.vw_py_hrpa0167_analyticssec limit 10
+select * from db_koandina_py_analyticssec.vw_py_hrpa2002_analyticssec limit 10
+select * from db_koandina_py_analyticssec.vw_py_hrpa2012_analyticssec limit 10
+select * from db_koandina_py_analyticssec.vw_py_hrpa0661_analyticssec limit 10
+select * from db_koandina_py_analyticssec.vw_py_hrpa0027_analyticssec limit 10
+select * from db_koandina_py_analyticssec.vw_py_hrpa0048_analyticssec limit 10
+
+select * from db_koandina_regional_analyticssec.vw_reg_hrpa0003_analyticssec limit 10
+select * from db_koandina_regional_analyticssec.vw_reg_hrpa0009_analyticssec limit 10
+select * from db_koandina_regional_analyticssec.vw_reg_hrpa0022_analyticssec limit 10
+select * from db_koandina_regional_analyticssec.vw_reg_hrpa0050_analyticssec limit 10
+select * from db_koandina_regional_analyticssec.vw_reg_hrpa0167_analyticssec limit 10
+select * from db_koandina_regional_analyticssec.vw_reg_hrpa2002_analyticssec limit 10
+select * from db_koandina_regional_analyticssec.vw_reg_hrpa2012_analyticssec limit 10
+select * from db_koandina_regional_analyticssec.vw_reg_hrpa0661_analyticssec limit 10
+select * from db_koandina_regional_analyticssec.vw_reg_hrpa0027_analyticssec limit 10
+select * from db_koandina_regional_analyticssec.vw_reg_hrpa0048_analyticssec limit 10

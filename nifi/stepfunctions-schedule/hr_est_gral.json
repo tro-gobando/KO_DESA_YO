@@ -1,0 +1,6 @@
+{
+"crond_expression": "cron(0 14 * * ? *)",
+"workflow_name": "hr_est_gral",
+"status": "ENABLED",
+"validation_date_expression":  "%Y-%m-%d"
+}

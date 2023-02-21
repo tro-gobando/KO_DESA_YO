@@ -1,5 +1,4 @@
 select
-    
     PLVAR,
     OTYPE,
     OBJID,

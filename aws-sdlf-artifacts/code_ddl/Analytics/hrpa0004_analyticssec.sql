@@ -1,5 +1,4 @@
 CREATE EXTERNAL TABLE db_koandina_regional_analyticssec.hrpa0004_analyticssec(
-  mandt string,
   pernr string,
   subty string,
   objps string,
@@ -45,6 +44,6 @@ STORED AS INPUTFORMAT
 OUTPUTFORMAT
   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat'
 LOCATION
-  's3://analyticssec-koandina-prod/regional/sap/hrpa0004'
+  's3://analyticssec-koandina-dev/regional/sap/hrpa0004'
 TBLPROPERTIES (
   'transient_lastDdlTime'='1611597300')

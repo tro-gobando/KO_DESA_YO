@@ -1,4 +1,5 @@
 select
+MANDT ,
 PLVAR ,
 OTYPE ,
 OBJID ,

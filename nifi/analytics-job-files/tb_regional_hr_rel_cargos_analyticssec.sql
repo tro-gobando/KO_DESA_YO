@@ -1,0 +1,4 @@
+select
+cargo_bit,
+cargo_sap
+from $SOURCE_DATABASE.hr_rel_cargos_stagesec

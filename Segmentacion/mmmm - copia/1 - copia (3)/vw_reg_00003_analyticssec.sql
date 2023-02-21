@@ -1,0 +1,5 @@
+CREATE OR REPLACE VIEW db_koandina_regional_analyticssec.vw_reg_00003_analyticssec AS
+select
+00003.
+
+from db_koandina_regional_analyticssec.00003_analyticssec 00003

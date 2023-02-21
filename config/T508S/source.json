@@ -1,0 +1,79 @@
+{
+    "functionName": "/SAPDS/RFC_READ_TABLE2",
+    "runInBackgroundJob": false,
+    "tables": 
+    [
+        {
+            "name": "T508S",
+            "description": "Tabla de texto para reglas plan horario de trabajo (T508A)",
+            "fields": 
+            [
+                {
+                    "name": "MANDT",
+                    "description": "Mandante",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isPrimaryKey": true,
+                    "checkTable": "T000",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "ZEITY",
+                    "description": "Agrupación de las áreas de personal p.planes horario trabajo",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "MOFID",
+                    "description": "Calendario de días festivos",
+                    "abapType": "CharacterString",
+                    "length": 2,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "MOSID",
+                    "description": "Agrupación de subdivisiones personal para planes hor.trabajo",
+                    "abapType": "NumericCharacterString",
+                    "length": 2,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SCHKZ",
+                    "description": "Regla para plan horario trabajo",
+                    "abapType": "CharacterString",
+                    "length": 8,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "checkTable": "T508A",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SPRSL",
+                    "description": "Clave de idioma",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "formattedLength": 2,
+                    "checkTable": "T002",
+                    "conversionExit": "ISOLA"
+                },
+                {
+                    "name": "RTEXT",
+                    "description": "Txt.p.regla plan horario tbjo.(infotp.Horario tbjo.teórico)",
+                    "abapType": "CharacterString",
+                    "length": 25,
+                    "isSelected": true,
+                    "conversionExit": ""
+                }
+            ]
+        }
+    ]
+}

@@ -28,6 +28,6 @@ STORED AS INPUTFORMAT
 OUTPUTFORMAT
   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat'
 LOCATION
-  's3://analyticssec-koandina-prod/regional/sap/hrp1051/'
+  's3://analyticssec-koandina-dev/regional/sap/hrp1051/'
 TBLPROPERTIES (
   'transient_lastDdlTime'='1611597300')

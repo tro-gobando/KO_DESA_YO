@@ -1,0 +1,1882 @@
+{
+    "Comment": "Spark ETL State Machine",
+    "StartAt": "Parallel Task_1",
+    "States": {
+        "Parallel Task_1": {
+            "Type": "Parallel",
+            "Branches": [                   {
+                                         "StartAt":"Spark_Job_J01_analytics-job-files/tb_regional_hrpa0000_analyticssec",
+                                         "States":{
+                                                            "Spark_Job_J01_analytics-job-files/tb_regional_hrpa0000_analyticssec": {
+                                                                                    "Type": "Pass",
+                                                                                    "Parameters": {
+                                                                                        "StepArguments": {
+                                                                                            "ClusterId.$": "$.clusterId",
+                                                                                            "Args": [
+                                                                                                {
+                                                                                                    "Arg1": "/usr/bin/spark-submit"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg2": "--conf"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg3": "spark.yarn.appMasterEnv.PYTHONIOENCODING=utf8"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg4": "--packages"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg5": "com.databricks:spark-redshift_2.11:3.0.0-preview1,org.apache.spark:spark-avro_2.11:2.4.4"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg6": "/home/hadoop/SparkTransform/SparkTransform.py"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg7.$": "$.jobsBucket"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg8": "analytics-job-files/tb_regional_hrpa0000_analyticssec"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg9.$": "$.workflowName"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg10": "rule_hr_1"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg11.$": "$.startDate"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg12.$": "$.lastDate"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "ResultPath": "$.taskresult",
+                                                                                    "Next": "Exec_Spark_Job_J01_analytics-job-files/tb_regional_hrpa0000_analyticssec"
+                                                                                },
+                                                     
+                                                     "Exec_Spark_Job_J01_analytics-job-files/tb_regional_hrpa0000_analyticssec": {
+                                                                                "Type": "Task",
+                                                                                "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+                                                                                "Parameters": {
+                                                                                               "ClusterId.$": "$.clusterId",                    
+                                                                                                 "Step": {
+                                                                                                    "Name": "Spark_Job_J01_analytics-job-files/tb_regional_hrpa0000_analyticssec",
+                                                                                                    "ActionOnFailure": "CONTINUE",
+                                                                                                    "HadoopJarStep": {
+                                                                                                        "Jar": "command-runner.jar",
+                                                                                                        "Args.$": "$.taskresult.StepArguments.Args[*][*]"
+                                                                                                    }
+                                                                                                 }
+                                                                                },  
+                                                                                "Retry": [
+                                                                                            {
+                                                                                                "ErrorEquals": ["States.ALL"],
+                                                                                                "IntervalSeconds": 10,
+                                                                                                "MaxAttempts": 1,
+                                                                                                "BackoffRate": 1.5
+                                                                                            }
+                                                                                        ],
+                                                                                 "Catch": [   {
+                                                                                              "ErrorEquals": ["CustomError"],
+                                                                                              "Next": "FailBranch_1"
+                                                                                            }, 
+                                                                                            {
+                                                                                               "ErrorEquals": ["States.ALL"],
+                                                                                               "Next": "FailBranch_1"
+                                                                                            }
+                                                                                        ],
+                                                                                                            
+                                                                                "ResultPath": "$.taskresult",
+                                                                                "Next": "SuccessBranch_1"
+                                                                            },
+                                "SuccessBranch_1": {
+                                                "Type": "Pass",
+                                                "End": true
+                                            },
+                                "FailBranch_1": {
+                                                    "Type": "Fail",
+                                                    "Cause": "Level_Error",
+                                                    "Error": "Level_Error"
+                                                    }
+                                            }},                   {
+                                         "StartAt":"Spark_Job_J02_analytics-job-files/tb_regional_hrpa0001_analyticssec",
+                                         "States":{
+                                                            "Spark_Job_J02_analytics-job-files/tb_regional_hrpa0001_analyticssec": {
+                                                                                    "Type": "Pass",
+                                                                                    "Parameters": {
+                                                                                        "StepArguments": {
+                                                                                            "ClusterId.$": "$.clusterId",
+                                                                                            "Args": [
+                                                                                                {
+                                                                                                    "Arg1": "/usr/bin/spark-submit"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg2": "--conf"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg3": "spark.yarn.appMasterEnv.PYTHONIOENCODING=utf8"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg4": "--packages"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg5": "com.databricks:spark-redshift_2.11:3.0.0-preview1,org.apache.spark:spark-avro_2.11:2.4.4"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg6": "/home/hadoop/SparkTransform/SparkTransform.py"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg7.$": "$.jobsBucket"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg8": "analytics-job-files/tb_regional_hrpa0001_analyticssec"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg9.$": "$.workflowName"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg10": "rule_hr_1"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg11.$": "$.startDate"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg12.$": "$.lastDate"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "ResultPath": "$.taskresult",
+                                                                                    "Next": "Exec_Spark_Job_J02_analytics-job-files/tb_regional_hrpa0001_analyticssec"
+                                                                                },
+                                                     
+                                                     "Exec_Spark_Job_J02_analytics-job-files/tb_regional_hrpa0001_analyticssec": {
+                                                                                "Type": "Task",
+                                                                                "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+                                                                                "Parameters": {
+                                                                                               "ClusterId.$": "$.clusterId",                    
+                                                                                                 "Step": {
+                                                                                                    "Name": "Spark_Job_J02_analytics-job-files/tb_regional_hrpa0001_analyticssec",
+                                                                                                    "ActionOnFailure": "CONTINUE",
+                                                                                                    "HadoopJarStep": {
+                                                                                                        "Jar": "command-runner.jar",
+                                                                                                        "Args.$": "$.taskresult.StepArguments.Args[*][*]"
+                                                                                                    }
+                                                                                                 }
+                                                                                },  
+                                                                                "Retry": [
+                                                                                            {
+                                                                                                "ErrorEquals": ["States.ALL"],
+                                                                                                "IntervalSeconds": 10,
+                                                                                                "MaxAttempts": 1,
+                                                                                                "BackoffRate": 1.5
+                                                                                            }
+                                                                                        ],
+                                                                                 "Catch": [   {
+                                                                                              "ErrorEquals": ["CustomError"],
+                                                                                              "Next": "FailBranch_2"
+                                                                                            }, 
+                                                                                            {
+                                                                                               "ErrorEquals": ["States.ALL"],
+                                                                                               "Next": "FailBranch_2"
+                                                                                            }
+                                                                                        ],
+                                                                                                            
+                                                                                "ResultPath": "$.taskresult",
+                                                                                "Next": "SuccessBranch_2"
+                                                                            },
+                                "SuccessBranch_2": {
+                                                "Type": "Pass",
+                                                "End": true
+                                            },
+                                "FailBranch_2": {
+                                                    "Type": "Fail",
+                                                    "Cause": "Level_Error",
+                                                    "Error": "Level_Error"
+                                                    }
+                                            }},                   {
+                                         "StartAt":"Spark_Job_J03_analytics-job-files/tb_regional_hrpa0002_analyticssec",
+                                         "States":{
+                                                            "Spark_Job_J03_analytics-job-files/tb_regional_hrpa0002_analyticssec": {
+                                                                                    "Type": "Pass",
+                                                                                    "Parameters": {
+                                                                                        "StepArguments": {
+                                                                                            "ClusterId.$": "$.clusterId",
+                                                                                            "Args": [
+                                                                                                {
+                                                                                                    "Arg1": "/usr/bin/spark-submit"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg2": "--conf"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg3": "spark.yarn.appMasterEnv.PYTHONIOENCODING=utf8"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg4": "--packages"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg5": "com.databricks:spark-redshift_2.11:3.0.0-preview1,org.apache.spark:spark-avro_2.11:2.4.4"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg6": "/home/hadoop/SparkTransform/SparkTransform.py"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg7.$": "$.jobsBucket"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg8": "analytics-job-files/tb_regional_hrpa0002_analyticssec"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg9.$": "$.workflowName"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg10": "rule_hr_1"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg11.$": "$.startDate"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg12.$": "$.lastDate"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "ResultPath": "$.taskresult",
+                                                                                    "Next": "Exec_Spark_Job_J03_analytics-job-files/tb_regional_hrpa0002_analyticssec"
+                                                                                },
+                                                     
+                                                     "Exec_Spark_Job_J03_analytics-job-files/tb_regional_hrpa0002_analyticssec": {
+                                                                                "Type": "Task",
+                                                                                "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+                                                                                "Parameters": {
+                                                                                               "ClusterId.$": "$.clusterId",                    
+                                                                                                 "Step": {
+                                                                                                    "Name": "Spark_Job_J03_analytics-job-files/tb_regional_hrpa0002_analyticssec",
+                                                                                                    "ActionOnFailure": "CONTINUE",
+                                                                                                    "HadoopJarStep": {
+                                                                                                        "Jar": "command-runner.jar",
+                                                                                                        "Args.$": "$.taskresult.StepArguments.Args[*][*]"
+                                                                                                    }
+                                                                                                 }
+                                                                                },  
+                                                                                "Retry": [
+                                                                                            {
+                                                                                                "ErrorEquals": ["States.ALL"],
+                                                                                                "IntervalSeconds": 10,
+                                                                                                "MaxAttempts": 1,
+                                                                                                "BackoffRate": 1.5
+                                                                                            }
+                                                                                        ],
+                                                                                 "Catch": [   {
+                                                                                              "ErrorEquals": ["CustomError"],
+                                                                                              "Next": "FailBranch_3"
+                                                                                            }, 
+                                                                                            {
+                                                                                               "ErrorEquals": ["States.ALL"],
+                                                                                               "Next": "FailBranch_3"
+                                                                                            }
+                                                                                        ],
+                                                                                                            
+                                                                                "ResultPath": "$.taskresult",
+                                                                                "Next": "SuccessBranch_3"
+                                                                            },
+                                "SuccessBranch_3": {
+                                                "Type": "Pass",
+                                                "End": true
+                                            },
+                                "FailBranch_3": {
+                                                    "Type": "Fail",
+                                                    "Cause": "Level_Error",
+                                                    "Error": "Level_Error"
+                                                    }
+                                            }},                   {
+                                         "StartAt":"Spark_Job_J04_analytics-job-files/tb_regional_hrpa0004_analyticssec",
+                                         "States":{
+                                                            "Spark_Job_J04_analytics-job-files/tb_regional_hrpa0004_analyticssec": {
+                                                                                    "Type": "Pass",
+                                                                                    "Parameters": {
+                                                                                        "StepArguments": {
+                                                                                            "ClusterId.$": "$.clusterId",
+                                                                                            "Args": [
+                                                                                                {
+                                                                                                    "Arg1": "/usr/bin/spark-submit"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg2": "--conf"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg3": "spark.yarn.appMasterEnv.PYTHONIOENCODING=utf8"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg4": "--packages"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg5": "com.databricks:spark-redshift_2.11:3.0.0-preview1,org.apache.spark:spark-avro_2.11:2.4.4"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg6": "/home/hadoop/SparkTransform/SparkTransform.py"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg7.$": "$.jobsBucket"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg8": "analytics-job-files/tb_regional_hrpa0004_analyticssec"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg9.$": "$.workflowName"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg10": "rule_hr_1"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg11.$": "$.startDate"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg12.$": "$.lastDate"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "ResultPath": "$.taskresult",
+                                                                                    "Next": "Exec_Spark_Job_J04_analytics-job-files/tb_regional_hrpa0004_analyticssec"
+                                                                                },
+                                                     
+                                                     "Exec_Spark_Job_J04_analytics-job-files/tb_regional_hrpa0004_analyticssec": {
+                                                                                "Type": "Task",
+                                                                                "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+                                                                                "Parameters": {
+                                                                                               "ClusterId.$": "$.clusterId",                    
+                                                                                                 "Step": {
+                                                                                                    "Name": "Spark_Job_J04_analytics-job-files/tb_regional_hrpa0004_analyticssec",
+                                                                                                    "ActionOnFailure": "CONTINUE",
+                                                                                                    "HadoopJarStep": {
+                                                                                                        "Jar": "command-runner.jar",
+                                                                                                        "Args.$": "$.taskresult.StepArguments.Args[*][*]"
+                                                                                                    }
+                                                                                                 }
+                                                                                },  
+                                                                                "Retry": [
+                                                                                            {
+                                                                                                "ErrorEquals": ["States.ALL"],
+                                                                                                "IntervalSeconds": 10,
+                                                                                                "MaxAttempts": 1,
+                                                                                                "BackoffRate": 1.5
+                                                                                            }
+                                                                                        ],
+                                                                                 "Catch": [   {
+                                                                                              "ErrorEquals": ["CustomError"],
+                                                                                              "Next": "FailBranch_4"
+                                                                                            }, 
+                                                                                            {
+                                                                                               "ErrorEquals": ["States.ALL"],
+                                                                                               "Next": "FailBranch_4"
+                                                                                            }
+                                                                                        ],
+                                                                                                            
+                                                                                "ResultPath": "$.taskresult",
+                                                                                "Next": "SuccessBranch_4"
+                                                                            },
+                                "SuccessBranch_4": {
+                                                "Type": "Pass",
+                                                "End": true
+                                            },
+                                "FailBranch_4": {
+                                                    "Type": "Fail",
+                                                    "Cause": "Level_Error",
+                                                    "Error": "Level_Error"
+                                                    }
+                                            }},                   {
+                                         "StartAt":"Spark_Job_J05_analytics-job-files/tb_regional_hrpa0007_analyticssec",
+                                         "States":{
+                                                            "Spark_Job_J05_analytics-job-files/tb_regional_hrpa0007_analyticssec": {
+                                                                                    "Type": "Pass",
+                                                                                    "Parameters": {
+                                                                                        "StepArguments": {
+                                                                                            "ClusterId.$": "$.clusterId",
+                                                                                            "Args": [
+                                                                                                {
+                                                                                                    "Arg1": "/usr/bin/spark-submit"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg2": "--conf"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg3": "spark.yarn.appMasterEnv.PYTHONIOENCODING=utf8"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg4": "--packages"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg5": "com.databricks:spark-redshift_2.11:3.0.0-preview1,org.apache.spark:spark-avro_2.11:2.4.4"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg6": "/home/hadoop/SparkTransform/SparkTransform.py"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg7.$": "$.jobsBucket"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg8": "analytics-job-files/tb_regional_hrpa0007_analyticssec"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg9.$": "$.workflowName"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg10": "rule_hr_1"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg11.$": "$.startDate"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg12.$": "$.lastDate"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "ResultPath": "$.taskresult",
+                                                                                    "Next": "Exec_Spark_Job_J05_analytics-job-files/tb_regional_hrpa0007_analyticssec"
+                                                                                },
+                                                     
+                                                     "Exec_Spark_Job_J05_analytics-job-files/tb_regional_hrpa0007_analyticssec": {
+                                                                                "Type": "Task",
+                                                                                "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+                                                                                "Parameters": {
+                                                                                               "ClusterId.$": "$.clusterId",                    
+                                                                                                 "Step": {
+                                                                                                    "Name": "Spark_Job_J05_analytics-job-files/tb_regional_hrpa0007_analyticssec",
+                                                                                                    "ActionOnFailure": "CONTINUE",
+                                                                                                    "HadoopJarStep": {
+                                                                                                        "Jar": "command-runner.jar",
+                                                                                                        "Args.$": "$.taskresult.StepArguments.Args[*][*]"
+                                                                                                    }
+                                                                                                 }
+                                                                                },  
+                                                                                "Retry": [
+                                                                                            {
+                                                                                                "ErrorEquals": ["States.ALL"],
+                                                                                                "IntervalSeconds": 10,
+                                                                                                "MaxAttempts": 1,
+                                                                                                "BackoffRate": 1.5
+                                                                                            }
+                                                                                        ],
+                                                                                 "Catch": [   {
+                                                                                              "ErrorEquals": ["CustomError"],
+                                                                                              "Next": "FailBranch_5"
+                                                                                            }, 
+                                                                                            {
+                                                                                               "ErrorEquals": ["States.ALL"],
+                                                                                               "Next": "FailBranch_5"
+                                                                                            }
+                                                                                        ],
+                                                                                                            
+                                                                                "ResultPath": "$.taskresult",
+                                                                                "Next": "SuccessBranch_5"
+                                                                            },
+                                "SuccessBranch_5": {
+                                                "Type": "Pass",
+                                                "End": true
+                                            },
+                                "FailBranch_5": {
+                                                    "Type": "Fail",
+                                                    "Cause": "Level_Error",
+                                                    "Error": "Level_Error"
+                                                    }
+                                            }},                   {
+                                         "StartAt":"Spark_Job_J06_analytics-job-files/tb_regional_hrpa0016_analyticssec",
+                                         "States":{
+                                                            "Spark_Job_J06_analytics-job-files/tb_regional_hrpa0016_analyticssec": {
+                                                                                    "Type": "Pass",
+                                                                                    "Parameters": {
+                                                                                        "StepArguments": {
+                                                                                            "ClusterId.$": "$.clusterId",
+                                                                                            "Args": [
+                                                                                                {
+                                                                                                    "Arg1": "/usr/bin/spark-submit"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg2": "--conf"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg3": "spark.yarn.appMasterEnv.PYTHONIOENCODING=utf8"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg4": "--packages"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg5": "com.databricks:spark-redshift_2.11:3.0.0-preview1,org.apache.spark:spark-avro_2.11:2.4.4"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg6": "/home/hadoop/SparkTransform/SparkTransform.py"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg7.$": "$.jobsBucket"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg8": "analytics-job-files/tb_regional_hrpa0016_analyticssec"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg9.$": "$.workflowName"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg10": "rule_hr_1"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg11.$": "$.startDate"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg12.$": "$.lastDate"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "ResultPath": "$.taskresult",
+                                                                                    "Next": "Exec_Spark_Job_J06_analytics-job-files/tb_regional_hrpa0016_analyticssec"
+                                                                                },
+                                                     
+                                                     "Exec_Spark_Job_J06_analytics-job-files/tb_regional_hrpa0016_analyticssec": {
+                                                                                "Type": "Task",
+                                                                                "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+                                                                                "Parameters": {
+                                                                                               "ClusterId.$": "$.clusterId",                    
+                                                                                                 "Step": {
+                                                                                                    "Name": "Spark_Job_J06_analytics-job-files/tb_regional_hrpa0016_analyticssec",
+                                                                                                    "ActionOnFailure": "CONTINUE",
+                                                                                                    "HadoopJarStep": {
+                                                                                                        "Jar": "command-runner.jar",
+                                                                                                        "Args.$": "$.taskresult.StepArguments.Args[*][*]"
+                                                                                                    }
+                                                                                                 }
+                                                                                },  
+                                                                                "Retry": [
+                                                                                            {
+                                                                                                "ErrorEquals": ["States.ALL"],
+                                                                                                "IntervalSeconds": 10,
+                                                                                                "MaxAttempts": 1,
+                                                                                                "BackoffRate": 1.5
+                                                                                            }
+                                                                                        ],
+                                                                                 "Catch": [   {
+                                                                                              "ErrorEquals": ["CustomError"],
+                                                                                              "Next": "FailBranch_6"
+                                                                                            }, 
+                                                                                            {
+                                                                                               "ErrorEquals": ["States.ALL"],
+                                                                                               "Next": "FailBranch_6"
+                                                                                            }
+                                                                                        ],
+                                                                                                            
+                                                                                "ResultPath": "$.taskresult",
+                                                                                "Next": "SuccessBranch_6"
+                                                                            },
+                                "SuccessBranch_6": {
+                                                "Type": "Pass",
+                                                "End": true
+                                            },
+                                "FailBranch_6": {
+                                                    "Type": "Fail",
+                                                    "Cause": "Level_Error",
+                                                    "Error": "Level_Error"
+                                                    }
+                                            }}],
+            "ResultPath": "$.ParallelOutput_1",
+            "OutputPath": "$.ParallelOutput_1[0]",
+            "Catch": [{
+                "ErrorEquals": ["States.ALL"],
+                "ResultPath": "$.ParallelOutput_1",
+                "Next": "WorkflowEnd"
+            }],
+            "Next": "Parallel Task_2"
+        },
+        "Parallel Task_2": {
+            "Type": "Parallel",
+            "Branches": [                   {
+                                         "StartAt":"Spark_Job_J10_analytics-job-files/tb_regional_hrpa0394_analyticssec",
+                                         "States":{
+                                                            "Spark_Job_J10_analytics-job-files/tb_regional_hrpa0394_analyticssec": {
+                                                                                    "Type": "Pass",
+                                                                                    "Parameters": {
+                                                                                        "StepArguments": {
+                                                                                            "ClusterId.$": "$.clusterId",
+                                                                                            "Args": [
+                                                                                                {
+                                                                                                    "Arg1": "/usr/bin/spark-submit"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg2": "--conf"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg3": "spark.yarn.appMasterEnv.PYTHONIOENCODING=utf8"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg4": "--packages"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg5": "com.databricks:spark-redshift_2.11:3.0.0-preview1,org.apache.spark:spark-avro_2.11:2.4.4"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg6": "/home/hadoop/SparkTransform/SparkTransform.py"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg7.$": "$.jobsBucket"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg8": "analytics-job-files/tb_regional_hrpa0394_analyticssec"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg9.$": "$.workflowName"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg10": "rule_hr_1"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg11.$": "$.startDate"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg12.$": "$.lastDate"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "ResultPath": "$.taskresult",
+                                                                                    "Next": "Exec_Spark_Job_J10_analytics-job-files/tb_regional_hrpa0394_analyticssec"
+                                                                                },
+                                                     
+                                                     "Exec_Spark_Job_J10_analytics-job-files/tb_regional_hrpa0394_analyticssec": {
+                                                                                "Type": "Task",
+                                                                                "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+                                                                                "Parameters": {
+                                                                                               "ClusterId.$": "$.clusterId",                    
+                                                                                                 "Step": {
+                                                                                                    "Name": "Spark_Job_J10_analytics-job-files/tb_regional_hrpa0394_analyticssec",
+                                                                                                    "ActionOnFailure": "CONTINUE",
+                                                                                                    "HadoopJarStep": {
+                                                                                                        "Jar": "command-runner.jar",
+                                                                                                        "Args.$": "$.taskresult.StepArguments.Args[*][*]"
+                                                                                                    }
+                                                                                                 }
+                                                                                },  
+                                                                                "Retry": [
+                                                                                            {
+                                                                                                "ErrorEquals": ["States.ALL"],
+                                                                                                "IntervalSeconds": 10,
+                                                                                                "MaxAttempts": 1,
+                                                                                                "BackoffRate": 1.5
+                                                                                            }
+                                                                                        ],
+                                                                                 "Catch": [   {
+                                                                                              "ErrorEquals": ["CustomError"],
+                                                                                              "Next": "FailBranch_10"
+                                                                                            }, 
+                                                                                            {
+                                                                                               "ErrorEquals": ["States.ALL"],
+                                                                                               "Next": "FailBranch_10"
+                                                                                            }
+                                                                                        ],
+                                                                                                            
+                                                                                "ResultPath": "$.taskresult",
+                                                                                "Next": "SuccessBranch_10"
+                                                                            },
+                                "SuccessBranch_10": {
+                                                "Type": "Pass",
+                                                "End": true
+                                            },
+                                "FailBranch_10": {
+                                                    "Type": "Fail",
+                                                    "Cause": "Level_Error",
+                                                    "Error": "Level_Error"
+                                                    }
+                                            }},                   {
+                                         "StartAt":"Spark_Job_J11_analytics-job-files/tb_regional_hrpa0465_analyticssec",
+                                         "States":{
+                                                            "Spark_Job_J11_analytics-job-files/tb_regional_hrpa0465_analyticssec": {
+                                                                                    "Type": "Pass",
+                                                                                    "Parameters": {
+                                                                                        "StepArguments": {
+                                                                                            "ClusterId.$": "$.clusterId",
+                                                                                            "Args": [
+                                                                                                {
+                                                                                                    "Arg1": "/usr/bin/spark-submit"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg2": "--conf"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg3": "spark.yarn.appMasterEnv.PYTHONIOENCODING=utf8"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg4": "--packages"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg5": "com.databricks:spark-redshift_2.11:3.0.0-preview1,org.apache.spark:spark-avro_2.11:2.4.4"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg6": "/home/hadoop/SparkTransform/SparkTransform.py"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg7.$": "$.jobsBucket"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg8": "analytics-job-files/tb_regional_hrpa0465_analyticssec"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg9.$": "$.workflowName"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg10": "rule_hr_1"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg11.$": "$.startDate"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg12.$": "$.lastDate"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "ResultPath": "$.taskresult",
+                                                                                    "Next": "Exec_Spark_Job_J11_analytics-job-files/tb_regional_hrpa0465_analyticssec"
+                                                                                },
+                                                     
+                                                     "Exec_Spark_Job_J11_analytics-job-files/tb_regional_hrpa0465_analyticssec": {
+                                                                                "Type": "Task",
+                                                                                "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+                                                                                "Parameters": {
+                                                                                               "ClusterId.$": "$.clusterId",                    
+                                                                                                 "Step": {
+                                                                                                    "Name": "Spark_Job_J11_analytics-job-files/tb_regional_hrpa0465_analyticssec",
+                                                                                                    "ActionOnFailure": "CONTINUE",
+                                                                                                    "HadoopJarStep": {
+                                                                                                        "Jar": "command-runner.jar",
+                                                                                                        "Args.$": "$.taskresult.StepArguments.Args[*][*]"
+                                                                                                    }
+                                                                                                 }
+                                                                                },  
+                                                                                "Retry": [
+                                                                                            {
+                                                                                                "ErrorEquals": ["States.ALL"],
+                                                                                                "IntervalSeconds": 10,
+                                                                                                "MaxAttempts": 1,
+                                                                                                "BackoffRate": 1.5
+                                                                                            }
+                                                                                        ],
+                                                                                 "Catch": [   {
+                                                                                              "ErrorEquals": ["CustomError"],
+                                                                                              "Next": "FailBranch_11"
+                                                                                            }, 
+                                                                                            {
+                                                                                               "ErrorEquals": ["States.ALL"],
+                                                                                               "Next": "FailBranch_11"
+                                                                                            }
+                                                                                        ],
+                                                                                                            
+                                                                                "ResultPath": "$.taskresult",
+                                                                                "Next": "SuccessBranch_11"
+                                                                            },
+                                "SuccessBranch_11": {
+                                                "Type": "Pass",
+                                                "End": true
+                                            },
+                                "FailBranch_11": {
+                                                    "Type": "Fail",
+                                                    "Cause": "Level_Error",
+                                                    "Error": "Level_Error"
+                                                    }
+                                            }},                   {
+                                         "StartAt":"Spark_Job_J12_analytics-job-files/tb_regional_job_2_text",
+                                         "States":{
+                                                            "Spark_Job_J12_analytics-job-files/tb_regional_job_2_text": {
+                                                                                    "Type": "Pass",
+                                                                                    "Parameters": {
+                                                                                        "StepArguments": {
+                                                                                            "ClusterId.$": "$.clusterId",
+                                                                                            "Args": [
+                                                                                                {
+                                                                                                    "Arg1": "/usr/bin/spark-submit"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg2": "--conf"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg3": "spark.yarn.appMasterEnv.PYTHONIOENCODING=utf8"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg4": "--packages"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg5": "com.databricks:spark-redshift_2.11:3.0.0-preview1,org.apache.spark:spark-avro_2.11:2.4.4"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg6": "/home/hadoop/SparkTransform/SparkTransform.py"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg7.$": "$.jobsBucket"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg8": "analytics-job-files/tb_regional_job_2_text"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg9.$": "$.workflowName"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg10": "rule_hr_1"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg11.$": "$.startDate"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg12.$": "$.lastDate"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "ResultPath": "$.taskresult",
+                                                                                    "Next": "Exec_Spark_Job_J12_analytics-job-files/tb_regional_job_2_text"
+                                                                                },
+                                                     
+                                                     "Exec_Spark_Job_J12_analytics-job-files/tb_regional_job_2_text": {
+                                                                                "Type": "Task",
+                                                                                "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+                                                                                "Parameters": {
+                                                                                               "ClusterId.$": "$.clusterId",                    
+                                                                                                 "Step": {
+                                                                                                    "Name": "Spark_Job_J12_analytics-job-files/tb_regional_job_2_text",
+                                                                                                    "ActionOnFailure": "CONTINUE",
+                                                                                                    "HadoopJarStep": {
+                                                                                                        "Jar": "command-runner.jar",
+                                                                                                        "Args.$": "$.taskresult.StepArguments.Args[*][*]"
+                                                                                                    }
+                                                                                                 }
+                                                                                },  
+                                                                                "Retry": [
+                                                                                            {
+                                                                                                "ErrorEquals": ["States.ALL"],
+                                                                                                "IntervalSeconds": 10,
+                                                                                                "MaxAttempts": 1,
+                                                                                                "BackoffRate": 1.5
+                                                                                            }
+                                                                                        ],
+                                                                                 "Catch": [   {
+                                                                                              "ErrorEquals": ["CustomError"],
+                                                                                              "Next": "FailBranch_12"
+                                                                                            }, 
+                                                                                            {
+                                                                                               "ErrorEquals": ["States.ALL"],
+                                                                                               "Next": "FailBranch_12"
+                                                                                            }
+                                                                                        ],
+                                                                                                            
+                                                                                "ResultPath": "$.taskresult",
+                                                                                "Next": "SuccessBranch_12"
+                                                                            },
+                                "SuccessBranch_12": {
+                                                "Type": "Pass",
+                                                "End": true
+                                            },
+                                "FailBranch_12": {
+                                                    "Type": "Fail",
+                                                    "Cause": "Level_Error",
+                                                    "Error": "Level_Error"
+                                                    }
+                                            }},                   {
+                                         "StartAt":"Spark_Job_J07_analytics-job-files/tb_regional_hrpa0041_analyticssec",
+                                         "States":{
+                                                            "Spark_Job_J07_analytics-job-files/tb_regional_hrpa0041_analyticssec": {
+                                                                                    "Type": "Pass",
+                                                                                    "Parameters": {
+                                                                                        "StepArguments": {
+                                                                                            "ClusterId.$": "$.clusterId",
+                                                                                            "Args": [
+                                                                                                {
+                                                                                                    "Arg1": "/usr/bin/spark-submit"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg2": "--conf"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg3": "spark.yarn.appMasterEnv.PYTHONIOENCODING=utf8"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg4": "--packages"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg5": "com.databricks:spark-redshift_2.11:3.0.0-preview1,org.apache.spark:spark-avro_2.11:2.4.4"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg6": "/home/hadoop/SparkTransform/SparkTransform.py"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg7.$": "$.jobsBucket"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg8": "analytics-job-files/tb_regional_hrpa0041_analyticssec"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg9.$": "$.workflowName"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg10": "rule_hr_1"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg11.$": "$.startDate"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg12.$": "$.lastDate"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "ResultPath": "$.taskresult",
+                                                                                    "Next": "Exec_Spark_Job_J07_analytics-job-files/tb_regional_hrpa0041_analyticssec"
+                                                                                },
+                                                     
+                                                     "Exec_Spark_Job_J07_analytics-job-files/tb_regional_hrpa0041_analyticssec": {
+                                                                                "Type": "Task",
+                                                                                "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+                                                                                "Parameters": {
+                                                                                               "ClusterId.$": "$.clusterId",                    
+                                                                                                 "Step": {
+                                                                                                    "Name": "Spark_Job_J07_analytics-job-files/tb_regional_hrpa0041_analyticssec",
+                                                                                                    "ActionOnFailure": "CONTINUE",
+                                                                                                    "HadoopJarStep": {
+                                                                                                        "Jar": "command-runner.jar",
+                                                                                                        "Args.$": "$.taskresult.StepArguments.Args[*][*]"
+                                                                                                    }
+                                                                                                 }
+                                                                                },  
+                                                                                "Retry": [
+                                                                                            {
+                                                                                                "ErrorEquals": ["States.ALL"],
+                                                                                                "IntervalSeconds": 10,
+                                                                                                "MaxAttempts": 1,
+                                                                                                "BackoffRate": 1.5
+                                                                                            }
+                                                                                        ],
+                                                                                 "Catch": [   {
+                                                                                              "ErrorEquals": ["CustomError"],
+                                                                                              "Next": "FailBranch_7"
+                                                                                            }, 
+                                                                                            {
+                                                                                               "ErrorEquals": ["States.ALL"],
+                                                                                               "Next": "FailBranch_7"
+                                                                                            }
+                                                                                        ],
+                                                                                                            
+                                                                                "ResultPath": "$.taskresult",
+                                                                                "Next": "SuccessBranch_7"
+                                                                            },
+                                "SuccessBranch_7": {
+                                                "Type": "Pass",
+                                                "End": true
+                                            },
+                                "FailBranch_7": {
+                                                    "Type": "Fail",
+                                                    "Cause": "Level_Error",
+                                                    "Error": "Level_Error"
+                                                    }
+                                            }},                   {
+                                         "StartAt":"Spark_Job_J08_analytics-job-files/tb_regional_hrpa0105_analyticssec",
+                                         "States":{
+                                                            "Spark_Job_J08_analytics-job-files/tb_regional_hrpa0105_analyticssec": {
+                                                                                    "Type": "Pass",
+                                                                                    "Parameters": {
+                                                                                        "StepArguments": {
+                                                                                            "ClusterId.$": "$.clusterId",
+                                                                                            "Args": [
+                                                                                                {
+                                                                                                    "Arg1": "/usr/bin/spark-submit"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg2": "--conf"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg3": "spark.yarn.appMasterEnv.PYTHONIOENCODING=utf8"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg4": "--packages"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg5": "com.databricks:spark-redshift_2.11:3.0.0-preview1,org.apache.spark:spark-avro_2.11:2.4.4"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg6": "/home/hadoop/SparkTransform/SparkTransform.py"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg7.$": "$.jobsBucket"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg8": "analytics-job-files/tb_regional_hrpa0105_analyticssec"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg9.$": "$.workflowName"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg10": "rule_hr_1"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg11.$": "$.startDate"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg12.$": "$.lastDate"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "ResultPath": "$.taskresult",
+                                                                                    "Next": "Exec_Spark_Job_J08_analytics-job-files/tb_regional_hrpa0105_analyticssec"
+                                                                                },
+                                                     
+                                                     "Exec_Spark_Job_J08_analytics-job-files/tb_regional_hrpa0105_analyticssec": {
+                                                                                "Type": "Task",
+                                                                                "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+                                                                                "Parameters": {
+                                                                                               "ClusterId.$": "$.clusterId",                    
+                                                                                                 "Step": {
+                                                                                                    "Name": "Spark_Job_J08_analytics-job-files/tb_regional_hrpa0105_analyticssec",
+                                                                                                    "ActionOnFailure": "CONTINUE",
+                                                                                                    "HadoopJarStep": {
+                                                                                                        "Jar": "command-runner.jar",
+                                                                                                        "Args.$": "$.taskresult.StepArguments.Args[*][*]"
+                                                                                                    }
+                                                                                                 }
+                                                                                },  
+                                                                                "Retry": [
+                                                                                            {
+                                                                                                "ErrorEquals": ["States.ALL"],
+                                                                                                "IntervalSeconds": 10,
+                                                                                                "MaxAttempts": 1,
+                                                                                                "BackoffRate": 1.5
+                                                                                            }
+                                                                                        ],
+                                                                                 "Catch": [   {
+                                                                                              "ErrorEquals": ["CustomError"],
+                                                                                              "Next": "FailBranch_8"
+                                                                                            }, 
+                                                                                            {
+                                                                                               "ErrorEquals": ["States.ALL"],
+                                                                                               "Next": "FailBranch_8"
+                                                                                            }
+                                                                                        ],
+                                                                                                            
+                                                                                "ResultPath": "$.taskresult",
+                                                                                "Next": "SuccessBranch_8"
+                                                                            },
+                                "SuccessBranch_8": {
+                                                "Type": "Pass",
+                                                "End": true
+                                            },
+                                "FailBranch_8": {
+                                                    "Type": "Fail",
+                                                    "Cause": "Level_Error",
+                                                    "Error": "Level_Error"
+                                                    }
+                                            }},                   {
+                                         "StartAt":"Spark_Job_J09_analytics-job-files/tb_regional_hrpa0185_analyticssec",
+                                         "States":{
+                                                            "Spark_Job_J09_analytics-job-files/tb_regional_hrpa0185_analyticssec": {
+                                                                                    "Type": "Pass",
+                                                                                    "Parameters": {
+                                                                                        "StepArguments": {
+                                                                                            "ClusterId.$": "$.clusterId",
+                                                                                            "Args": [
+                                                                                                {
+                                                                                                    "Arg1": "/usr/bin/spark-submit"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg2": "--conf"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg3": "spark.yarn.appMasterEnv.PYTHONIOENCODING=utf8"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg4": "--packages"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg5": "com.databricks:spark-redshift_2.11:3.0.0-preview1,org.apache.spark:spark-avro_2.11:2.4.4"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg6": "/home/hadoop/SparkTransform/SparkTransform.py"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg7.$": "$.jobsBucket"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg8": "analytics-job-files/tb_regional_hrpa0185_analyticssec"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg9.$": "$.workflowName"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg10": "rule_hr_1"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg11.$": "$.startDate"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg12.$": "$.lastDate"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "ResultPath": "$.taskresult",
+                                                                                    "Next": "Exec_Spark_Job_J09_analytics-job-files/tb_regional_hrpa0185_analyticssec"
+                                                                                },
+                                                     
+                                                     "Exec_Spark_Job_J09_analytics-job-files/tb_regional_hrpa0185_analyticssec": {
+                                                                                "Type": "Task",
+                                                                                "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+                                                                                "Parameters": {
+                                                                                               "ClusterId.$": "$.clusterId",                    
+                                                                                                 "Step": {
+                                                                                                    "Name": "Spark_Job_J09_analytics-job-files/tb_regional_hrpa0185_analyticssec",
+                                                                                                    "ActionOnFailure": "CONTINUE",
+                                                                                                    "HadoopJarStep": {
+                                                                                                        "Jar": "command-runner.jar",
+                                                                                                        "Args.$": "$.taskresult.StepArguments.Args[*][*]"
+                                                                                                    }
+                                                                                                 }
+                                                                                },  
+                                                                                "Retry": [
+                                                                                            {
+                                                                                                "ErrorEquals": ["States.ALL"],
+                                                                                                "IntervalSeconds": 10,
+                                                                                                "MaxAttempts": 1,
+                                                                                                "BackoffRate": 1.5
+                                                                                            }
+                                                                                        ],
+                                                                                 "Catch": [   {
+                                                                                              "ErrorEquals": ["CustomError"],
+                                                                                              "Next": "FailBranch_9"
+                                                                                            }, 
+                                                                                            {
+                                                                                               "ErrorEquals": ["States.ALL"],
+                                                                                               "Next": "FailBranch_9"
+                                                                                            }
+                                                                                        ],
+                                                                                                            
+                                                                                "ResultPath": "$.taskresult",
+                                                                                "Next": "SuccessBranch_9"
+                                                                            },
+                                "SuccessBranch_9": {
+                                                "Type": "Pass",
+                                                "End": true
+                                            },
+                                "FailBranch_9": {
+                                                    "Type": "Fail",
+                                                    "Cause": "Level_Error",
+                                                    "Error": "Level_Error"
+                                                    }
+                                            }}],
+            "ResultPath": "$.ParallelOutput_2",
+            "OutputPath": "$.ParallelOutput_2[0]",
+            "Catch": [{
+                "ErrorEquals": ["States.ALL"],
+                "ResultPath": "$.ParallelOutput_2",
+                "Next": "WorkflowEnd"
+            }],
+            "Next": "Parallel Task_3"
+        },
+        "Parallel Task_3": {
+            "Type": "Parallel",
+            "Branches": [                   {
+                                         "StartAt":"Spark_Job_J13_analytics-job-files/tb_regional_employee_attr_analyticssec",
+                                         "States":{
+                                                            "Spark_Job_J13_analytics-job-files/tb_regional_employee_attr_analyticssec": {
+                                                                                    "Type": "Pass",
+                                                                                    "Parameters": {
+                                                                                        "StepArguments": {
+                                                                                            "ClusterId.$": "$.clusterId",
+                                                                                            "Args": [
+                                                                                                {
+                                                                                                    "Arg1": "/usr/bin/spark-submit"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg2": "--conf"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg3": "spark.yarn.appMasterEnv.PYTHONIOENCODING=utf8"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg4": "--packages"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg5": "com.databricks:spark-redshift_2.11:3.0.0-preview1,org.apache.spark:spark-avro_2.11:2.4.4"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg6": "/home/hadoop/SparkTransform/SparkTransform.py"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg7.$": "$.jobsBucket"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg8": "analytics-job-files/tb_regional_employee_attr_analyticssec"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg9.$": "$.workflowName"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg10": "rule_hr_1"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg11.$": "$.startDate"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg12.$": "$.lastDate"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "ResultPath": "$.taskresult",
+                                                                                    "Next": "Exec_Spark_Job_J13_analytics-job-files/tb_regional_employee_attr_analyticssec"
+                                                                                },
+                                                     
+                                                     "Exec_Spark_Job_J13_analytics-job-files/tb_regional_employee_attr_analyticssec": {
+                                                                                "Type": "Task",
+                                                                                "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+                                                                                "Parameters": {
+                                                                                               "ClusterId.$": "$.clusterId",                    
+                                                                                                 "Step": {
+                                                                                                    "Name": "Spark_Job_J13_analytics-job-files/tb_regional_employee_attr_analyticssec",
+                                                                                                    "ActionOnFailure": "CONTINUE",
+                                                                                                    "HadoopJarStep": {
+                                                                                                        "Jar": "command-runner.jar",
+                                                                                                        "Args.$": "$.taskresult.StepArguments.Args[*][*]"
+                                                                                                    }
+                                                                                                 }
+                                                                                },  
+                                                                                "Retry": [
+                                                                                            {
+                                                                                                "ErrorEquals": ["States.ALL"],
+                                                                                                "IntervalSeconds": 10,
+                                                                                                "MaxAttempts": 1,
+                                                                                                "BackoffRate": 1.5
+                                                                                            }
+                                                                                        ],
+                                                                                 "Catch": [   {
+                                                                                              "ErrorEquals": ["CustomError"],
+                                                                                              "Next": "FailBranch_13"
+                                                                                            }, 
+                                                                                            {
+                                                                                               "ErrorEquals": ["States.ALL"],
+                                                                                               "Next": "FailBranch_13"
+                                                                                            }
+                                                                                        ],
+                                                                                                            
+                                                                                "ResultPath": "$.taskresult",
+                                                                                "Next": "SuccessBranch_13"
+                                                                            },
+                                "SuccessBranch_13": {
+                                                "Type": "Pass",
+                                                "End": true
+                                            },
+                                "FailBranch_13": {
+                                                    "Type": "Fail",
+                                                    "Cause": "Level_Error",
+                                                    "Error": "Level_Error"
+                                                    }
+                                            }},                   {
+                                         "StartAt":"Spark_Job_J14_analytics-job-files/tb_regional_employee_text_analyticssec",
+                                         "States":{
+                                                            "Spark_Job_J14_analytics-job-files/tb_regional_employee_text_analyticssec": {
+                                                                                    "Type": "Pass",
+                                                                                    "Parameters": {
+                                                                                        "StepArguments": {
+                                                                                            "ClusterId.$": "$.clusterId",
+                                                                                            "Args": [
+                                                                                                {
+                                                                                                    "Arg1": "/usr/bin/spark-submit"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg2": "--conf"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg3": "spark.yarn.appMasterEnv.PYTHONIOENCODING=utf8"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg4": "--packages"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg5": "com.databricks:spark-redshift_2.11:3.0.0-preview1,org.apache.spark:spark-avro_2.11:2.4.4"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg6": "/home/hadoop/SparkTransform/SparkTransform.py"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg7.$": "$.jobsBucket"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg8": "analytics-job-files/tb_regional_employee_text_analyticssec"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg9.$": "$.workflowName"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg10": "rule_hr_1"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg11.$": "$.startDate"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg12.$": "$.lastDate"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "ResultPath": "$.taskresult",
+                                                                                    "Next": "Exec_Spark_Job_J14_analytics-job-files/tb_regional_employee_text_analyticssec"
+                                                                                },
+                                                     
+                                                     "Exec_Spark_Job_J14_analytics-job-files/tb_regional_employee_text_analyticssec": {
+                                                                                "Type": "Task",
+                                                                                "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+                                                                                "Parameters": {
+                                                                                               "ClusterId.$": "$.clusterId",                    
+                                                                                                 "Step": {
+                                                                                                    "Name": "Spark_Job_J14_analytics-job-files/tb_regional_employee_text_analyticssec",
+                                                                                                    "ActionOnFailure": "CONTINUE",
+                                                                                                    "HadoopJarStep": {
+                                                                                                        "Jar": "command-runner.jar",
+                                                                                                        "Args.$": "$.taskresult.StepArguments.Args[*][*]"
+                                                                                                    }
+                                                                                                 }
+                                                                                },  
+                                                                                "Retry": [
+                                                                                            {
+                                                                                                "ErrorEquals": ["States.ALL"],
+                                                                                                "IntervalSeconds": 10,
+                                                                                                "MaxAttempts": 1,
+                                                                                                "BackoffRate": 1.5
+                                                                                            }
+                                                                                        ],
+                                                                                 "Catch": [   {
+                                                                                              "ErrorEquals": ["CustomError"],
+                                                                                              "Next": "FailBranch_14"
+                                                                                            }, 
+                                                                                            {
+                                                                                               "ErrorEquals": ["States.ALL"],
+                                                                                               "Next": "FailBranch_14"
+                                                                                            }
+                                                                                        ],
+                                                                                                            
+                                                                                "ResultPath": "$.taskresult",
+                                                                                "Next": "SuccessBranch_14"
+                                                                            },
+                                "SuccessBranch_14": {
+                                                "Type": "Pass",
+                                                "End": true
+                                            },
+                                "FailBranch_14": {
+                                                    "Type": "Fail",
+                                                    "Cause": "Level_Error",
+                                                    "Error": "Level_Error"
+                                                    }
+                                            }},                   {
+                                         "StartAt":"Spark_Job_J15_analytics-job-files/tb_regional_hr_dota_bp_analyticssec",
+                                         "States":{
+                                                            "Spark_Job_J15_analytics-job-files/tb_regional_hr_dota_bp_analyticssec": {
+                                                                                    "Type": "Pass",
+                                                                                    "Parameters": {
+                                                                                        "StepArguments": {
+                                                                                            "ClusterId.$": "$.clusterId",
+                                                                                            "Args": [
+                                                                                                {
+                                                                                                    "Arg1": "/usr/bin/spark-submit"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg2": "--conf"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg3": "spark.yarn.appMasterEnv.PYTHONIOENCODING=utf8"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg4": "--packages"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg5": "com.databricks:spark-redshift_2.11:3.0.0-preview1,org.apache.spark:spark-avro_2.11:2.4.4"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg6": "/home/hadoop/SparkTransform/SparkTransform.py"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg7.$": "$.jobsBucket"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg8": "analytics-job-files/tb_regional_hr_dota_bp_analyticssec"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg9.$": "$.workflowName"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg10": "rule_hr_1"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg11.$": "$.startDate"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg12.$": "$.lastDate"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "ResultPath": "$.taskresult",
+                                                                                    "Next": "Exec_Spark_Job_J15_analytics-job-files/tb_regional_hr_dota_bp_analyticssec"
+                                                                                },
+                                                     
+                                                     "Exec_Spark_Job_J15_analytics-job-files/tb_regional_hr_dota_bp_analyticssec": {
+                                                                                "Type": "Task",
+                                                                                "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+                                                                                "Parameters": {
+                                                                                               "ClusterId.$": "$.clusterId",                    
+                                                                                                 "Step": {
+                                                                                                    "Name": "Spark_Job_J15_analytics-job-files/tb_regional_hr_dota_bp_analyticssec",
+                                                                                                    "ActionOnFailure": "CONTINUE",
+                                                                                                    "HadoopJarStep": {
+                                                                                                        "Jar": "command-runner.jar",
+                                                                                                        "Args.$": "$.taskresult.StepArguments.Args[*][*]"
+                                                                                                    }
+                                                                                                 }
+                                                                                },  
+                                                                                "Retry": [
+                                                                                            {
+                                                                                                "ErrorEquals": ["States.ALL"],
+                                                                                                "IntervalSeconds": 10,
+                                                                                                "MaxAttempts": 1,
+                                                                                                "BackoffRate": 1.5
+                                                                                            }
+                                                                                        ],
+                                                                                 "Catch": [   {
+                                                                                              "ErrorEquals": ["CustomError"],
+                                                                                              "Next": "FailBranch_15"
+                                                                                            }, 
+                                                                                            {
+                                                                                               "ErrorEquals": ["States.ALL"],
+                                                                                               "Next": "FailBranch_15"
+                                                                                            }
+                                                                                        ],
+                                                                                                            
+                                                                                "ResultPath": "$.taskresult",
+                                                                                "Next": "SuccessBranch_15"
+                                                                            },
+                                "SuccessBranch_15": {
+                                                "Type": "Pass",
+                                                "End": true
+                                            },
+                                "FailBranch_15": {
+                                                    "Type": "Fail",
+                                                    "Cause": "Level_Error",
+                                                    "Error": "Level_Error"
+                                                    }
+                                            }},                   {
+                                         "StartAt":"Spark_Job_J16_analytics-job-files/tb_regional_hr_est_gral_analyticssec",
+                                         "States":{
+                                                            "Spark_Job_J16_analytics-job-files/tb_regional_hr_est_gral_analyticssec": {
+                                                                                    "Type": "Pass",
+                                                                                    "Parameters": {
+                                                                                        "StepArguments": {
+                                                                                            "ClusterId.$": "$.clusterId",
+                                                                                            "Args": [
+                                                                                                {
+                                                                                                    "Arg1": "/usr/bin/spark-submit"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg2": "--conf"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg3": "spark.yarn.appMasterEnv.PYTHONIOENCODING=utf8"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg4": "--packages"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg5": "com.databricks:spark-redshift_2.11:3.0.0-preview1,org.apache.spark:spark-avro_2.11:2.4.4"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg6": "/home/hadoop/SparkTransform/SparkTransform.py"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg7.$": "$.jobsBucket"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg8": "analytics-job-files/tb_regional_hr_est_gral_analyticssec"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg9.$": "$.workflowName"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg10": "rule_hr_1"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg11.$": "$.startDate"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg12.$": "$.lastDate"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "ResultPath": "$.taskresult",
+                                                                                    "Next": "Exec_Spark_Job_J16_analytics-job-files/tb_regional_hr_est_gral_analyticssec"
+                                                                                },
+                                                     
+                                                     "Exec_Spark_Job_J16_analytics-job-files/tb_regional_hr_est_gral_analyticssec": {
+                                                                                "Type": "Task",
+                                                                                "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+                                                                                "Parameters": {
+                                                                                               "ClusterId.$": "$.clusterId",                    
+                                                                                                 "Step": {
+                                                                                                    "Name": "Spark_Job_J16_analytics-job-files/tb_regional_hr_est_gral_analyticssec",
+                                                                                                    "ActionOnFailure": "CONTINUE",
+                                                                                                    "HadoopJarStep": {
+                                                                                                        "Jar": "command-runner.jar",
+                                                                                                        "Args.$": "$.taskresult.StepArguments.Args[*][*]"
+                                                                                                    }
+                                                                                                 }
+                                                                                },  
+                                                                                "Retry": [
+                                                                                            {
+                                                                                                "ErrorEquals": ["States.ALL"],
+                                                                                                "IntervalSeconds": 10,
+                                                                                                "MaxAttempts": 1,
+                                                                                                "BackoffRate": 1.5
+                                                                                            }
+                                                                                        ],
+                                                                                 "Catch": [   {
+                                                                                              "ErrorEquals": ["CustomError"],
+                                                                                              "Next": "FailBranch_16"
+                                                                                            }, 
+                                                                                            {
+                                                                                               "ErrorEquals": ["States.ALL"],
+                                                                                               "Next": "FailBranch_16"
+                                                                                            }
+                                                                                        ],
+                                                                                                            
+                                                                                "ResultPath": "$.taskresult",
+                                                                                "Next": "SuccessBranch_16"
+                                                                            },
+                                "SuccessBranch_16": {
+                                                "Type": "Pass",
+                                                "End": true
+                                            },
+                                "FailBranch_16": {
+                                                    "Type": "Fail",
+                                                    "Cause": "Level_Error",
+                                                    "Error": "Level_Error"
+                                                    }
+                                            }},                   {
+                                         "StartAt":"Spark_Job_J17_analytics-job-files/tb_regional_hr_est_terceros_analyticssec",
+                                         "States":{
+                                                            "Spark_Job_J17_analytics-job-files/tb_regional_hr_est_terceros_analyticssec": {
+                                                                                    "Type": "Pass",
+                                                                                    "Parameters": {
+                                                                                        "StepArguments": {
+                                                                                            "ClusterId.$": "$.clusterId",
+                                                                                            "Args": [
+                                                                                                {
+                                                                                                    "Arg1": "/usr/bin/spark-submit"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg2": "--conf"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg3": "spark.yarn.appMasterEnv.PYTHONIOENCODING=utf8"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg4": "--packages"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg5": "com.databricks:spark-redshift_2.11:3.0.0-preview1,org.apache.spark:spark-avro_2.11:2.4.4"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg6": "/home/hadoop/SparkTransform/SparkTransform.py"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg7.$": "$.jobsBucket"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg8": "analytics-job-files/tb_regional_hr_est_terceros_analyticssec"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg9.$": "$.workflowName"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg10": "rule_hr_1"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg11.$": "$.startDate"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg12.$": "$.lastDate"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "ResultPath": "$.taskresult",
+                                                                                    "Next": "Exec_Spark_Job_J17_analytics-job-files/tb_regional_hr_est_terceros_analyticssec"
+                                                                                },
+                                                     
+                                                     "Exec_Spark_Job_J17_analytics-job-files/tb_regional_hr_est_terceros_analyticssec": {
+                                                                                "Type": "Task",
+                                                                                "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+                                                                                "Parameters": {
+                                                                                               "ClusterId.$": "$.clusterId",                    
+                                                                                                 "Step": {
+                                                                                                    "Name": "Spark_Job_J17_analytics-job-files/tb_regional_hr_est_terceros_analyticssec",
+                                                                                                    "ActionOnFailure": "CONTINUE",
+                                                                                                    "HadoopJarStep": {
+                                                                                                        "Jar": "command-runner.jar",
+                                                                                                        "Args.$": "$.taskresult.StepArguments.Args[*][*]"
+                                                                                                    }
+                                                                                                 }
+                                                                                },  
+                                                                                "Retry": [
+                                                                                            {
+                                                                                                "ErrorEquals": ["States.ALL"],
+                                                                                                "IntervalSeconds": 10,
+                                                                                                "MaxAttempts": 1,
+                                                                                                "BackoffRate": 1.5
+                                                                                            }
+                                                                                        ],
+                                                                                 "Catch": [   {
+                                                                                              "ErrorEquals": ["CustomError"],
+                                                                                              "Next": "FailBranch_17"
+                                                                                            }, 
+                                                                                            {
+                                                                                               "ErrorEquals": ["States.ALL"],
+                                                                                               "Next": "FailBranch_17"
+                                                                                            }
+                                                                                        ],
+                                                                                                            
+                                                                                "ResultPath": "$.taskresult",
+                                                                                "Next": "SuccessBranch_17"
+                                                                            },
+                                "SuccessBranch_17": {
+                                                "Type": "Pass",
+                                                "End": true
+                                            },
+                                "FailBranch_17": {
+                                                    "Type": "Fail",
+                                                    "Cause": "Level_Error",
+                                                    "Error": "Level_Error"
+                                                    }
+                                            }},                   {
+                                         "StartAt":"Spark_Job_J18_analytics-job-files/tb_regional_hr_rel_cargos_analyticssec",
+                                         "States":{
+                                                            "Spark_Job_J18_analytics-job-files/tb_regional_hr_rel_cargos_analyticssec": {
+                                                                                    "Type": "Pass",
+                                                                                    "Parameters": {
+                                                                                        "StepArguments": {
+                                                                                            "ClusterId.$": "$.clusterId",
+                                                                                            "Args": [
+                                                                                                {
+                                                                                                    "Arg1": "/usr/bin/spark-submit"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg2": "--conf"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg3": "spark.yarn.appMasterEnv.PYTHONIOENCODING=utf8"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg4": "--packages"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg5": "com.databricks:spark-redshift_2.11:3.0.0-preview1,org.apache.spark:spark-avro_2.11:2.4.4"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg6": "/home/hadoop/SparkTransform/SparkTransform.py"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg7.$": "$.jobsBucket"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg8": "analytics-job-files/tb_regional_hr_rel_cargos_analyticssec"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg9.$": "$.workflowName"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg10": "rule_hr_1"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg11.$": "$.startDate"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg12.$": "$.lastDate"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "ResultPath": "$.taskresult",
+                                                                                    "Next": "Exec_Spark_Job_J18_analytics-job-files/tb_regional_hr_rel_cargos_analyticssec"
+                                                                                },
+                                                     
+                                                     "Exec_Spark_Job_J18_analytics-job-files/tb_regional_hr_rel_cargos_analyticssec": {
+                                                                                "Type": "Task",
+                                                                                "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+                                                                                "Parameters": {
+                                                                                               "ClusterId.$": "$.clusterId",                    
+                                                                                                 "Step": {
+                                                                                                    "Name": "Spark_Job_J18_analytics-job-files/tb_regional_hr_rel_cargos_analyticssec",
+                                                                                                    "ActionOnFailure": "CONTINUE",
+                                                                                                    "HadoopJarStep": {
+                                                                                                        "Jar": "command-runner.jar",
+                                                                                                        "Args.$": "$.taskresult.StepArguments.Args[*][*]"
+                                                                                                    }
+                                                                                                 }
+                                                                                },  
+                                                                                "Retry": [
+                                                                                            {
+                                                                                                "ErrorEquals": ["States.ALL"],
+                                                                                                "IntervalSeconds": 10,
+                                                                                                "MaxAttempts": 1,
+                                                                                                "BackoffRate": 1.5
+                                                                                            }
+                                                                                        ],
+                                                                                 "Catch": [   {
+                                                                                              "ErrorEquals": ["CustomError"],
+                                                                                              "Next": "FailBranch_18"
+                                                                                            }, 
+                                                                                            {
+                                                                                               "ErrorEquals": ["States.ALL"],
+                                                                                               "Next": "FailBranch_18"
+                                                                                            }
+                                                                                        ],
+                                                                                                            
+                                                                                "ResultPath": "$.taskresult",
+                                                                                "Next": "SuccessBranch_18"
+                                                                            },
+                                "SuccessBranch_18": {
+                                                "Type": "Pass",
+                                                "End": true
+                                            },
+                                "FailBranch_18": {
+                                                    "Type": "Fail",
+                                                    "Cause": "Level_Error",
+                                                    "Error": "Level_Error"
+                                                    }
+                                            }}],
+            "ResultPath": "$.ParallelOutput_3",
+            "OutputPath": "$.ParallelOutput_3[0]",
+            "Catch": [{
+                "ErrorEquals": ["States.ALL"],
+                "ResultPath": "$.ParallelOutput_3",
+                "Next": "WorkflowEnd"
+            }],
+            "Next": "Parallel Task_4"
+        },
+        "Parallel Task_4": {
+            "Type": "Parallel",
+            "Branches": [                   {
+                                         "StartAt":"Spark_Job_J19_analytics-job-files/tb_regional_hractionreas2text_analyticssec",
+                                         "States":{
+                                                            "Spark_Job_J19_analytics-job-files/tb_regional_hractionreas2text_analyticssec": {
+                                                                                    "Type": "Pass",
+                                                                                    "Parameters": {
+                                                                                        "StepArguments": {
+                                                                                            "ClusterId.$": "$.clusterId",
+                                                                                            "Args": [
+                                                                                                {
+                                                                                                    "Arg1": "/usr/bin/spark-submit"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg2": "--conf"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg3": "spark.yarn.appMasterEnv.PYTHONIOENCODING=utf8"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg4": "--packages"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg5": "com.databricks:spark-redshift_2.11:3.0.0-preview1,org.apache.spark:spark-avro_2.11:2.4.4"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg6": "/home/hadoop/SparkTransform/SparkTransform.py"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg7.$": "$.jobsBucket"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg8": "analytics-job-files/tb_regional_hractionreas2text_analyticssec"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg9.$": "$.workflowName"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg10": "rule_hr_1"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg11.$": "$.startDate"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg12.$": "$.lastDate"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "ResultPath": "$.taskresult",
+                                                                                    "Next": "Exec_Spark_Job_J19_analytics-job-files/tb_regional_hractionreas2text_analyticssec"
+                                                                                },
+                                                     
+                                                     "Exec_Spark_Job_J19_analytics-job-files/tb_regional_hractionreas2text_analyticssec": {
+                                                                                "Type": "Task",
+                                                                                "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+                                                                                "Parameters": {
+                                                                                               "ClusterId.$": "$.clusterId",                    
+                                                                                                 "Step": {
+                                                                                                    "Name": "Spark_Job_J19_analytics-job-files/tb_regional_hractionreas2text_analyticssec",
+                                                                                                    "ActionOnFailure": "CONTINUE",
+                                                                                                    "HadoopJarStep": {
+                                                                                                        "Jar": "command-runner.jar",
+                                                                                                        "Args.$": "$.taskresult.StepArguments.Args[*][*]"
+                                                                                                    }
+                                                                                                 }
+                                                                                },  
+                                                                                "Retry": [
+                                                                                            {
+                                                                                                "ErrorEquals": ["States.ALL"],
+                                                                                                "IntervalSeconds": 10,
+                                                                                                "MaxAttempts": 1,
+                                                                                                "BackoffRate": 1.5
+                                                                                            }
+                                                                                        ],
+                                                                                 "Catch": [   {
+                                                                                              "ErrorEquals": ["CustomError"],
+                                                                                              "Next": "FailBranch_19"
+                                                                                            }, 
+                                                                                            {
+                                                                                               "ErrorEquals": ["States.ALL"],
+                                                                                               "Next": "FailBranch_19"
+                                                                                            }
+                                                                                        ],
+                                                                                                            
+                                                                                "ResultPath": "$.taskresult",
+                                                                                "Next": "SuccessBranch_19"
+                                                                            },
+                                "SuccessBranch_19": {
+                                                "Type": "Pass",
+                                                "End": true
+                                            },
+                                "FailBranch_19": {
+                                                    "Type": "Fail",
+                                                    "Cause": "Level_Error",
+                                                    "Error": "Level_Error"
+                                                    }
+                                            }}],
+            "ResultPath": "$.ParallelOutput_4",
+            "OutputPath": "$.ParallelOutput_4[0]",
+            "Catch": [{
+                "ErrorEquals": ["States.ALL"],
+                "ResultPath": "$.ParallelOutput_4",
+                "Next": "WorkflowEnd"
+            }],
+            "Next": "WorkflowEnd"
+        },
+        "WorkflowEnd": {
+            "Type": "Pass",
+            "End": true
+                    }
+    }
+    }

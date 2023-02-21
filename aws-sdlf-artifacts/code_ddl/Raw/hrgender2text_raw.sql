@@ -12,7 +12,7 @@ STORED AS INPUTFORMAT
 OUTPUTFORMAT 
   'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
 LOCATION
-  's3://raw-koandina-prod/regional/sap/hrgender2text'
+  's3://raw-koandina-dev/regional/sap/hrgender2text'
 TBLPROPERTIES (
   'skip.header.line.count'='1', 
   'spark.sql.partitionProvider'='catalog')

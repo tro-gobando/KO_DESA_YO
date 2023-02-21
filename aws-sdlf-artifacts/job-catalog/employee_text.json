@@ -1,0 +1,15 @@
+{
+ "s3_data_source": "s3://raw-koandina-dev/regional/sap/employee_text/",
+ "spark_program": "spark_submit_tb_general_parquet.py",
+ "hive_table_raw": "employee_text_raw",
+ "has_header": "True",
+ "hive_database_raw": "db_koandina_regional_raw",
+ "programs": "s3://artifacts-koandina-dev/spark_programs/spark_submit_tb_general_parquet.py",
+ "partition_name_raw": "False",
+ "enabled": "True",
+ "behavior_data": "WITHOUT_PARTITION_OVERWRITE",
+ "hive_table_stage": "employee_text_stage",
+ "hive_database_stage": "db_koandina_regional_stage",
+ "spark_program_s3_path": "s3://artifacts-koandina-dev/spark_programs/spark_submit_tb_general_parquet.py",
+ "s3_target": "s3://stage-koandina-dev/regional/sap/employee_text/"
+}

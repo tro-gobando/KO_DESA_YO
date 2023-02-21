@@ -1,0 +1,6 @@
+CREATE OR REPLACE VIEW db_koandina_br_analyticssec.vw_br_hr_00001_analyticssec AS
+select
+00001.
+
+from db_koandina_regional_analyticssec.00001_analyticssec 00001
+inner join db_koandina_br_analyticssec.vw_br_hrpa0001_analyticssec hrpa0001 on 00001.pernr = hrpa0001.pernr

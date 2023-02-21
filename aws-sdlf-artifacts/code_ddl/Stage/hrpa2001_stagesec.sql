@@ -90,6 +90,6 @@ STORED AS INPUTFORMAT
 OUTPUTFORMAT 
   'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
 LOCATION
-  's3://stagesec-koandina-prod/regional/sap/hrpa2001/'
+  's3://stagesec-koandina-dev/regional/sap/hrpa2001/'
 TBLPROPERTIES (
 'compressionType'='SNAPPY')

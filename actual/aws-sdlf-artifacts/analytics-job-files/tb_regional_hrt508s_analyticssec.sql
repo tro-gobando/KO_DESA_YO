@@ -1,0 +1,8 @@
+select
+ZEITY,
+MOFID,
+MOSID,
+SCHKZ,
+SPRSL,
+RTEXT
+from $SOURCE_DATABASE.hrt508s_stagesec

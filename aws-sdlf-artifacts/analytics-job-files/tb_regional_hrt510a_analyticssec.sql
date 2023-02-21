@@ -1,0 +1,6 @@
+select
+MOLGA,
+TRFAR,
+TARTX,
+ITRFA
+from $SOURCE_DATABASE.hrt510a_stagesec

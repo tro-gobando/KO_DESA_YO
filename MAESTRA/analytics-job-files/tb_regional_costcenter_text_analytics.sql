@@ -1,0 +1,10 @@
+select
+LANGU,
+KOKRS,
+KOSTL,
+DATETO,
+DATEFROM,
+TXTSH,
+TXTMD,
+TXTMC
+from $SOURCE_DATABASE.costcenter_text_stage

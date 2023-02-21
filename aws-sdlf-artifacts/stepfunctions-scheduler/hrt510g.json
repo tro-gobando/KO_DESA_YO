@@ -1,0 +1,118 @@
+{
+    "Comment": "Spark ETL State Machine",
+    "StartAt": "Parallel Task_1",
+    "States": {
+        "Parallel Task_1": {
+            "Type": "Parallel",
+            "Branches": [                   {
+                                         "StartAt":"Spark_Job_J01_analytics-job-files/tb_regional_hrt510g_analyticssec",
+                                         "States":{
+                                                            "Spark_Job_J01_analytics-job-files/tb_regional_hrt510g_analyticssec": {
+                                                                                    "Type": "Pass",
+                                                                                    "Parameters": {
+                                                                                        "StepArguments": {
+                                                                                            "ClusterId.$": "$.clusterId",
+                                                                                            "Args": [
+                                                                                                {
+                                                                                                    "Arg1": "/usr/bin/spark-submit"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg2": "--conf"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg3": "spark.yarn.appMasterEnv.PYTHONIOENCODING=utf8"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg4": "--packages"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg5": "com.databricks:spark-redshift_2.11:3.0.0-preview1,org.apache.spark:spark-avro_2.11:2.4.4"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg6": "/home/hadoop/SparkTransform/SparkTransform.py"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg7.$": "$.jobsBucket"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg8": "analytics-job-files/tb_regional_hrt510g_analyticssec"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg9.$": "$.workflowName"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg10": "hrt510g"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg11.$": "$.startDate"
+                                                                                                },
+                                                                                                {
+                                                                                                    "Arg12.$": "$.lastDate"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "ResultPath": "$.taskresult",
+                                                                                    "Next": "Exec_Spark_Job_J01_analytics-job-files/tb_regional_hrt510g_analyticssec"
+                                                                                },
+                                                     
+                                                     "Exec_Spark_Job_J01_analytics-job-files/tb_regional_hrt510g_analyticssec": {
+                                                                                "Type": "Task",
+                                                                                "Resource": "arn:aws:states:::elasticmapreduce:addStep.sync",
+                                                                                "Parameters": {
+                                                                                               "ClusterId.$": "$.clusterId",                    
+                                                                                                 "Step": {
+                                                                                                    "Name": "Spark_Job_J01_analytics-job-files/tb_regional_hrt510g_analyticssec",
+                                                                                                    "ActionOnFailure": "CONTINUE",
+                                                                                                    "HadoopJarStep": {
+                                                                                                        "Jar": "command-runner.jar",
+                                                                                                        "Args.$": "$.taskresult.StepArguments.Args[*][*]"
+                                                                                                    }
+                                                                                                 }
+                                                                                },  
+                                                                                "Retry": [
+                                                                                            {
+                                                                                                "ErrorEquals": ["States.ALL"],
+                                                                                                "IntervalSeconds": 10,
+                                                                                                "MaxAttempts": 1,
+                                                                                                "BackoffRate": 1.5
+                                                                                            }
+                                                                                        ],
+                                                                                 "Catch": [   {
+                                                                                              "ErrorEquals": ["CustomError"],
+                                                                                              "Next": "FailBranch_1"
+                                                                                            }, 
+                                                                                            {
+                                                                                               "ErrorEquals": ["States.ALL"],
+                                                                                               "Next": "FailBranch_1"
+                                                                                            }
+                                                                                        ],
+                                                                                                            
+                                                                                "ResultPath": "$.taskresult",
+                                                                                "Next": "SuccessBranch_1"
+                                                                            },
+                                "SuccessBranch_1": {
+                                                "Type": "Pass",
+                                                "End": true
+                                            },
+                                "FailBranch_1": {
+                                                    "Type": "Fail",
+                                                    "Cause": "Level_Error",
+                                                    "Error": "Level_Error"
+                                                    }
+                                            }}],
+            "ResultPath": "$.ParallelOutput_1",
+            "OutputPath": "$.ParallelOutput_1[0]",
+            "Catch": [{
+                "ErrorEquals": ["States.ALL"],
+                "ResultPath": "$.ParallelOutput_1",
+                "Next": "WorkflowEnd"
+            }],
+            "Next": "WorkflowEnd"
+        },
+        "WorkflowEnd": {
+            "Type": "Pass",
+            "End": true
+                    }
+    }
+    }

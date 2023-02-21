@@ -1,0 +1,2 @@
+JOBID;JOBNAME;JOBGROUP;LEVEL;DOMAIN;PRE_VALIDATION_JOB_NAME;POST_VALIDATION_JOB_NAME
+J01;atb_regional_hr_rel_cargos_analyticssec;1;1;hr_rel_cargos;;

@@ -1,0 +1,5 @@
+CREATE OR REPLACE VIEW "vw_hr_rel_cargos_analyticssec" AS
+select
+cargo_bit,
+cargo_sap
+from db_koandina_regional_analyticssec.hr_rel_cargos_analyticssec

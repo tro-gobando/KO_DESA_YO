@@ -1,0 +1,39 @@
+{
+    "functionName": "/SAPDS/RFC_READ_TABLE2",
+    "runInBackgroundJob": false,
+    "tables": 
+    [
+        {
+            "name": "H_T502T",
+            "description": "Generated Table for View H_T502T",
+            "fields": 
+            [
+                {
+                    "name": "MANDT",
+                    "description": "Mandante",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isPrimaryKey": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FAMST",
+                    "description": "Clave para el estado civil",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "FTEXT",
+                    "description": "Denominación del estado civil",
+                    "abapType": "CharacterString",
+                    "length": 6,
+                    "isSelected": true,
+                    "conversionExit": ""
+                }
+            ]
+        }
+    ]
+}

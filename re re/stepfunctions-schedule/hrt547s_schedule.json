@@ -1,0 +1,6 @@
+{
+  "crond_expression": "cron(0 14 * * ? *)",
+  "workflow_name": "hrt547s",
+  "status": "DISABLED",
+  "validation_date_expression": "%Y-%m-%d"
+}

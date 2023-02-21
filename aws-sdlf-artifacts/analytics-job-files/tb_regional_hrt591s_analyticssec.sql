@@ -1,0 +1,6 @@
+select
+SPRSL,
+INFTY,
+SUBTY,
+STEXT
+from $SOURCE_DATABASE.hrt591s_stagesec

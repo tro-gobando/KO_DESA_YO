@@ -1,0 +1,9 @@
+select
+SPRAS,
+LAND1,
+LANDX,
+NATIO,
+LANDX50,
+NATIO50,
+PRQ_SPREGT
+from $SOURCE_DATABASE.hrt005t_stagesec

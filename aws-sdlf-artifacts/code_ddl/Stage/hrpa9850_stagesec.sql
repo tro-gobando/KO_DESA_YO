@@ -30,13 +30,13 @@ CREATE EXTERNAL TABLE db_koandina_br_stage.hrpa9850_stagesec(
     PLSA string,
     ZSAVP string,
     LANCH string)
-ROW FORMAT SERDE
+ROW FORMAT SERDE 
   'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe'
 STORED AS INPUTFORMAT
   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat'
 OUTPUTFORMAT
   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat'
 LOCATION
-  's3://stagesec-koandina-prod/br/sap/hrpa9850/'
+  's3://stagesec-koandina-dev/br/sap/hrpa9850/'
 TBLPROPERTIES (
 'compressionType'='SNAPPY')

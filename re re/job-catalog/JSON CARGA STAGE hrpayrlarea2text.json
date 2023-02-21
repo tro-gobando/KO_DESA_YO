@@ -1,0 +1,41 @@
+{
+ "s3_data_source": {
+  "S": "s3://rawsec-koandina-$ENV/regional/sap/hrpayrlarea2text/"
+ },
+ "behavior_data": {
+  "S": "WITHOUT_PARTITION_OVERWRITE"
+ },
+ "enabled": {
+  "S": "True"
+ },
+ "has_header": {
+  "S": "True"
+ },
+ "hive_database_raw": {
+  "S": "db_koandina_regional_raw"
+ },
+ "hive_database_stage": {
+  "S": "db_koandina_regional_stage"
+ },
+ "hive_table_raw": {
+  "S": "hrpayrlarea2text_rawsec"
+ },
+ "hive_table_stage": {
+  "S": "hrpayrlarea2text_stagesec"
+ },
+ "partition_name_raw": {
+  "S": "False"
+ },
+ "programs": {
+  "S": "s3://artifacts-koandina-$ENV/spark_programs/spark_submit_tb_general_parquet.py"
+ },
+ "s3_target": {
+  "S": "s3://stagesec-koandina-$ENV/regional/sap/hrpayrlarea2text/"
+ },
+ "spark_program": {
+  "S": "spark_submit_tb_general_parquet.py"
+ },
+ "spark_program_s3_path": {
+  "S": "s3://artifacts-koandina-$ENV/spark_programs/spark_submit_tb_general_parquet.py"
+ }
+}

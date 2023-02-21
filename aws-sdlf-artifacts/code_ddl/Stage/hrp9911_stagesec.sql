@@ -24,7 +24,7 @@ STORED AS INPUTFORMAT
 OUTPUTFORMAT
   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat'
 LOCATION
-  's3://stagesec-koandina-prod/br/sap/hrp9911'
+  's3://stagesec-koandina-dev/br/sap/hrp9911'
 TBLPROPERTIES (
 'compressionType'='SNAPPY',
 'skip.header.line.count'='1')

@@ -13,7 +13,7 @@ STORED AS INPUTFORMAT
 OUTPUTFORMAT 
   'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
 LOCATION
-  's3://rawsec-koandina-prod/cl/sap/hrconve/'
+  's3://rawsec-koandina-dev/cl/sap/hrconve/'
 TBLPROPERTIES (
   'skip.header.line.count'='1', 
   'spark.sql.partitionProvider'='catalog')

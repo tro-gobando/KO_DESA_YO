@@ -13,6 +13,6 @@ STORED AS INPUTFORMAT
 OUTPUTFORMAT 
   'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
 LOCATION
-  's3://rawsec-koandina-prod/regional/sap/hrt529u/'
+  's3://rawsec-koandina-dev/regional/sap/hrt529u/'
 TBLPROPERTIES (
   'skip.header.line.count'='1')

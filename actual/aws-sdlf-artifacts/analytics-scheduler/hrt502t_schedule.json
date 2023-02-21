@@ -1,0 +1,17 @@
+{
+"crond_expression": {
+"S": "cron(0 14 * * ? *)"
+},
+"rule_name": {
+"S": "hrt502t"
+},
+"status": {
+"S": "ENABLED"
+},
+"step_functions_arn": {
+"S": "arn:aws:states:us-east-1:654146749982:stateMachine:hrt502t"
+},
+"validation_date_expression": {
+"S": "%Y-%m-%d"
+}
+}

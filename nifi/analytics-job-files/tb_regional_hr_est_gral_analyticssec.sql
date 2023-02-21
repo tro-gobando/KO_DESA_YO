@@ -1,0 +1,26 @@
+select
+ anio
+,mes
+,operacion
+,operacion_original
+,nro_personal
+,nombre
+,ceco
+,ceco_descripcion
+,nivel_1
+,nivel_2
+,nivel_3
+,unidorg
+,unidorg_descripcion
+,cod_cargo
+,desc_cargo
+,cod_posicion
+,desc_posicion
+,dir
+,gestion
+,subgestion
+,cargo_vendedor
+,sectores
+,areas
+,area_kpi
+from $SOURCE_DATABASE.hr_est_gral_stagesec

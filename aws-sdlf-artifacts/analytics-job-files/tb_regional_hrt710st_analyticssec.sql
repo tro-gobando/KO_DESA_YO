@@ -1,0 +1,6 @@
+select
+SPRSL,
+SCODE,
+JCODE,
+LTEXT
+from $SOURCE_DATABASE.hrt710st_stagesec

@@ -1,0 +1,5 @@
+JOBID;JOBNAME;JOBGROUP;LEVEL;DOMAIN;PRE_VALIDATION_JOB_NAME;POST_VALIDATION_JOB_NAME
+J01;analytics-job-files/tb_reg_employee_attr_ar_analyticssec;1;1;emplgroup_attr_ar;;
+J02;analytics-job-files/tb_reg_employee_attr_br_analyticssec;2;1;emplgroup_attr_br;;
+J03;analytics-job-files/tb_reg_employee_attr_cl_analyticssec;3;1;emplgroup_attr_cl;;
+J04;analytics-job-files/tb_reg_employee_attr_py_analyticssec;4;1;emplgroup_attr_py;;

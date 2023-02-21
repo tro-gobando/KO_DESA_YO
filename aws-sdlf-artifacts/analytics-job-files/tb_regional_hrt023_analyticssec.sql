@@ -1,5 +1,4 @@
 select
-
 KOSTL,
 TRFAR,
 GERENCIA1,

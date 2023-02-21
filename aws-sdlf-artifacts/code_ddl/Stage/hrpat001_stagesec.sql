@@ -12,13 +12,14 @@ PLANS_BOSS string,
 PLSTX_BOSS string,
 ORGEH_BOSS string,
 ORGTX_BOSS string)
-ROW FORMAT SERDE 
+ROW FORMAT SERDE
   'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe'
-STORED AS INPUTFORMAT 
-  'org.apache.hadoop.mapred.TextInputFormat' 
-OUTPUTFORMAT 
-  'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
+STORED AS INPUTFORMAT
+  'org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat'
+OUTPUTFORMAT
+  'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat'
 LOCATION
-  's3://stagesec-koandina-prod/regional/sap/hrpat001/'
+  's3://stagesec-koandina-dev/regional/sap/hrpat001'
 TBLPROPERTIES (
-'compressionType'='SNAPPY')
+'compressionType'='SNAPPY',
+'skip.header.line.count'='1')

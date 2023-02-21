@@ -1,0 +1,84 @@
+{
+    "functionName": "/SAPDS/RFC_READ_TABLE2",
+    "runInBackgroundJob": false,
+    "tables": 
+    [
+        {
+            "name": "T005T",
+            "description": "Denominación de los países",
+            "fields": 
+            [
+                {
+                    "name": "MANDT",
+                    "description": "Mandante",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isPrimaryKey": true,
+                    "checkTable": "T000",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "SPRAS",
+                    "description": "Clave de idioma",
+                    "abapType": "CharacterString",
+                    "length": 1,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "formattedLength": 2,
+                    "checkTable": "T002",
+                    "conversionExit": "ISOLA"
+                },
+                {
+                    "name": "LAND1",
+                    "description": "Clave de país",
+                    "abapType": "CharacterString",
+                    "length": 3,
+                    "isPrimaryKey": true,
+                    "isSelected": true,
+                    "checkTable": "T005",
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LANDX",
+                    "description": "Denominación del país",
+                    "abapType": "CharacterString",
+                    "length": 15,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NATIO",
+                    "description": "Denominación de la nacionalidad",
+                    "abapType": "CharacterString",
+                    "length": 15,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "LANDX50",
+                    "description": "Denominación del país (máximo 50 posiciones)",
+                    "abapType": "CharacterString",
+                    "length": 50,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "NATIO50",
+                    "description": "Denominación de la nacionalidad (máximo 50 posiciones)",
+                    "abapType": "CharacterString",
+                    "length": 50,
+                    "isSelected": true,
+                    "conversionExit": ""
+                },
+                {
+                    "name": "PRQ_SPREGT",
+                    "description": "Suprarregión por texto de país",
+                    "abapType": "CharacterString",
+                    "length": 30,
+                    "isSelected": true,
+                    "conversionExit": ""
+                }
+            ]
+        }
+    ]
+}

@@ -9,7 +9,7 @@ STORED AS INPUTFORMAT
 OUTPUTFORMAT
   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat'
 LOCATION
-  's3://stage-koandina-prod/regional/sap/hremplgrouptext'
+  's3://stage-koandina-dev/regional/sap/hremplgrouptext'
 TBLPROPERTIES (
 'compressionType'='SNAPPY',
 'skip.header.line.count'='1')

@@ -13,6 +13,6 @@ STORED AS INPUTFORMAT
 OUTPUTFORMAT 
   'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
 LOCATION
-  's3://stagesec-koandina-prod/br/sap/thrvcdir/'
+  's3://stagesec-koandina-dev/br/sap/thrvcdir/'
 TBLPROPERTIES (
 'compressionType'='SNAPPY')
