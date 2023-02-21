@@ -650,7 +650,7 @@ LEFT JOIN db_koandina_regional_analyticssec.hrpa0016_analyticssec hrpa0016
   LEFT JOIN db_koandina_cl_analyticssec.hrconve_analyticssec con ON con.desti = ea.kostl
   LEFT JOIN pa0105 pa0105 ON pa0105.pernr = ea.pernr AND pa0105.fecha = ea.fecha
   LEFT JOIN rota_arg rota_arg ON rota_arg.pernr = ea.pernr AND rota_arg.fecha = ea.fecha
-  LEFT JOIN db_koandina_py_analyticssec.thrrolrt_analyticssec roltr ON roltr.persk = ea.pernr AND roltr.cttyp = rota_arg.cttyp AND roltr.jcode = p1051.subty
+  LEFT JOIN db_koandina_py_analyticssec.thrrolrt_analyticssec roltr ON roltr.persk = ea.persk AND roltr.cttyp = rota_arg.cttyp AND roltr.jcode = p1051.jcode
 )
 
  SELECT DISTINCT
