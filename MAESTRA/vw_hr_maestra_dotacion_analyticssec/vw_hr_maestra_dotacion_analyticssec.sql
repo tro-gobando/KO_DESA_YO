@@ -1,4 +1,4 @@
-CREATE OR REPLACE VIEW db_koandina_regional_analyticssec.vw_hr_maestra_dotacion_analyticssec AS 
+--CREATE OR REPLACE VIEW db_koandina_regional_analyticssec.vw_hr_maestra_dotacion_analyticssec AS 
 /*
 202208 - GOBANDO - 	Cracion
 202209 - GOBANDO - 	Apertura por calendario
@@ -587,7 +587,8 @@ LEFT JOIN db_koandina_regional_analyticssec.hrpa0016_analyticssec hrpa0016
   , CASE 
     --   WHEN ea.bukrs = '3049' AND ea.persk = '8E' THEN COALESCE(COALESCE(trim(oca_p.txtmd), trim(pas_p.txtmd)), 'PLANTA') 
     --   WHEN ea.bukrs = '3049' AND ea.persk <> '8E' THEN 'PLANTA' 
-      WHEN ea.bukrs IN ('3049') THEN trim(roltr.rotacion)                                   -- cambio rotacion paraguay
+	  WHEN ea.bukrs IN ('3049') and ea.persk = '8E' and rota_arg.cttyp = '02' and p1051.jcode = '' THEN 'TEMPORADA' -- temporada
+      WHEN ea.bukrs IN ('3049') THEN trim(roltr.rotacion) 	  -- cambio rotacion paraguay	  
       WHEN ea.bukrs IN ('3046','3047') AND rota_arg.cttyp IN ('21','26','35') THEN 'PLANTA' 
       WHEN ea.bukrs IN ('3046','3047') AND rota_arg.cttyp IN ('30','52','53') THEN 'TEMPORADA' 	--cambio de valor 20 por 30 en condicion rota_arg.cttyp
       WHEN ea.bukrs IN ('3046','3047') AND rota_arg.cttyp IN ('68') THEN 'PRACTICA' 
