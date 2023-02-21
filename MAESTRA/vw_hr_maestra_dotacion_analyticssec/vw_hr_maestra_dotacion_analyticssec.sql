@@ -690,3 +690,4 @@ LEFT JOIN db_koandina_regional_analyticssec.hrpa0016_analyticssec hrpa0016
      , mes
  FROM dotacion
  WHERE  cod_sociedad != ''
+
