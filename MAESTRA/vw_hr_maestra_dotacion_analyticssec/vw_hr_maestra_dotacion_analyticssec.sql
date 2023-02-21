@@ -46,7 +46,8 @@ WITH
      db_koandina_regional_analyticssec.employee_attr_analyticssec ea
   LEFT JOIN tie tie ON tie.fecha BETWEEN date_parse(ea.begda, '%Y-%m-%d') AND (CASE WHEN (date_parse(ea.endda, '%Y-%m-%d') > current_date) THEN current_date ELSE date_parse(ea.endda, '%Y-%m-%d') END)
   WHERE   
-	 stat2 = '3' AND year(tie.fecha) >= year(current_date) - 2 AND tie.fecha <= current_date
+	 stat2 = '3' 
+-- 	 AND year(tie.fecha) >= year(current_date) - 2 AND tie.fecha <= current_date
 )
 
 , employee_attr_inact AS (
@@ -66,15 +67,17 @@ WITH
   , ea.trfar
   , ea.sname
   , ea.persk
-  , date_parse(ea.begda, '%Y-%m-%d')  		as fecha
-  ,year(date_parse(ea.begda, '%Y-%m-%d')) 	as anio
-  ,month(date_parse(ea.begda, '%Y-%m-%d')) 	as mes
-  FROM  
-	 db_koandina_regional_analyticssec.employee_attr_analyticssec ea
+  , tie.fecha
+  , tie.anio
+  , tie.mes
+  FROM
+     db_koandina_regional_analyticssec.employee_attr_analyticssec ea
+  LEFT JOIN tie tie ON tie.fecha BETWEEN date_parse(ea.begda, '%Y-%m-%d') AND (CASE WHEN (date_parse(ea.endda, '%Y-%m-%d') > current_date) THEN current_date ELSE date_parse(ea.endda, '%Y-%m-%d') END)
   WHERE   
-	 stat2 = '1' AND year(date_parse(ea.begda, '%Y-%m-%d')) >= year(current_date) - 2
+	 stat2 != '3' 
+-- 	 AND year(tie.fecha) >= year(current_date) - 2 AND tie.fecha <= current_date
+)
 
-) 
 -- pa0002 AS (
   -- SELECT DISTINCT
      -- pernr
@@ -95,7 +98,9 @@ WITH
   FROM
      db_koandina_regional_analyticssec.HRPA0002_analyticssec pa0002
   LEFT JOIN tie tie ON tie.fecha BETWEEN date_parse(pa0002.begda, '%Y-%m-%d') AND (CASE WHEN date_parse(pa0002.endda, '%Y-%m-%d') > current_date THEN current_date ELSE date_parse(pa0002.endda, '%Y-%m-%d') END)
-  WHERE   year(tie.fecha) >= year(current_date) - 2 AND tie.fecha <= current_date AND trim(sprsl) <> ''
+  WHERE   
+--   year(tie.fecha) >= year(current_date) - 2 AND tie.fecha <= current_date AND 
+    trim(sprsl) <> ''
   GROUP BY pa0002.pernr, mes, anio
 ) 
 
@@ -136,7 +141,7 @@ WITH
   FROM
      db_koandina_regional_analyticssec.hrp1051_analyticssec p1051
   LEFT JOIN tie tie ON tie.fecha BETWEEN date_parse(p1051.begda, '%Y-%m-%d') AND (CASE WHEN date_parse(p1051.endda, '%Y-%m-%d') > current_date THEN current_date ELSE date_parse(p1051.endda, '%Y-%m-%d') END)
-  WHERE   year(tie.fecha) >= year(current_date) - 2 AND tie.fecha <= current_date
+--   WHERE year(tie.fecha) >= year(current_date) - 2 AND  tie.fecha <= current_date
   GROUP BY  p1051.objid, p1051.jcode, tie.mes ,tie.anio
 )
 
@@ -153,8 +158,7 @@ WITH
   WHERE p1051.plvar = '01'
      AND p1051.otype = 'S' 
      AND p1051.subty in ('HAY','HAYP') 
-     AND year(at.fecha) >= year(current_date) - 2
-     AND at.fecha <= current_date    --se agrega grado hay para paraguay dic-22  
+    --  AND year(at.fecha) >= year(current_date) - 2 AND at.fecha <= current_date    --se agrega grado hay para paraguay dic-22  
 )
 
 -- , pa0004 AS (
@@ -173,7 +177,7 @@ WITH
   FROM
      db_koandina_regional_analyticssec.hrpa0004_analyticssec pa0004
   LEFT JOIN tie tie ON tie.fecha BETWEEN date_parse(pa0004.begda, '%Y-%m-%d') AND (CASE WHEN date_parse(pa0004.endda, '%Y-%m-%d') > current_date THEN current_date ELSE date_parse(pa0004.endda, '%Y-%m-%d') END)
-  WHERE   year(tie.fecha) >= year(current_date) - 2 AND tie.fecha <= current_date
+--   WHERE   year(tie.fecha) >= year(current_date) - 2 AND tie.fecha <= current_date
   GROUP BY pa0004.pernr, mes, anio
 ) 
 
@@ -219,11 +223,11 @@ WITH
 
 , pa0041 AS (
   SELECT DISTINCT
-    pa0041.pernr, MAX(tie.fecha) fecha, MAX(pa0041.dat01) dat01, tie.mes , tie.anio--, min(pa0041.begda) begda
+    pa0041.pernr, MAX(tie.fecha) fecha, MAX(pa0041.dat01) dat01, tie.mes , tie.anio, min(pa0041.begda) begda
   FROM
      db_koandina_regional_analyticssec.HRPA0041_analyticssec pa0041
   LEFT JOIN tie tie ON tie.fecha BETWEEN date_parse(pa0041.begda, '%Y-%m-%d') AND CASE WHEN date_parse(pa0041.endda, '%Y-%m-%d') > current_date THEN current_date ELSE date_parse(pa0041.endda, '%Y-%m-%d') END
-  WHERE   year(tie.fecha) >= year(current_date) - 2 AND tie.fecha <= current_date --and pa0041.begda = at.begda
+--   WHERE   year(tie.fecha) >= year(current_date) - 2 AND tie.fecha <= current_date --and pa0041.begda = at.begda
             --   AND pa0041.pernr = '06000001'
   GROUP BY pa0041.pernr, mes, anio
                 -- order by tie.anio, tie.mes
@@ -247,7 +251,7 @@ WITH
   FROM
      db_koandina_regional_analyticssec.hrpositiontext_analyticssec pos
   LEFT JOIN tie tie ON tie.fecha BETWEEN date_parse(pos.datefrom, '%Y-%m-%d') AND CASE WHEN date_parse(pos.dateto, '%Y-%m-%d') > current_date THEN current_date ELSE date_parse(pos.dateto, '%Y-%m-%d') END
-  WHERE   year(tie.fecha) >= year(current_date) - 2 AND tie.fecha <= current_date
+--   WHERE   year(tie.fecha) >= year(current_date) - 2 AND tie.fecha <= current_date
   GROUP BY pos.key1,pos.langu,  mes, anio
 ) 
 , posicion AS (
@@ -263,7 +267,7 @@ WITH
 
 , ocacional_paraguay AS (
   SELECT DISTINCT
-   'OCACIONAL' txtmd
+  'OCACIONAL' txtmd
   , pos_paraguay.key1
   FROM
      db_koandina_regional_analyticssec.hrpositiontext_analyticssec pos_paraguay
@@ -315,7 +319,7 @@ WITH
   FROM
      db_koandina_regional_analytics.costcenter_text_analytics ccos
   LEFT JOIN tie tie ON (tie.fecha BETWEEN ccos.datefrom AND (CASE WHEN (ccos.dateto > current_date) THEN current_date ELSE ccos.dateto END))
-  WHERE year(tie.fecha) >= year(current_date) - 2 AND tie.fecha <= current_date
+--   WHERE year(tie.fecha) >= year(current_date) - 2 AND tie.fecha <= current_date
   GROUP BY ccos.kokrs, ccos.kostl, ccos.langu, mes, anio
 ) 
 , ccosto AS (
@@ -358,10 +362,11 @@ WITH
   FROM
      db_koandina_regional_analyticssec.HRPA0105_analyticssec pa0105
     LEFT JOIN tie tie ON (tie.fecha BETWEEN date_parse(pa0105.begda, '%Y-%m-%d') AND (CASE WHEN (date_parse(pa0105.endda, '%Y-%m-%d') > current_date) THEN current_date ELSE date_parse(pa0105.endda, '%Y-%m-%d') END))
-  WHERE   year(tie.fecha) >= year(current_date) - 2 AND tie.fecha <= current_date AND pa0105.usrty = '0010'
-    --  AND pa0105.usrty = '0010' 
-     AND year(tie.fecha) >= year(current_date) - 2 
-     AND tie.fecha <= current_date 
+  WHERE   
+--   year(tie.fecha) >= year(current_date) - 2 AND tie.fecha <= current_date AND 
+     pa0105.usrty = '0010'
+     AND pa0105.usrty = '0010' 
+    --  AND year(tie.fecha) >= year(current_date) - 2 AND tie.fecha <= current_date 
     --  AND trim(pa0105.usrid_long) <> ''
   GROUP BY pa0105.pernr, mes, anio
 ) 
@@ -392,7 +397,9 @@ LEFT JOIN db_koandina_regional_analyticssec.HRPA0105_analyticssec pa0105
   FROM
      (db_koandina_regional_analyticssec.hrorgunittext_analyticssec org
   LEFT JOIN tie tie ON (tie.fecha BETWEEN date_parse(org.datefrom, '%Y-%m-%d') AND (CASE WHEN (date_parse(org.dateto, '%Y-%m-%d') > current_date) THEN current_date ELSE date_parse(org.dateto, '%Y-%m-%d') END)))
-  WHERE   year(tie.fecha) >= year(current_date) - 2 AND tie.fecha <= current_date
+  WHERE   
+--   year(tie.fecha) >= year(current_date) - 2 AND tie.fecha <= current_date and 
+  org.datefrom = org.datefrom
   GROUP BY org.key1, mes, anio
 ) 
 
@@ -441,7 +448,7 @@ LEFT JOIN db_koandina_regional_analyticssec.hrorgunittext_analyticssec org
   FROM
      db_koandina_regional_analyticssec.hrpa0016_analyticssec hrpa0016
   LEFT JOIN tie tie ON tie.fecha BETWEEN date_parse(hrpa0016.begda, '%Y-%m-%d') AND CASE WHEN date_parse(hrpa0016.endda, '%Y-%m-%d') > current_date THEN current_date ELSE date_parse(hrpa0016.endda, '%Y-%m-%d') END
-  WHERE   year(tie.fecha) >= year(current_date) - 2 AND tie.fecha <= current_date
+--   WHERE   year(tie.fecha) >= year(current_date) - 2 AND tie.fecha <= current_date
   GROUP BY hrpa0016.pernr, hrpa0016.cttyp, mes, anio
 ) 
 
@@ -475,7 +482,7 @@ LEFT JOIN db_koandina_regional_analyticssec.hrpa0016_analyticssec hrpa0016
 ) 
 , t23 AS (
   SELECT
-    kostl
+     kostl
   , trfar
   , gerencia1
   , gerencia2
@@ -489,7 +496,7 @@ LEFT JOIN db_koandina_regional_analyticssec.hrpa0016_analyticssec hrpa0016
 ) 
 , t23null AS (
   SELECT
-    kostl
+     kostl
   , trfar
   , gerencia1
   , gerencia2
@@ -510,8 +517,8 @@ LEFT JOIN db_koandina_regional_analyticssec.hrpa0016_analyticssec hrpa0016
   , CASE WHEN ea.bukrs = '3046' OR ea.bukrs = '3047' THEN 'Argentina' WHEN ea.bukrs = '3048' THEN 'Brasil' WHEN ea.bukrs = '3043' OR ea.bukrs = '3044' OR ea.bukrs = '3045' OR ea.bukrs = '3050' THEN 'Chile' WHEN ea.bukrs = '3049' THEN 'Paraguay' END operacion
   , pstt.txtsh localidad
   , CASE WHEN ea.werks = '8C1F' OR ea.werks = '8C2F' THEN 'Antofagasta' WHEN ea.werks = '8C1Q' OR ea.werks = '8C2Q' THEN 'Coquimbo' WHEN ea.werks = '8C1G' OR ea.werks = '8C2G' THEN 'Punta Arenas' ELSE 'Centro' END zona
-  , CASE WHEN ea.kostl = t23.kostl AND ea.trfar = t23.trfar AND ea.bukrs in ('3043','3044','3045','3050') THEN t23.gerencia1 WHEN ea.kostl = t23null.kostl AND ea.bukrs in ('3043' ,'3044' ,'3045' ,'3050') THEN t23null.gerencia1 ELSE null END gerencia_1
-  , CASE WHEN ea.kostl = t23.kostl AND ea.trfar = t23.trfar AND ea.bukrs in ('3043','3044','3045','3050') THEN t23.gerencia2 WHEN ea.kostl = t23null.kostl AND ea.bukrs in ('3043' ,'3044' ,'3045' ,'3050') THEN t23null.gerencia2 ELSE null END gerencia_2
+  , CASE WHEN ea.kostl = t23.kostl AND ea.trfar = t23.trfar AND ea.bukrs = '3043' OR ea.bukrs = '3044' OR ea.bukrs = '3045' OR ea.bukrs = '3050' THEN t23.gerencia1 WHEN ea.kostl = t23null.kostl AND ea.bukrs = '3043' OR ea.bukrs = '3044' OR ea.bukrs = '3045' OR ea.bukrs = '3050' THEN t23null.gerencia1 ELSE null END gerencia_1
+  , CASE WHEN ea.kostl = t23.kostl AND ea.trfar = t23.trfar AND ea.bukrs = '3043' OR ea.bukrs = '3044' OR ea.bukrs = '3045' OR ea.bukrs = '3050' THEN t23.gerencia2 WHEN ea.kostl = t23null.kostl AND ea.bukrs = '3043' OR ea.bukrs = '3044' OR ea.bukrs = '3045' OR ea.bukrs = '3050' THEN t23null.gerencia2 ELSE null END gerencia_2
   , ea.orgeh cod_un_org
   , org.txtmd desc_un_org
 --   , p1051.jcode grado_hay
@@ -540,7 +547,7 @@ LEFT JOIN db_koandina_regional_analyticssec.hrpa0016_analyticssec hrpa0016
 
       -- ELSE COALESCE(trim(rota2.rotacion), trim(rota1.rotacion)) 
 	  ELSE trim(rota.rotacion)                                              -- cambio rotacion chile
-       END rotacion		--cambio de valor 20 por 30 en condicion rota_arg.cttyp
+      END rotacion		--cambio de valor 20 por 30 en condicion rota_arg.cttyp
 	  
 --   , COALESCE(rol2.rol, rol1.rol) rol
 	 ,CASE
@@ -618,7 +625,7 @@ LEFT JOIN db_koandina_regional_analyticssec.hrpa0016_analyticssec hrpa0016
 			THEN p1051.jcode
 		WHEN (ea.bukrs = '3043' OR ea.bukrs = '3044' OR ea.bukrs = '3045' OR ea.bukrs = '3050') AND p1051.subty = 'HAY'     --chile
 			THEN p1051.jcode
-   END grado_hay    
+  END grado_hay    
 --   , (CASE WHEN ((ea.bukrs = '3049') AND (ea.persk = '8E')) THEN COALESCE(COALESCE(trim(oca_p.txtmd), trim(pas_p.txtmd)), 'PLANTA') WHEN ((ea.bukrs = '3049') AND (ea.persk <> '8E')) THEN 'PLANTA' WHEN (((ea.bukrs = '3046') OR (ea.bukrs = '3047')) AND (rota_arg.cttyp IN ('21', '26', '35'))) THEN 'PLANTA' WHEN (((ea.bukrs = '3046') OR (ea.bukrs = '3047')) AND (rota_arg.cttyp IN ('20', '52', '53'))) THEN 'TEMPORADA' WHEN (((ea.bukrs = '3046') OR (ea.bukrs = '3047')) AND (rota_arg.cttyp IN ('68'))) THEN 'PRACTICA' WHEN ((ea.bukrs = '3048') AND (ea.persk IN ('84', '87'))) THEN 'PRACTICA' WHEN ((ea.bukrs = '3048') AND (NOT (ea.persk IN ('84', '87')))) THEN 'PLANTA' ELSE COALESCE(trim(rota2.rotacion), trim(rota1.rotacion)) END) rotacion
   ,CASE 
       WHEN ea.bukrs = '3049' AND ea.persk = '8E' THEN COALESCE(COALESCE(trim(oca_p.txtmd), trim(pas_p.txtmd)), 'PLANTA') 
@@ -687,6 +694,114 @@ LEFT JOIN db_koandina_regional_analyticssec.hrpa0016_analyticssec hrpa0016
   LEFT JOIN rota_arg rota_arg ON rota_arg.pernr = ea.pernr AND rota_arg.fecha = ea.fecha
 WHERE  ea.persk != ''
 )
+
+-- (SELECT DISTINCT
+--       nro_pers
+--     , nomb_pers
+--     , cod_sociedad
+--     , sociedad
+--     , operacion
+--     , localidad
+--     , zona
+--     , gerencia_1
+--     , gerencia_2
+--     , cod_un_org
+--     , desc_un_org
+--     , grado_hay
+--     , rotacion
+--     , rol
+--     , genero
+--     , nacionalidad
+--     , condicion
+--     , fech_ing
+--     , fech_nac
+--     , cod_cargo
+--     , cargo
+--     , cod_centro_costo
+--     , centro_costo
+--     , cod_cen_cost_imp
+--     , idioma
+--     , mail
+--     , cod_clasecontrato
+--     , anio
+--     , mes
+--     , area_de_personal
+-- FROM activos
+-- WHERE  cod_sociedad != ''
+-- -- WHERE   
+-- -- (fecha = ult_dia_mes OR fecha = date_trunc('month',  current_date)) AND
+-- -- sociedad IS NOT NULL
+-- group by 
+--       nro_pers
+--     , nomb_pers
+--     , cod_sociedad
+--     , sociedad
+--     , operacion
+--     , localidad
+--     , zona
+--     , gerencia_1
+--     , gerencia_2
+--     , cod_un_org
+--     , desc_un_org
+--     , grado_hay
+--     , rotacion
+--     , rol
+--     , genero
+--     , nacionalidad
+--     , condicion
+--     , fech_ing
+--     , fech_nac
+--     , cod_cargo
+--     , cargo
+--     , cod_centro_costo
+--     , centro_costo
+--     , cod_cen_cost_imp
+--     , idioma
+--     , mail
+--     , cod_clasecontrato
+--     , anio
+--     , mes
+--     , area_de_personal
+-- )
+
+-- UNION ALL
+
+(SELECT DISTINCT
+  nro_pers
+, nomb_pers
+, cod_sociedad
+, sociedad
+, operacion
+, localidad
+, zona
+, gerencia_1
+, gerencia_2
+, cod_un_org
+, desc_un_org
+, grado_hay
+, rotacion
+, rol
+, genero
+, nacionalidad
+, condicion
+, fech_ing
+, fech_nac
+, cod_cargo
+, cargo
+, cod_centro_costo
+, centro_costo
+, cod_cen_cost_imp
+, idioma
+, mail
+, cod_clasecontrato
+, anio
+, mes
+, area_de_personal
+FROM inactivos
+WHERE  cod_sociedad != '' 
+)
+
+UNION ALL
 
 (SELECT DISTINCT
       nro_pers
@@ -757,41 +872,3 @@ group by
     , area_de_personal
 )
 
-UNION ALL
-
-(SELECT DISTINCT
-  nro_pers
-, nomb_pers
-, cod_sociedad
-, sociedad
-, operacion
-, localidad
-, zona
-, gerencia_1
-, gerencia_2
-, cod_un_org
-, desc_un_org
-, grado_hay
-, rotacion
-, rol
-, genero
-, nacionalidad
-, condicion
-, fech_ing
-, fech_nac
-, cod_cargo
-, cargo
-, cod_centro_costo
-, centro_costo
-, cod_cen_cost_imp
-, idioma
-, mail
-, cod_clasecontrato
-, anio
-, mes
-, area_de_personal
-FROM inactivos
-WHERE  cod_sociedad != '' 
-)
-
--- select * from  db_koandina_regional_analyticssec.vw_hr_maestra_dotacion_analyticssec WHERE   nro_pers = '06013351' order by anio, mes
